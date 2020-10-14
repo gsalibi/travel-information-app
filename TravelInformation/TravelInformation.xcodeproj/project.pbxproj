@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
+		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
 		ECE2323C253643480030E21B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2323B253643480030E21B /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE23239253643480030E21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9A4A53F92537967B00DE508F /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				9A4A53F72537966F00DE508F /* CoreDataManager.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 		ECE2322B253643480030E21B = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				ECE232432536434A0030E21B /* Assets.xcassets */,
 				ECE232452536434A0030E21B /* LaunchScreen.storyboard */,
 				ECE232482536434A0030E21B /* Info.plist */,
+				9A4A53F92537967B00DE508F /* Persistance */,
 				ECE23240253643480030E21B /* TravelInformation.xcdatamodeld */,
 			);
 			path = TravelInformation;
@@ -276,6 +287,7 @@
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
 				ECE23242253643480030E21B /* TravelInformation.xcdatamodeld in Sources */,
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
+				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96576CZ92S;
 				INFOPLIST_FILE = TravelInformation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96576CZ92S;
 				INFOPLIST_FILE = TravelInformation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

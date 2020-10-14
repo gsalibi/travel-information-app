@@ -8,13 +8,17 @@
 import UIKit
 import CoreData
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        CoreDataManager.sharedInstance.setup { (error: Error?) in
+            //TODO: present alert with error message
+        }
+        
         return true
     }
 
