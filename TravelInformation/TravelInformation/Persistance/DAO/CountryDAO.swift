@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class SeasonDAO: DAO {
+class CountryDAO: DAO {
     
     /// Method responsible for saving a CountryManaged into database
     /// - parameters:
