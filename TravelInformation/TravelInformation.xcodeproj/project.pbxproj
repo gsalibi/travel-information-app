@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
+		9AE4D10C253801E90026EC8B /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D10B253801E90026EC8B /* DAO.swift */; };
+		9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D10D253802650026EC8B /* CountryDAO.swift */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
 		ECE2323C253643480030E21B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2323B253643480030E21B /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9AE4D10B253801E90026EC8B /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		9AE4D10D253802650026EC8B /* CountryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDAO.swift; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE23239253643480030E21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,9 +97,19 @@
 		9A4A53F92537967B00DE508F /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				9AE4D10A253801D90026EC8B /* DAO */,
 				9A4A53F72537966F00DE508F /* CoreDataManager.swift */,
 			);
 			path = Persistance;
+			sourceTree = "<group>";
+		};
+		9AE4D10A253801D90026EC8B /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4D10B253801E90026EC8B /* DAO.swift */,
+				9AE4D10D253802650026EC8B /* CountryDAO.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 		ECE2322B253643480030E21B = {
@@ -283,8 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
 				ECE2323C253643480030E21B /* ViewController.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
+				9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */,
 				ECE23242253643480030E21B /* TravelInformation.xcdatamodeld in Sources */,
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
