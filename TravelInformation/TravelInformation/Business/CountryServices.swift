@@ -9,12 +9,13 @@ import UIKit
 
 class CountryServices {
     
+    //MARK: - CoreData
     /// Function responsible for creating a Country
     /// - parameters:
     ///     - season: Country to be saved
     ///     - completion: closure to be executed at the end of this method
     /// - throws: if an error occurs during saving an object into database (Errors.DatabaseFailure)
-    static func createSeason(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
+    static func createCountry(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
         // block to be executed in background
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             // error to be returned in case of failure
@@ -41,12 +42,12 @@ class CountryServices {
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
     
-    /// Function responsible for updating a season
+    /// Function responsible for updating a country
     /// - parameters:
-    ///     - season: season to be updated
+    ///     - countryManaged: countryManaged to be updated
     ///     - completion: closure to be executed at the end of this method
     /// - throws: if an error occurs during saving an object into database (Errors.DatabaseFailure)
-    static func updateSeason(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
+    static func updateCountry(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
         // block to be executed in background
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             // error to be returned in case of failure
@@ -73,12 +74,12 @@ class CountryServices {
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
     
-    /// Function responsible for deleting a season
+    /// Function responsible for deleting a country
     /// - parameters:
-    ///     - season: season to be deleted
+    ///     - countryManaged: country to be deleted
     ///     - completion: closure to be executed at the end of this method
     /// - throws: if an error occurs during saving an object into database (Errors.DatabaseFailure)
-    static func deleteSeason(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
+    static func deleteCountry(countryManaged: CountryManaged, _ completion: ((_ error: Error?) -> Void)?) {
         // block to be executed in background
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             // error to be returned in case of failure
@@ -86,7 +87,7 @@ class CountryServices {
             
             do {
                 // save information
-                try CountryManaged.delete(countryManaged)
+                try CountryDAO.delete(countryManaged)
             }
             catch let error {
                 raisedError = error
