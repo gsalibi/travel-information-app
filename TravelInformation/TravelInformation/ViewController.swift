@@ -34,13 +34,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
         let cellCountry = self.countries[indexPath.row]
-        cell.textLabel?.text = cellCountry.name
-        
+//        cell.textLabel?.text = cellCountry.name
+        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
     
     
