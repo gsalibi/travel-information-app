@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
 		9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98C9FF253930190087EFB0 /* NetworkManager.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9A98C9FF253930190087EFB0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				ECE23237253643480030E21B /* AppDelegate.swift */,
 				ECE23239253643480030E21B /* SceneDelegate.swift */,
 				ECE2323B253643480030E21B /* ViewController.swift */,
+				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 				ECE2323D253643480030E21B /* Main.storyboard */,
 				ECE232432536434A0030E21B /* Assets.xcassets */,
 				ECE232452536434A0030E21B /* LaunchScreen.storyboard */,
@@ -329,6 +332,7 @@
 				9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */,
 				ECE23242253643480030E21B /* TravelInformation.xcdatamodeld in Sources */,
 				9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */,
+				9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */,
 				9AE4D111253808D70026EC8B /* CountryServices.swift in Sources */,
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
