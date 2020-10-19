@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
+		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
+		9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98C9FF253930190087EFB0 /* NetworkManager.swift */; };
+		9AE4D10C253801E90026EC8B /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D10B253801E90026EC8B /* DAO.swift */; };
+		9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D10D253802650026EC8B /* CountryDAO.swift */; };
+		9AE4D111253808D70026EC8B /* CountryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D110253808D70026EC8B /* CountryServices.swift */; };
+		9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D11325380A000026EC8B /* QueueManager.swift */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
 		ECE2323C253643480030E21B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2323B253643480030E21B /* ViewController.swift */; };
@@ -37,7 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9A98C9FF253930190087EFB0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9AE4D10B253801E90026EC8B /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		9AE4D10D253802650026EC8B /* CountryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDAO.swift; sourceTree = "<group>"; };
+		9AE4D110253808D70026EC8B /* CountryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServices.swift; sourceTree = "<group>"; };
+		9AE4D11325380A000026EC8B /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE23239253643480030E21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +102,42 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9A4A53F92537967B00DE508F /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4D10A253801D90026EC8B /* DAO */,
+				9A4A53F72537966F00DE508F /* CoreDataManager.swift */,
+				ECE23240253643480030E21B /* TravelInformation.xcdatamodeld */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		9AE4D10A253801D90026EC8B /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4D10B253801E90026EC8B /* DAO.swift */,
+				9AE4D10D253802650026EC8B /* CountryDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		9AE4D10F253808C10026EC8B /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4D110253808D70026EC8B /* CountryServices.swift */,
+				9A98C9FF253930190087EFB0 /* NetworkManager.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9AE4D112253809E90026EC8B /* Mechanism */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4D11325380A000026EC8B /* QueueManager.swift */,
+			);
+			path = Mechanism;
+			sourceTree = "<group>";
+		};
 		ECE2322B253643480030E21B = {
 			isa = PBXGroup;
 			children = (
@@ -115,11 +165,14 @@
 				ECE23237253643480030E21B /* AppDelegate.swift */,
 				ECE23239253643480030E21B /* SceneDelegate.swift */,
 				ECE2323B253643480030E21B /* ViewController.swift */,
+				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 				ECE2323D253643480030E21B /* Main.storyboard */,
 				ECE232432536434A0030E21B /* Assets.xcassets */,
 				ECE232452536434A0030E21B /* LaunchScreen.storyboard */,
 				ECE232482536434A0030E21B /* Info.plist */,
-				ECE23240253643480030E21B /* TravelInformation.xcdatamodeld */,
+				9AE4D112253809E90026EC8B /* Mechanism */,
+				9AE4D10F253808C10026EC8B /* Business */,
+				9A4A53F92537967B00DE508F /* Persistance */,
 			);
 			path = TravelInformation;
 			sourceTree = "<group>";
@@ -272,10 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
 				ECE2323C253643480030E21B /* ViewController.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
+				9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */,
+				9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */,
 				ECE23242253643480030E21B /* TravelInformation.xcdatamodeld in Sources */,
+				9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */,
+				9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */,
+				9AE4D111253808D70026EC8B /* CountryServices.swift in Sources */,
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
+				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,9 +513,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96576CZ92S;
 				INFOPLIST_FILE = TravelInformation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,9 +533,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96576CZ92S;
 				INFOPLIST_FILE = TravelInformation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

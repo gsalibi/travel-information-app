@@ -48,3 +48,7 @@ enum Visa: String, Codable {
     case vistoEmitidoÀChegadaMediantePagamentoDeTaxaDeUSD8000 = "Visto emitido à chegada, mediante pagamento de taxa de USD 80,00"
     case vistoExigido = "Visto exigido"
 }
+
+struct CountrySummary: Codable {
+    var results: [Country]?
+}
