@@ -11,7 +11,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var countries: [Country] = []
+    var countries: [Country] = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +26,6 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.fetchCountries { [weak self] (countries) in
             self?.countries = countries
-            DispatchQueue.main.async {
-              self?.tableView.reloadData()
-            }
         }
     }
 
@@ -36,8 +39,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
         let cellCountry = self.countries[indexPath.row]
-//        cell.textLabel?.text = cellCountry.name
-        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        cell.textLabel?.text = cellCountry.name
+        
         return cell
     }
     

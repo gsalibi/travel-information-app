@@ -23,7 +23,7 @@ class CoreDataManager {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "TravelInformationContainer")
+        let container = NSPersistentContainer(name: "TravelInformation")
         
         return container
     }()

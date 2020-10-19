@@ -28,13 +28,13 @@ class NetworkManager {
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
                 //TODO: Change this to show alert
-          print("Error with the response, unexpected status code: \(response)")
+            print("Error with the response, unexpected status code: \(String(describing: response))")
           return
         }
 
         if let data = data,
-          let countrySummary = try? JSONDecoder().decode(CountrySummary.self, from: data) {
-          completionHandler(countrySummary.results ?? [])
+          let countrySummary = try? JSONDecoder().decode([Country].self, from: data) {
+          completionHandler(countrySummary ?? [])
         }
       })
       task.resume()

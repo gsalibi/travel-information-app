@@ -6,7 +6,7 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>New item</key>
+			<key>ec2-3-16-29-21.us-east-2.compute.amazonaws.com</key>
 			<string></string>
 		</dict>
 	</dict>
