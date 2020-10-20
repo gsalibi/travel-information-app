@@ -10,8 +10,8 @@ import UIKit
 class CountryDetailsViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
-    
     var info: [String] = []
+    var cellTitles = ["País: ", "Capital: ", "Modeda: ", "Língua: ", "Exigência de entrada: ", "Exigência de saída: ", "Visto de Turismo: ",  "Visto de Negócios: "]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class CountryDetailsViewController: UIViewController{
 
 
 }
+
 extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +31,8 @@ extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
-        cell.textLabel?.text = info[indexPath.row]
+        cell.textLabel?.numberOfLines = 0 // change the line break to WordWrap
+        cell.textLabel?.text = cellTitles[indexPath.row] + info[indexPath.row]
         
         return cell
     }
