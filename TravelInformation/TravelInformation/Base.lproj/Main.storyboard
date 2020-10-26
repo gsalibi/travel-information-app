@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLR-Ee-r0l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mop-Qg-CCy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,32 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="i79-Of-6x3">
-            <objects>
-                <navigationController id="zLR-Ee-r0l" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NZd-ih-EJ6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="y8I-VR-tb5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xvm-Qw-pVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-917" y="130"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MF1-1x-xkn">
-                                <rect key="frame" x="8" y="8" width="398" height="792"/>
+                                <rect key="frame" x="8" y="96" width="398" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" id="fcK-Ua-6SG">
@@ -67,51 +51,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--Country Details View Controller-->
+        <!--Nome do país-->
         <scene sceneID="hb1-BZ-Q3C">
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
+                                        <rect key="frame" x="40" y="0.0" width="374" height="729"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do país" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzu-I4-Qjg">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Persona1" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Rp-Zki">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="183"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAV-Tq-j2C" userLabel="detailText">
+                                                <rect key="frame" x="0.0" y="183" width="374" height="215"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies imperdiet est, eget congue elit pulvinar ut. Etiam nec ligula libero. Praesent ullamcorper commodo ante et fermentum. Suspendisse potenti. Fusce commodo neque gravida dignissim semper. Sed ultrices dapibus mauris. Fusce finibus ipsum dolor, lacinia hendrerit neque bibendum at. In pulvinar, nunc sit amet volutpat facilisis, velit velit vestibulum sem, non lobortis neque libero quis nibh. Curabitur laoreet quam at odio finibus fermentum. Nulla eleifend facilisis maximus. Praesent pellentesque orci sed sodales pulvinar.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Persona1" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Rp-Zki">
-                                                <rect key="frame" x="0.0" y="20.5" width="414" height="183"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAV-Tq-j2C" userLabel="detailText">
-                                                <rect key="frame" x="0.0" y="203.5" width="414" height="210.5"/>
-                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies imperdiet est, eget congue elit pulvinar ut. Etiam nec ligula libero. Praesent ullamcorper commodo ante et fermentum. Suspendisse potenti. Fusce commodo neque gravida dignissim semper. Sed ultrices dapibus mauris. Fusce finibus ipsum dolor, lacinia hendrerit neque bibendum at. In pulvinar, nunc sit amet volutpat facilisis, velit velit vestibulum sem, non lobortis neque libero quis nibh. Curabitur laoreet quam at odio finibus fermentum. Nulla eleifend facilisis maximus. Praesent pellentesque orci sed sodales pulvinar.</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do país" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIB-XF-GRh" userLabel="Nome do país">
+                                                <rect key="frame" x="0.0" y="398" width="374" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-lR-Ihh" userLabel="Capital">
+                                                <rect key="frame" x="0.0" y="419.5" width="374" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-08-UOZ">
+                                                <rect key="frame" x="0.0" y="434" width="374" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma Oficial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-Uj-XqC">
+                                                <rect key="frame" x="0.0" y="453.5" width="374" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="goa-ro-i34" userLabel="Requisitos pra viajar tab">
+                                                <rect key="frame" x="0.0" y="473" width="374" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8u-0g-GY1" userLabel="Informações culturais tab">
+                                                <rect key="frame" x="0.0" y="601" width="374" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="p1i-Rp-Zki" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="SdF-n5-JVh"/>
-                                            <constraint firstItem="bzu-I4-Qjg" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="eto-ES-uOQ"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="width" secondItem="aO8-tB-b7z" secondAttribute="width" id="EFs-q1-STW"/>
-                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="top" secondItem="aO8-tB-b7z" secondAttribute="top" id="Ull-S2-9Go"/>
-                                    <constraint firstAttribute="trailing" secondItem="xtk-SC-hgH" secondAttribute="trailing" id="eU5-DI-j10"/>
-                                    <constraint firstAttribute="bottom" secondItem="xtk-SC-hgH" secondAttribute="bottom" id="yzk-i4-PMR"/>
-                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="leading" secondItem="aO8-tB-b7z" secondAttribute="leading" id="zUL-zN-YLl"/>
+                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="top" secondItem="JDS-Fv-heH" secondAttribute="top" id="HFp-I8-PbZ"/>
+                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="trailing" secondItem="pmO-Hl-hQo" secondAttribute="trailing" constant="-20" id="Oce-et-vME"/>
+                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="leading" secondItem="pmO-Hl-hQo" secondAttribute="leading" constant="20" id="mS2-3T-Mop"/>
+                                    <constraint firstItem="xtk-SC-hgH" firstAttribute="bottom" secondItem="JDS-Fv-heH" secondAttribute="bottom" id="qCb-IX-WxB"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="JDS-Fv-heH"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="pmO-Hl-hQo"/>
@@ -120,17 +125,35 @@
                         <viewLayoutGuide key="safeArea" id="iSh-rK-1ja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aO8-tB-b7z" firstAttribute="leading" secondItem="iSh-rK-1ja" secondAttribute="leading" id="HP8-Fx-tt5"/>
-                            <constraint firstItem="aO8-tB-b7z" firstAttribute="top" secondItem="iSh-rK-1ja" secondAttribute="top" id="pJg-kR-07V"/>
-                            <constraint firstItem="iSh-rK-1ja" firstAttribute="trailing" secondItem="aO8-tB-b7z" secondAttribute="trailing" id="sUA-cq-Z2e"/>
-                            <constraint firstItem="iSh-rK-1ja" firstAttribute="bottom" secondItem="aO8-tB-b7z" secondAttribute="bottom" id="scb-Av-Ou2"/>
+                            <constraint firstItem="aO8-tB-b7z" firstAttribute="leading" secondItem="iSh-rK-1ja" secondAttribute="leading" id="4ed-gi-TGL"/>
+                            <constraint firstItem="aO8-tB-b7z" firstAttribute="top" secondItem="iSh-rK-1ja" secondAttribute="top" id="5mg-YW-wCo"/>
+                            <constraint firstItem="iSh-rK-1ja" firstAttribute="trailing" secondItem="aO8-tB-b7z" secondAttribute="trailing" id="UbI-QY-Np9"/>
+                            <constraint firstItem="iSh-rK-1ja" firstAttribute="bottom" secondItem="aO8-tB-b7z" secondAttribute="bottom" id="VQB-gi-R72"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yYj-K3-If7"/>
+                    <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="130"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EJK-Gv-RBC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mop-Qg-CCy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f9e-8V-bYr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T9t-2o-b03"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaH-lQ-ihR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
