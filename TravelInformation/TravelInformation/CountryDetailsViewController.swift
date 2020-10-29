@@ -31,41 +31,13 @@ class CountryDetailsViewController: UIViewController{
         setLayout()
     }
     
+   
     func setLayout() {
         title = info[0]
-        stackView.backgroundColor = .white
-        stackView.isLayoutMarginsRelativeArrangement = true
-        
-        //handles custom spacing
-        stackView.setCustomSpacing(0, after: nameLbl)
-        stackView.setCustomSpacing(11, after: currencyLbl)
-        stackView.setCustomSpacing(26, after: oficialLanguageLbl)
-        stackView.setCustomSpacing(5, after: needsToTravelBtn)
-        stackView.setCustomSpacing(28, after: culturalInformationBtn)
-        
-        let detailTextConstraint = detailTexLbl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 21)
-//        detailTextConstraint.priority = .init(999)
-        detailTextConstraint.isActive = true
-        
-        let nameConstraint = nameLbl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 21)
-        nameConstraint.priority = .init(999)
-        nameConstraint.isActive = true
-            
-        let capitalConstraint = capitalCityLbl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 21)
-        capitalConstraint.priority = .init(999)
-        capitalConstraint.isActive = true
-            
-        let currencyConstraint = currencyLbl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 21)
-        currencyConstraint.priority = .init(999)
-        currencyConstraint.isActive = true
-            
-        let languageConstraint = oficialLanguageLbl.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 21)
-        languageConstraint.priority = .init(999)
-        languageConstraint.isActive = true
-        
+
         //fills data into labels
         nameLbl.text = info[0]
-        capitalCityLbl.text = info[1]
+        capitalCityLbl.text! += " \(info[1])"
         currencyLbl.text! += " \(info[2])"
         oficialLanguageLbl.text! += " \(info[3])"
         
