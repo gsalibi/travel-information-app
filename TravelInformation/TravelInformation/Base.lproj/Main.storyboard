@@ -64,11 +64,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
                                         <rect key="frame" x="0.0" y="13" width="414" height="1053.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagemPais" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Rp-Zki">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="244"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIS-z5-zfh" userLabel="textView">
                                                 <rect key="frame" x="0.0" y="261" width="414" height="235"/>
@@ -317,7 +317,9 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="p1i-Rp-Zki" firstAttribute="leading" secondItem="xtk-SC-hgH" secondAttribute="leading" id="M4M-fG-Hc4"/>
                                             <constraint firstItem="SIS-z5-zfh" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="Pfk-RQ-kP2"/>
+                                            <constraint firstItem="p1i-Rp-Zki" firstAttribute="leading" secondItem="xtk-SC-hgH" secondAttribute="leading" id="Xxa-0C-m9K"/>
                                             <constraint firstItem="X8f-OT-nhm" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="dr2-yB-NOE"/>
                                             <constraint firstItem="2av-a3-xxe" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="mlp-eP-DHs"/>
                                             <constraint firstItem="RkZ-v3-Dbv" firstAttribute="width" secondItem="xtk-SC-hgH" secondAttribute="width" id="pm9-hv-aTX"/>
