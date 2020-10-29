@@ -137,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE2323B253643480030E21B /* ViewController.swift */,
+				31A5CBD0254B2C1E00CEF8DB /* HomeViewController.swift */,
 				9AE3678525490F8C0077B5A2 /* NeedsToTravelViewController.swift */,
 				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 			);
@@ -254,7 +255,6 @@
 				9AE4D112253809E90026EC8B /* Mechanism */,
 				9AE4D10F253808C10026EC8B /* Business */,
 				9A4A53F92537967B00DE508F /* Persistance */,
-				31A5CBD0254B2C1E00CEF8DB /* HomeViewController.swift */,
 			);
 			path = TravelInformation;
 			sourceTree = "<group>";
