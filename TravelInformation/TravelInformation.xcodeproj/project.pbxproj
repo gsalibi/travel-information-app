@@ -10,6 +10,8 @@
 		310F2F77D160129D9674759A /* Pods_TravelInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */; };
 		31955B9D254B4734001C364E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31955B9C254B4734001C364E /* NewsView.swift */; };
 		31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A5CBC7254B29F200CEF8DB /* Home.storyboard */; };
+		31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C4313D255076C500B817DD /* CountryInfosView.xib */; };
+		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
 		9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
@@ -56,6 +58,8 @@
 		1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31955B9C254B4734001C364E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		31A5CBC7254B29F200CEF8DB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		31C4313D255076C500B817DD /* CountryInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfosView.xib; sourceTree = "<group>"; };
+		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
 		7DAC19A958B6DEFAB8E014DE /* Pods-TravelInformationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformationTests.release.xcconfig"; path = "Target Support Files/Pods-TravelInformationTests/Pods-TravelInformationTests.release.xcconfig"; sourceTree = "<group>"; };
 		92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				31955B9C254B4734001C364E /* NewsView.swift */,
+				31C4313D255076C500B817DD /* CountryInfosView.xib */,
+				31C43142255076E100B817DD /* CountryInfosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */,
+				31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */,
 				ECE232472536434A0030E21B /* LaunchScreen.storyboard in Resources */,
 				ECE232442536434A0030E21B /* Assets.xcassets in Resources */,
 				ECE2323F253643480030E21B /* Main.storyboard in Resources */,
@@ -482,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C43143255076E100B817DD /* CountryInfosView.swift in Sources */,
 				9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */,
 				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
 				31955B9D254B4734001C364E /* NewsView.swift in Sources */,

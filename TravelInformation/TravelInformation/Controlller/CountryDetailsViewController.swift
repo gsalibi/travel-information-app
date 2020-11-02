@@ -21,6 +21,8 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet weak var needsToTravelBtn: UIButton!
     @IBOutlet weak var culturalInformationBtn: UIButton!
     
+
+    @IBOutlet var infosViews: [CountryInfosView]!
     
     /// Country's information array.
     /// Comes in the following order: name, capitalCity, currency, oficialLanguage, entryNeeds, exitNeeds, touristVisa, businessVisa.
@@ -28,19 +30,32 @@ class CountryDetailsViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()
+        setTexts()
+        
+        
     }
     
    
-    func setLayout() {
-        title = info[0]
-
-        //fills data into labels
-        nameLbl.text = info[0]
-        capitalCityLbl.text! += " \(info[1])"
-        currencyLbl.text! += " \(info[2])"
-        oficialLanguageLbl.text! += " \(info[3])"
+    func setTexts() {
+        var count = 1
+        for infoView in infosViews{
+            infoView.title.text = "\(count)  title"
+                infoView.value.text = "\(count)  value"
+            
+            count += 1
+        }
         
+        for i in 0 ..< info.count{
+            print("\(i) : \(info[i])")
+        }
+//        title = info[0]
+//
+//        //fills data into labels
+//        nameLbl.text = info[0]
+//        capitalCityLbl.text! += " \(info[1])"
+//        currencyLbl.text! += " \(info[2])"
+//        oficialLanguageLbl.text! += " \(info[3])"
+//        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

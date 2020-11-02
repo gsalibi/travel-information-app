@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="13" width="414" height="1051.5"/>
+                                        <rect key="frame" x="0.0" y="13" width="414" height="1180.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="340.5"/>
@@ -229,6 +229,7 @@
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Moea"/>
                                                 <constraints>
                                                     <constraint firstItem="i1U-4g-CQu" firstAttribute="leading" secondItem="SIS-z5-zfh" secondAttribute="leading" constant="20" id="C5c-yV-Psx"/>
                                                     <constraint firstItem="i1U-4g-CQu" firstAttribute="centerY" secondItem="SIS-z5-zfh" secondAttribute="centerY" id="Kf8-Mk-cR3"/>
@@ -237,53 +238,36 @@
                                                     <constraint firstItem="i1U-4g-CQu" firstAttribute="centerX" secondItem="SIS-z5-zfh" secondAttribute="centerX" id="zgg-Im-ai7"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="l53-xS-uLO" userLabel="DetailCountry">
-                                                <rect key="frame" x="0.0" y="511" width="414" height="122"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="501" text="Nome do país" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIB-XF-GRh" userLabel="Nome do país">
-                                                        <rect key="frame" x="20" y="10" width="374" height="21.5"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <color key="textColor" name="text"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Capital:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-lR-Ihh" userLabel="Capital">
-                                                        <rect key="frame" x="20" y="31.5" width="374" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" name="text"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Moeda: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-08-UOZ">
-                                                        <rect key="frame" x="20" y="62" width="374" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" name="text"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Idioma Oficial: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-Uj-XqC">
-                                                        <rect key="frame" x="20" y="92.5" width="374" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" name="text"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="l53-xS-uLO" userLabel="coinView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="511" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="U20-Uj-XqC" firstAttribute="top" secondItem="fAV-08-UOZ" secondAttribute="bottom" constant="11" id="3CP-EG-wT8"/>
-                                                    <constraint firstAttribute="trailing" secondItem="l1i-lR-Ihh" secondAttribute="trailing" constant="20" id="8TK-HS-DXC"/>
-                                                    <constraint firstItem="cIB-XF-GRh" firstAttribute="leading" secondItem="l53-xS-uLO" secondAttribute="leading" constant="20" id="EN2-2y-5po"/>
-                                                    <constraint firstAttribute="trailing" secondItem="cIB-XF-GRh" secondAttribute="trailing" constant="20" id="Gpa-4U-JtA"/>
-                                                    <constraint firstItem="fAV-08-UOZ" firstAttribute="top" secondItem="l1i-lR-Ihh" secondAttribute="bottom" constant="16" id="bee-fR-tgf"/>
-                                                    <constraint firstItem="cIB-XF-GRh" firstAttribute="top" secondItem="l53-xS-uLO" secondAttribute="top" constant="10" id="dJU-Ze-XRn"/>
-                                                    <constraint firstAttribute="bottom" secondItem="U20-Uj-XqC" secondAttribute="bottom" constant="10" id="fNh-eu-Wgm"/>
-                                                    <constraint firstItem="l1i-lR-Ihh" firstAttribute="leading" secondItem="cIB-XF-GRh" secondAttribute="leading" id="i82-2Q-o19"/>
-                                                    <constraint firstAttribute="trailing" secondItem="U20-Uj-XqC" secondAttribute="trailing" constant="20" id="pTu-Hs-7GD"/>
-                                                    <constraint firstItem="U20-Uj-XqC" firstAttribute="leading" secondItem="fAV-08-UOZ" secondAttribute="leading" id="pt1-tj-a1M"/>
-                                                    <constraint firstItem="fAV-08-UOZ" firstAttribute="leading" secondItem="l1i-lR-Ihh" secondAttribute="leading" id="qv2-eV-EOQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fAV-08-UOZ" secondAttribute="trailing" constant="20" id="r3a-ua-QVf"/>
-                                                    <constraint firstItem="l1i-lR-Ihh" firstAttribute="top" secondItem="cIB-XF-GRh" secondAttribute="bottom" id="vNM-nK-6lt"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Vn8-KD-7yK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-hD-osI" userLabel="passportView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="578" width="414" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aGu-xB-lhg"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-Lf-3vb" userLabel="touristVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="645" width="414" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cjY-KW-DHY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-hT-CY0" userLabel="businessVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="712" width="414" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="PKy-By-wkk"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-v3-Dbv">
-                                                <rect key="frame" x="0.0" y="650" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="779" width="414" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-80-X1B">
                                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
@@ -308,7 +292,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-OT-nhm">
-                                                <rect key="frame" x="0.0" y="717" width="414" height="90"/>
+                                                <rect key="frame" x="0.0" y="846" width="414" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-ze-4oR">
                                                         <rect key="frame" x="20" y="10" width="374" height="50"/>
@@ -330,7 +314,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="240" translatesAutoresizingMaskIntoConstraints="NO" id="2av-a3-xxe">
-                                                <rect key="frame" x="0.0" y="824" width="414" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="953" width="414" height="42.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Notícias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-ZZ-nxa">
                                                         <rect key="frame" x="20" y="0.0" width="394" height="26.5"/>
@@ -348,7 +332,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-KI-2bG" userLabel="NewsView">
-                                                <rect key="frame" x="0.0" y="883.5" width="414" height="168"/>
+                                                <rect key="frame" x="0.0" y="1012.5" width="414" height="168"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-Gs-hSD">
                                                         <rect key="frame" x="0.0" y="-5" width="414" height="178"/>
@@ -497,19 +481,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7"/>
                     <connections>
-                        <outlet property="capitalCityLbl" destination="l1i-lR-Ihh" id="jFS-ab-pw0"/>
                         <outlet property="countryImageView" destination="p1i-Rp-Zki" id="AXN-Kj-cZI"/>
                         <outlet property="culturalInformationBtn" destination="Lhi-ze-4oR" id="EtS-FI-wAu"/>
-                        <outlet property="currencyLbl" destination="fAV-08-UOZ" id="mt1-2Z-bz7"/>
-                        <outlet property="nameLbl" destination="cIB-XF-GRh" id="OLh-X9-WEv"/>
                         <outlet property="needsToTravelBtn" destination="ZP1-80-X1B" id="zM8-Mh-p8g"/>
-                        <outlet property="oficialLanguageLbl" destination="U20-Uj-XqC" id="KzY-kT-Qux"/>
                         <outlet property="stackView" destination="xtk-SC-hgH" id="tkc-KQ-OYo"/>
+                        <outletCollection property="infosViews" destination="l53-xS-uLO" collectionClass="NSMutableArray" id="41k-EU-yTj"/>
+                        <outletCollection property="infosViews" destination="RhY-hD-osI" collectionClass="NSMutableArray" id="QAo-tq-fW8"/>
+                        <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="lCy-Wh-g3u"/>
+                        <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="kQj-bC-gzR"/>
+                        <outletCollection property="infosViews" destination="T9U-hT-CY0" collectionClass="NSMutableArray" id="0mT-bm-Fcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742.0289855072465" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2984" y="364"/>
         </scene>
         <!--Item-->
         <scene sceneID="EJK-Gv-RBC">
