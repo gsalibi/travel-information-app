@@ -22,6 +22,7 @@
 		9AE4D111253808D70026EC8B /* CountryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D110253808D70026EC8B /* CountryServices.swift */; };
 		9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D11325380A000026EC8B /* QueueManager.swift */; };
 		9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */; };
+		9AFFD9352550838F00BC3EEC /* CulturalnfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFD9342550838F00BC3EEC /* CulturalnfoViewController.swift */; };
 		C192DAA55595030AEC8D2DA5 /* Pods_TravelInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
@@ -70,6 +71,7 @@
 		9AE4D110253808D70026EC8B /* CountryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServices.swift; sourceTree = "<group>"; };
 		9AE4D11325380A000026EC8B /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		9AFFD9342550838F00BC3EEC /* CulturalnfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalnfoViewController.swift; sourceTree = "<group>"; };
 		AA4CCB5FF876D179FDAF1C6E /* Pods-TravelInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformation.release.xcconfig"; path = "Target Support Files/Pods-TravelInformation/Pods-TravelInformation.release.xcconfig"; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				ECE2323B253643480030E21B /* ViewController.swift */,
 				9AE3678525490F8C0077B5A2 /* NeedsToTravelViewController.swift */,
+				9AFFD9342550838F00BC3EEC /* CulturalnfoViewController.swift */,
 				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 				9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */,
 			);
@@ -498,6 +501,7 @@
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
+				9AFFD9352550838F00BC3EEC /* CulturalnfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

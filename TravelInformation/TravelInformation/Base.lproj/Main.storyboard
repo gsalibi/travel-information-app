@@ -171,6 +171,9 @@
                                                         <state key="normal" image="infoCulturalTag">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="ieN-hS-k3q" kind="show" identifier="toCulturalInfo" id="Fvb-RE-gQR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -423,28 +426,28 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-0F-s4f">
-                                        <rect key="frame" x="0.0" y="13" width="414" height="129"/>
+                                        <rect key="frame" x="0.0" y="13" width="414" height="159.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma Oficial: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce5-Bi-eSB" userLabel="Entry Needs">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce5-Bi-eSB" userLabel="Entry Needs">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma Oficial: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-hE-IkC" userLabel="Exit Needs">
-                                                <rect key="frame" x="0.0" y="36.5" width="414" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="67" width="414" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma Oficial: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-ee-0HD" userLabel="Tourist Visa">
-                                                <rect key="frame" x="0.0" y="73" width="414" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="103.5" width="414" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idioma Oficial: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i09-ur-Y0z" userLabel="Business Visa">
-                                                <rect key="frame" x="0.0" y="109.5" width="414" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="140" width="414" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -483,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM3-cW-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515.9420289855075" y="-283.25892857142856"/>
+            <point key="canvasLocation" x="3472" y="-252"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="umr-Xd-tR8">
@@ -513,6 +516,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4u-Iv-ObT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="147" y="690"/>
+        </scene>
+        <!--Nome do país-->
+        <scene sceneID="zPF-pN-xCR">
+            <objects>
+                <viewController id="ieN-hS-k3q" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bgl-xD-hof">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzE-bF-PMm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lOQ-Wt-plx">
+                                        <rect key="frame" x="20" y="13" width="51.5" height="279.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lOQ-Wt-plx" secondAttribute="bottom" id="Fa2-Df-xpM"/>
+                                    <constraint firstItem="lOQ-Wt-plx" firstAttribute="leading" secondItem="CzE-bF-PMm" secondAttribute="leading" constant="20" id="GQM-qF-XV2"/>
+                                    <constraint firstItem="lOQ-Wt-plx" firstAttribute="top" secondItem="CzE-bF-PMm" secondAttribute="top" constant="13" id="L3Q-6l-99h"/>
+                                    <constraint firstAttribute="trailing" secondItem="lOQ-Wt-plx" secondAttribute="trailing" constant="-20" id="qRw-Oo-QYH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lv3-GJ-CQa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lv3-GJ-CQa" firstAttribute="bottom" secondItem="CzE-bF-PMm" secondAttribute="bottom" id="6tX-e2-TSx"/>
+                            <constraint firstItem="CzE-bF-PMm" firstAttribute="leading" secondItem="lv3-GJ-CQa" secondAttribute="leading" id="NBg-Va-hzM"/>
+                            <constraint firstItem="CzE-bF-PMm" firstAttribute="top" secondItem="lv3-GJ-CQa" secondAttribute="top" id="b9E-dr-y9b"/>
+                            <constraint firstItem="lv3-GJ-CQa" firstAttribute="trailing" secondItem="CzE-bF-PMm" secondAttribute="trailing" id="wwF-Ow-HbQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nome do país" id="j1x-IL-5bN"/>
+                    <connections>
+                        <outlet property="stackView" destination="lOQ-Wt-plx" id="OMt-eP-Sy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9d-Qq-oPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4210" y="325"/>
         </scene>
     </scenes>
     <resources>

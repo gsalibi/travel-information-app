@@ -48,6 +48,10 @@ class CountryDetailsViewController: UIViewController{
         case "toNeeds":
             let needsVC = segue.destination as! NeedsToTravelViewController
             needsVC.info = self.info
+        
+        case "toCulturalInfo":
+            let culturalInfoVC = segue.destination as! CulturalInfoViewController
+            culturalInfoVC.info = self.info
             
         default:
             //TODO: Change this to present alert?
