@@ -42,7 +42,7 @@ class CountryDetailsViewController: UIViewController{
         }else{
             nameCountryLabel.text = "País desconhecido 🧐"
         }
-        if let capital = country?.name{
+        if let capital = country?.capital{
             capitalCountryLabel.text = capital
         }else{
             capitalCountryLabel.text = "Capital desconhecida 🧐"

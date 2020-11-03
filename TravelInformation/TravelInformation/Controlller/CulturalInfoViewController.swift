@@ -28,14 +28,14 @@ class CulturalInfoViewController: UIViewController {
             for info in cultural.keys{
                 let title = UILabel()
                 title.text = info
-                title.font = UIFont.systemFont(ofSize: 20)
+                title.font = UIFont(name: "Roboto-Bold", size: 20)
                 title.textColor = Asset.text.color
 
                 title.numberOfLines = 0
                 
                 let description = UILabel()
                 description.text = cultural[info]
-                description.font = UIFont.systemFont(ofSize: 16)
+                description.font = UIFont(name: "Roboto-Regular", size: 16)
                 description.textColor = Asset.text.color
                 description.numberOfLines = 0
                 
