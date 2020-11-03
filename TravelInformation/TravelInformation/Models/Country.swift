@@ -15,6 +15,8 @@ class Country: Codable {
     let capital, currency, language, passportValidity: String?
     let entryCurrency, exitCurrency: String?
     let touristVisa, businessVisa: Visa?
+    let vaccines: Vaccines
+    let culture: [String: String]?
 
     enum CodingKeys: String, CodingKey {
         case name, capital, currency, language
@@ -23,9 +25,10 @@ class Country: Codable {
         case exitCurrency = "exit_currency"
         case touristVisa = "tourist_visa"
         case businessVisa = "business_visa"
+        case vaccines, culture
     }
 
-    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?) {
+    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?, vaccines: Vaccines, culture: [String: String]?) {
         self.name = name
         self.capital = capital
         self.currency = currency
@@ -35,6 +38,8 @@ class Country: Codable {
         self.exitCurrency = exitCurrency
         self.touristVisa = touristVisa
         self.businessVisa = businessVisa
+        self.vaccines = vaccines
+        self.culture = culture
     }
 }
 
@@ -48,6 +53,80 @@ enum Visa: String, Codable {
     case vistoEmitidoÀChegadaMediantePagamentoDeTaxaDeUSD8000 = "Visto emitido à chegada, mediante pagamento de taxa de USD 80,00"
     case vistoExigido = "Visto exigido"
 }
+
+enum Vaccines: Codable {
+    case string(String)
+    case vaccineElementArray([VaccineElement])
+    case null
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let x = try? container.decode([VaccineElement].self) {
+            self = .vaccineElementArray(x)
+            return
+        }
+        if let x = try? container.decode(String.self) {
+            self = .string(x)
+            return
+        }
+        if container.decodeNil() {
+            self = .null
+            return
+        }
+        throw DecodingError.typeMismatch(Vaccines.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Vaccines"))
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .string(let x):
+            try container.encode(x)
+        case .vaccineElementArray(let x):
+            try container.encode(x)
+        case .null:
+            try container.encodeNil()
+        }
+    }
+}
+
+// MARK: - VaccineElement
+class VaccineElement: Codable {
+    let disease: String
+    let vaccine: VaccineEnum
+    let guidance: Guidance
+    let source: Source
+    let vaccineDescription: String
+
+    enum CodingKeys: String, CodingKey {
+        case disease, vaccine, guidance, source
+        case vaccineDescription = "description"
+    }
+
+    init(disease: String, vaccine: VaccineEnum, guidance: Guidance, source: Source, vaccineDescription: String) {
+        self.disease = disease
+        self.vaccine = vaccine
+        self.guidance = guidance
+        self.source = source
+        self.vaccineDescription = vaccineDescription
+    }
+}
+
+enum Guidance: String, Codable {
+    case empty = ""
+    case exigência = "Exigência"
+    case recomendação = "Recomendação"
+}
+
+enum Source: String, Codable {
+    case oms = "OMS"
+    case sourceOMS = "-OMS"
+}
+
+enum VaccineEnum: String, Codable {
+    case não = "Não"
+    case sim = "Sim"
+}
+
 
 struct CountrySummary: Codable {
     var results: [Country]?
