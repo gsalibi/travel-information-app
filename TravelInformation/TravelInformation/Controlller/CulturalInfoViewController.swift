@@ -10,14 +10,41 @@ import UIKit
 class CulturalInfoViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
+    var country : Country?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCulturalInfos()
+        
         // Do any additional setup after loading the view.
     }
     
 
+    func setCulturalInfos(){
+        let spacingView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 20))
+        spacingView.backgroundColor = .clear
+        self.stackView.addSubview(spacingView)
+        if let cultural = country?.culture as? [String : String]{
+            for info in cultural.keys{
+                let title = UILabel()
+                title.text = info
+                title.font = UIFont.systemFont(ofSize: 20)
+                title.textColor = Asset.text.color
+
+                title.numberOfLines = 0
+                
+                let description = UILabel()
+                description.text = cultural[info]
+                description.font = UIFont.systemFont(ofSize: 16)
+                description.textColor = Asset.text.color
+                description.numberOfLines = 0
+                
+                
+                stackView.addArrangedSubview(title)
+                stackView.addArrangedSubview(description)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

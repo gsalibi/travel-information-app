@@ -69,9 +69,7 @@ class CountryDetailsViewController: UIViewController{
             infoView.title.text = title
             
             infoView.value.text = value
-            if title == "Moeda"{
-                infoView.value.text = "iuehriauheiruhaiueraieuhriuaheiurhaiuehriuh ehai urhaiuehih aiuh aeh haeh aiueh aiueh iauhe aiuhe"
-            }
+     
             infoView.isHidden = false
         }else{
             infoView.isHidden = true
@@ -83,12 +81,18 @@ class CountryDetailsViewController: UIViewController{
     @IBAction func goVaccineInfo(_ sender: Any) {
     }
     @IBAction func goCultureInfo(_ sender: Any) {
+        performSegue(withIdentifier: "infoCulture", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toNeeds":
-            let needsVC = segue.destination as! NeedsToTravelViewController
-            needsVC.info = self.info
+            if let needsVC = segue.destination as? NeedsToTravelViewController{
+                needsVC.info = self.info
+                }
+        case "infoCulture":
+            if let vc = segue.destination as? CulturalInfoViewController{
+                vc.country = self.country
+            }
             
         default:
             //TODO: Change this to present alert?

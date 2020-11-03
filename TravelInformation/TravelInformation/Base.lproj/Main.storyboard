@@ -313,7 +313,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="nam-Bu-Cfh"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Informações culturais">
                                                             <color key="titleColor" name="text"/>
@@ -493,18 +493,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="200"/>
+                                        <color key="backgroundColor" name="primary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="jUx-RZ-Gkb"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="primary"/>
                                 <constraints>
                                     <constraint firstItem="26C-Bk-e7F" firstAttribute="bottom" secondItem="oJR-lr-V7W" secondAttribute="bottom" id="6VB-HG-peM"/>
-                                    <constraint firstItem="26C-Bk-e7F" firstAttribute="leading" secondItem="Fh1-hq-zVW" secondAttribute="leading" id="Gth-gD-9CC"/>
                                     <constraint firstItem="26C-Bk-e7F" firstAttribute="top" secondItem="oJR-lr-V7W" secondAttribute="top" id="KBM-yX-gJw"/>
                                     <constraint firstItem="26C-Bk-e7F" firstAttribute="leading" secondItem="oJR-lr-V7W" secondAttribute="leading" id="UAr-W5-UUp"/>
+                                    <constraint firstItem="26C-Bk-e7F" firstAttribute="trailing" secondItem="JKf-1S-gW8" secondAttribute="trailing" constant="-20" id="YWg-t1-dpP"/>
                                     <constraint firstItem="26C-Bk-e7F" firstAttribute="top" secondItem="Fh1-hq-zVW" secondAttribute="top" id="ZXd-wW-2n5"/>
                                     <constraint firstItem="26C-Bk-e7F" firstAttribute="trailing" secondItem="oJR-lr-V7W" secondAttribute="trailing" id="i9S-Aj-iiO"/>
                                     <constraint firstItem="JKf-1S-gW8" firstAttribute="bottom" secondItem="26C-Bk-e7F" secondAttribute="bottom" priority="100" constant="597" id="lmy-Lj-IBj"/>
@@ -516,10 +518,10 @@
                         <viewLayoutGuide key="safeArea" id="I40-Lz-dgP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="26C-Bk-e7F" firstAttribute="width" secondItem="I40-Lz-dgP" secondAttribute="width" id="96H-k3-05K"/>
                             <constraint firstItem="I40-Lz-dgP" firstAttribute="bottom" secondItem="Fh1-hq-zVW" secondAttribute="bottom" id="Gtg-2x-Xgx"/>
                             <constraint firstItem="I40-Lz-dgP" firstAttribute="top" secondItem="Fh1-hq-zVW" secondAttribute="top" id="IWf-KR-NiE"/>
                             <constraint firstItem="Fh1-hq-zVW" firstAttribute="trailing" secondItem="I40-Lz-dgP" secondAttribute="trailing" id="OFW-Fs-2vD"/>
+                            <constraint firstItem="26C-Bk-e7F" firstAttribute="leading" secondItem="I40-Lz-dgP" secondAttribute="leading" constant="20" id="cJ1-sM-tKE"/>
                             <constraint firstItem="I40-Lz-dgP" firstAttribute="leading" secondItem="Fh1-hq-zVW" secondAttribute="leading" id="gwE-Tx-F7i"/>
                         </constraints>
                     </view>
