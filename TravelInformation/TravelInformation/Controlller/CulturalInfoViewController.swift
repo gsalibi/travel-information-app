@@ -15,6 +15,8 @@ class CulturalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCulturalInfos()
+        self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
+
         
         // Do any additional setup after loading the view.
     }

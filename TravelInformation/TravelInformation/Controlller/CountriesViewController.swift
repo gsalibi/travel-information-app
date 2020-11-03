@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CountriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        let nib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "countryCell")
         
         NetworkManager.shared.fetchCountries { [weak self] (countries) in
             self?.countries = countries
@@ -33,11 +35,13 @@ class ViewController: UIViewController {
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased() < $1.name.lowercased()}) ?? countries
         }
         
+        self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "toDetails":
+        case "countrySelected":
             guard (selectedCountry != nil) else { print("No selected country"); return }
             let destinationVC = segue.destination as! CountryDetailsViewController
             
@@ -48,23 +52,30 @@ class ViewController: UIViewController {
         }
     }
 }
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.countries.count
     }
-    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
-        let cellCountry = self.countries[indexPath.row]
-        cell.textLabel?.text = cellCountry.name
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell{
+            let cellCountry = self.countries[indexPath.row]
+            cell.name.text = cellCountry.name
+            
+            return cell
+        }else{
+            print("cade a ceklula")
+            return UITableViewCell()
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countries[indexPath.row]
         
-        performSegue(withIdentifier: "toDetails", sender: self)
+        performSegue(withIdentifier: "countrySelected", sender: self)
         
     }
     

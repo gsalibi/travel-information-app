@@ -29,6 +29,10 @@ class CountryDetailsViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setTexts()
+        self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
+        if let name = country?.name{
+            self.navigationItem.title = name
+        }
         
         
         
@@ -79,18 +83,20 @@ class CountryDetailsViewController: UIViewController{
     //MARK: Segues Actions
     
     @IBAction func goVaccineInfo(_ sender: Any) {
+        performSegue(withIdentifier: "vaccineInfo", sender: nil)
+        
     }
     @IBAction func goCultureInfo(_ sender: Any) {
         performSegue(withIdentifier: "infoCulture", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "toNeeds":
-            if let needsVC = segue.destination as? NeedsToTravelViewController{
-                needsVC.info = self.info
-                }
         case "infoCulture":
             if let vc = segue.destination as? CulturalInfoViewController{
+                vc.country = self.country
+            }
+        case "vaccineInfo":
+            if let vc = segue.destination as? VaccineViewController{
                 vc.country = self.country
             }
             
