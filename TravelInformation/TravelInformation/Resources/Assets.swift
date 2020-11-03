@@ -25,13 +25,13 @@ internal enum Asset {
   internal static let detail = ColorAsset(name: "detail")
   internal static let primary = ColorAsset(name: "primary")
   internal static let secondary = ColorAsset(name: "secondary")
-  internal static let tertiary = ColorAsset(name: "tertiary")
   internal static let text = ColorAsset(name: "text")
   internal static let imagemPais = ImageAsset(name: "imagemPais")
   internal static let imgHome = ImageAsset(name: "imgHome")
   internal static let infoCulturalTag = ImageAsset(name: "infoCulturalTag")
   internal static let requisitosTag = ImageAsset(name: "requisitosTag")
   internal static let selectCtryBtnTag = ImageAsset(name: "selectCtryBtnTag")
+  internal static let tertiary = ColorAsset(name: "tertiary")
   internal static let usrIMG = ImageAsset(name: "usrIMG")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

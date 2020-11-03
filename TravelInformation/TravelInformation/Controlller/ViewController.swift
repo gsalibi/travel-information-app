@@ -37,16 +37,8 @@ class ViewController: UIViewController {
             guard (selectedCountry != nil) else { print("No selected country"); return }
             let destinationVC = segue.destination as! CountryDetailsViewController
             
-            destinationVC.info = [] //reset info array
-            
-            destinationVC.info.append(selectedCountry?.name ?? "No name found")
-            destinationVC.info.append(selectedCountry?.capital ?? "No Capital city found")
-            destinationVC.info.append(selectedCountry?.language ?? "No language found")
-            destinationVC.info.append(selectedCountry?.currency ?? "No currency found")
-            destinationVC.info.append(selectedCountry?.entryCurrency ?? "No entryCurrency found")
-            destinationVC.info.append(selectedCountry?.exitCurrency ?? "No exitCurrency found")
-            destinationVC.info.append(selectedCountry?.passportValidity ?? "No passportValidity info found")
-            destinationVC.info.append(selectedCountry?.businessVisa?.rawValue ?? "No businessVisa info found")
+            destinationVC.country = selectedCountry
+
         default:
             print("Segue id not implemented")
         }

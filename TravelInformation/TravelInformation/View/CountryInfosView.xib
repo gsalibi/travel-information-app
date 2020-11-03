@@ -18,26 +18,26 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-PN-vkv" userLabel="view">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-ZR-SPM">
-                            <rect key="frame" x="20" y="0.0" width="39" height="15"/>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" text="Moeda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-ZR-SPM">
+                            <rect key="frame" x="20" y="0.0" width="39" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" name="text"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-fW-cbM">
-                            <rect key="frame" x="20" y="17" width="33" height="19.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="aoierj aioej roiaejro ieaoi jaoij oiajeo aoj jaejoi jaoej oiajeoi jaoiej oiajo ijeoiaj oieaj oiajeoi jaio jaoiej oiaj " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-fW-cbM">
+                            <rect key="frame" x="20" y="36" width="374" height="38.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" name="text"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnl-cG-IYy">
-                            <rect key="frame" x="20" y="53" width="374" height="1"/>
+                            <rect key="frame" x="20" y="91" width="374" height="1"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="eps-F8-OgQ"/>
@@ -47,6 +47,8 @@
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
                         <constraint firstItem="bKJ-fW-cbM" firstAttribute="top" secondItem="ksX-ZR-SPM" secondAttribute="bottom" constant="2" id="1KA-yQ-KWh"/>
+                        <constraint firstItem="Mnl-cG-IYy" firstAttribute="top" secondItem="bKJ-fW-cbM" secondAttribute="bottom" constant="16.5" id="3oD-Yx-0fJ"/>
+                        <constraint firstAttribute="trailing" secondItem="bKJ-fW-cbM" secondAttribute="trailing" constant="20" id="6SM-l7-ZPO"/>
                         <constraint firstAttribute="bottom" secondItem="Mnl-cG-IYy" secondAttribute="bottom" constant="2" id="8Lt-xJ-mal"/>
                         <constraint firstItem="ksX-ZR-SPM" firstAttribute="top" secondItem="0xp-PN-vkv" secondAttribute="top" id="Kjx-r0-Ohp"/>
                         <constraint firstItem="Mnl-cG-IYy" firstAttribute="leading" secondItem="0xp-PN-vkv" secondAttribute="leading" constant="20" id="XpE-eQ-oVb"/>
@@ -69,7 +71,7 @@
     </objects>
     <resources>
         <namedColor name="primary">
-            <color red="0.070588235294117646" green="0.094117647058823528" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.071000002324581146" green="0.093999996781349182" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

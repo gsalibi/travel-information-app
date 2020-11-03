@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="13" width="414" height="1180.5"/>
+                                        <rect key="frame" x="0.0" y="13" width="414" height="1170.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="340.5"/>
@@ -269,45 +269,74 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-v3-Dbv">
                                                 <rect key="frame" x="0.0" y="779" width="414" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-80-X1B">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-80-X1B" userLabel="vaccineInfoButton">
                                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                                        <color key="backgroundColor" name="secondary"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Tmu-Ow-fvK"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <state key="normal" image="requisitosTag">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Informaões sobre vacinas">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="goVaccineInfo:" destination="BiW-BS-Brh" eventType="touchUpInside" id="zzU-O7-eAT"/>
                                                             <segue destination="0gR-NF-kHZ" kind="show" identifier="toNeeds" id="REP-Ao-NhL"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-xK-2HW">
+                                                        <rect key="frame" x="366" y="17" width="8" height="15.5"/>
+                                                        <color key="tintColor" name="detail"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="wVX-7Q-Ooj"/>
+                                                            <constraint firstAttribute="width" secondItem="Xgk-xK-2HW" secondAttribute="height" multiplier="2:5" id="wld-DH-4NN"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="ZP1-80-X1B" firstAttribute="leading" secondItem="RkZ-v3-Dbv" secondAttribute="leading" constant="20" id="XaQ-Me-oWq"/>
+                                                    <constraint firstItem="ZP1-80-X1B" firstAttribute="trailing" secondItem="Xgk-xK-2HW" secondAttribute="trailing" constant="20" id="dck-m0-yo1"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZP1-80-X1B" secondAttribute="trailing" constant="20" id="nUc-el-58K"/>
                                                     <constraint firstItem="ZP1-80-X1B" firstAttribute="centerY" secondItem="RkZ-v3-Dbv" secondAttribute="centerY" id="pJZ-H5-OfV"/>
+                                                    <constraint firstItem="Xgk-xK-2HW" firstAttribute="centerY" secondItem="RkZ-v3-Dbv" secondAttribute="centerY" id="t36-zP-fUh"/>
                                                     <constraint firstAttribute="height" secondItem="ZP1-80-X1B" secondAttribute="height" id="x25-bR-BM4"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-OT-nhm">
                                                 <rect key="frame" x="0.0" y="846" width="414" height="90"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-ze-4oR">
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-ze-4oR">
                                                         <rect key="frame" x="20" y="10" width="374" height="50"/>
+                                                        <color key="backgroundColor" name="secondary"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="nam-Bu-Cfh"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <state key="normal" image="infoCulturalTag">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Informações culturais">
+                                                            <color key="titleColor" name="text"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="goCultureInfo:" destination="BiW-BS-Brh" eventType="touchUpInside" id="PwN-Qk-TrW"/>
+                                                        </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6uU-2X-iwI">
+                                                        <rect key="frame" x="366" y="27" width="8" height="15.5"/>
+                                                        <color key="tintColor" name="detail"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="6uU-2X-iwI" secondAttribute="height" multiplier="2:5" id="NhO-dD-VuQ"/>
+                                                            <constraint firstAttribute="height" constant="20" id="gcW-0j-nPb"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Lhi-ze-4oR" secondAttribute="bottom" constant="30" id="4o7-88-vDh"/>
+                                                    <constraint firstItem="Lhi-ze-4oR" firstAttribute="trailing" secondItem="6uU-2X-iwI" secondAttribute="trailing" constant="20" id="IUE-q6-6As"/>
+                                                    <constraint firstItem="6uU-2X-iwI" firstAttribute="centerY" secondItem="Lhi-ze-4oR" secondAttribute="centerY" id="K9f-Tx-pqg"/>
                                                     <constraint firstItem="Lhi-ze-4oR" firstAttribute="leading" secondItem="X8f-OT-nhm" secondAttribute="leading" constant="20" id="UMD-wg-OZa"/>
                                                     <constraint firstAttribute="trailing" secondItem="Lhi-ze-4oR" secondAttribute="trailing" constant="20" id="cgF-KO-OI5"/>
                                                     <constraint firstItem="Lhi-ze-4oR" firstAttribute="top" secondItem="X8f-OT-nhm" secondAttribute="top" constant="10" id="vRP-aM-SQK"/>
@@ -332,98 +361,54 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-KI-2bG" userLabel="NewsView">
-                                                <rect key="frame" x="0.0" y="1012.5" width="414" height="168"/>
+                                                <rect key="frame" x="0.0" y="1012.5" width="414" height="158"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-Gs-hSD">
-                                                        <rect key="frame" x="0.0" y="-5" width="414" height="178"/>
+                                                        <rect key="frame" x="0.0" y="-5" width="414" height="168"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qU1-WU-nuV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1207" height="178"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="1148" height="168"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-vX-HJT" customClass="NewsView" customModule="TravelInformation" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="178"/>
-                                                                        <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-pD-ztD" userLabel="Date">
-                                                                                <rect key="frame" x="21" y="35.5" width="236" height="12"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="200" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSn-D8-Yc7" userLabel="Description">
-                                                                                <rect key="frame" x="21" y="55.5" width="244" height="109.5"/>
-                                                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies imperdiet est, eget congue elit pulvinar ut. Etiam nec ligula libero. Praesent ullamcorper commodo ante et fermentum. Suspendisse potenti. Fusce commodo neque gravida dignissim semper.</string>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Titulo da Noticia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzc-Pp-RMd">
-                                                                                <rect key="frame" x="21" y="13" width="244" height="19.5"/>
-                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzb-Lb-EQq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="168"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="tzc-Pp-RMd" firstAttribute="leading" secondItem="3L0-vX-HJT" secondAttribute="leading" constant="21" id="2xI-C6-P8t"/>
-                                                                            <constraint firstAttribute="width" constant="277" id="82d-df-pkM"/>
-                                                                            <constraint firstItem="hSn-D8-Yc7" firstAttribute="leading" secondItem="qrQ-pD-ztD" secondAttribute="leading" id="90N-dl-AKh"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="tzc-Pp-RMd" secondAttribute="trailing" constant="12" id="9c0-Zu-3uS"/>
-                                                                            <constraint firstItem="qrQ-pD-ztD" firstAttribute="top" secondItem="tzc-Pp-RMd" secondAttribute="bottom" constant="3" id="GHw-QX-noX"/>
-                                                                            <constraint firstItem="tzc-Pp-RMd" firstAttribute="top" secondItem="3L0-vX-HJT" secondAttribute="top" constant="13" id="IIM-2t-ML6"/>
-                                                                            <constraint firstItem="hSn-D8-Yc7" firstAttribute="top" secondItem="qrQ-pD-ztD" secondAttribute="bottom" constant="8" id="QfK-uB-jPu"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="hSn-D8-Yc7" secondAttribute="bottom" constant="13" id="Tzl-1a-T4D"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="hSn-D8-Yc7" secondAttribute="trailing" constant="12" id="bdI-9e-F5u"/>
-                                                                            <constraint firstItem="qrQ-pD-ztD" firstAttribute="leading" secondItem="tzc-Pp-RMd" secondAttribute="leading" id="t2d-Yi-c1r"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="qrQ-pD-ztD" secondAttribute="trailing" constant="20" id="zOn-GR-n8K"/>
+                                                                            <constraint firstAttribute="width" constant="20" id="fAo-kt-ukD"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="775-on-NAY">
-                                                                        <rect key="frame" x="282" y="0.0" width="150" height="178"/>
-                                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="zZ7-wg-h4V"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-Hb-ZhI">
-                                                                        <rect key="frame" x="437" y="0.0" width="150" height="178"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEZ-rS-2vw" customClass="NewsView" customModule="TravelInformation" customModuleProvider="target">
+                                                                        <rect key="frame" x="25" y="0.0" width="277" height="168"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="tae-dq-3Yf"/>
+                                                                            <constraint firstAttribute="height" constant="168" id="Lew-xI-4Jf"/>
+                                                                            <constraint firstAttribute="width" constant="277" id="syI-T3-cbJ"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-jJ-Jbi">
-                                                                        <rect key="frame" x="592" y="0.0" width="150" height="178"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugZ-Rr-CWp" customClass="NewsView" customModule="TravelInformation" customModuleProvider="target">
+                                                                        <rect key="frame" x="307" y="0.0" width="277" height="168"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="wli-G4-wRd"/>
+                                                                            <constraint firstAttribute="height" constant="168" id="fJK-Hb-fPv"/>
+                                                                            <constraint firstAttribute="width" constant="277" id="mOx-NM-vvJ"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiM-lp-4KH">
-                                                                        <rect key="frame" x="747" y="0.0" width="150" height="178"/>
-                                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="ALv-2I-YsX"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNl-Jl-04V">
-                                                                        <rect key="frame" x="902" y="0.0" width="150" height="178"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4x-cF-1re" customClass="NewsView" customModule="TravelInformation" customModuleProvider="target">
+                                                                        <rect key="frame" x="589" y="0.0" width="277" height="168"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="ymF-S1-MRe"/>
+                                                                            <constraint firstAttribute="width" constant="277" id="8lm-fF-oz3"/>
+                                                                            <constraint firstAttribute="height" constant="168" id="Yo9-iC-MQp"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYS-Tt-xUq">
-                                                                        <rect key="frame" x="1057" y="0.0" width="150" height="178"/>
-                                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzH-gF-3Or" customClass="NewsView" customModule="TravelInformation" customModuleProvider="target">
+                                                                        <rect key="frame" x="871" y="0.0" width="277" height="168"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="150" id="l6k-MY-5OE"/>
+                                                                            <constraint firstAttribute="width" constant="277" id="XrC-mF-0vc"/>
+                                                                            <constraint firstAttribute="height" constant="168" id="oaa-eS-8HS"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="3L0-vX-HJT" firstAttribute="height" secondItem="qU1-WU-nuV" secondAttribute="height" id="GLy-7I-0fO"/>
-                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
@@ -481,14 +466,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7"/>
                     <connections>
+                        <outlet property="capitalCountryLabel" destination="X9S-44-Sf7" id="3h9-Y9-nns"/>
                         <outlet property="countryImageView" destination="p1i-Rp-Zki" id="AXN-Kj-cZI"/>
                         <outlet property="culturalInformationBtn" destination="Lhi-ze-4oR" id="EtS-FI-wAu"/>
+                        <outlet property="nameCountryLabel" destination="5q3-4D-B7t" id="JVL-yM-Z1H"/>
                         <outlet property="needsToTravelBtn" destination="ZP1-80-X1B" id="zM8-Mh-p8g"/>
-                        <outlet property="stackView" destination="xtk-SC-hgH" id="tkc-KQ-OYo"/>
                         <outletCollection property="infosViews" destination="l53-xS-uLO" collectionClass="NSMutableArray" id="41k-EU-yTj"/>
                         <outletCollection property="infosViews" destination="RhY-hD-osI" collectionClass="NSMutableArray" id="QAo-tq-fW8"/>
                         <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="lCy-Wh-g3u"/>
-                        <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="kQj-bC-gzR"/>
                         <outletCollection property="infosViews" destination="T9U-hT-CY0" collectionClass="NSMutableArray" id="0mT-bm-Fcg"/>
                     </connections>
                 </viewController>
@@ -620,35 +605,25 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="imagemPais" width="374" height="244"/>
-        <image name="infoCulturalTag" width="373" height="50"/>
-        <image name="requisitosTag" width="373" height="50"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="detail">
-            <color red="0.2627450980392157" green="0.83529411764705885" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2630000114440918" green="0.83499997854232788" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
-            <color red="0.070588235294117646" green="0.094117647058823528" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.071000002324581146" green="0.093999996781349182" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
-            <color red="0.10588235294117647" green="0.14117647058823529" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10599999874830246" green="0.14100000262260437" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
