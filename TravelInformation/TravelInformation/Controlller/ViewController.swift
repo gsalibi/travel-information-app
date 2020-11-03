@@ -28,7 +28,11 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.fetchCountries { [weak self] (countries) in
             self?.countries = countries
+            
+            //Ordering countries by name
+            self?.countries = self?.countries.sorted(by: { $0.name.lowercased() < $1.name.lowercased()}) ?? countries
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

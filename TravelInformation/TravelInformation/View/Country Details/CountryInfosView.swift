@@ -32,8 +32,11 @@ class CountryInfosView: UIView {
     
     func commonInit(){
         Bundle.main.loadNibNamed("CountryInfosView", owner: self, options: nil)
+       
         addSubview(contentView)
+        
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
     }
 }

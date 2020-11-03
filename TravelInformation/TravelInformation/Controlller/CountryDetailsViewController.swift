@@ -67,10 +67,11 @@ class CountryDetailsViewController: UIViewController{
      
         if let value = value as? String{
             infoView.title.text = title
-//            if title = "Moeda"{
-//                
-//            }
+            
             infoView.value.text = value
+            if title == "Moeda"{
+                infoView.value.text = "iuehriauheiruhaiueraieuhriuaheiurhaiuehriuh ehai urhaiuehih aiuh aeh haeh aiueh aiueh iauhe aiuhe"
+            }
             infoView.isHidden = false
         }else{
             infoView.isHidden = true

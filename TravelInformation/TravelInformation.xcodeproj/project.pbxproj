@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		310F2F77D160129D9674759A /* Pods_TravelInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */; };
 		314EB932255180B30069722F /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB931255180B30069722F /* NewsView.swift */; };
+		314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */; };
+		314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB9402551B4550069722F /* VaccineInfoView.swift */; };
+		314EB9462551B6E40069722F /* VaccineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314EB9452551B6E40069722F /* VaccineInfoView.xib */; };
 		31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A5CBC7254B29F200CEF8DB /* Home.storyboard */; };
 		31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C4313D255076C500B817DD /* CountryInfosView.xib */; };
 		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
 		31C431482551737300B817DD /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C431472551737300B817DD /* NewsView.xib */; };
 		31C431522551757B00B817DD /* infoButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C431512551757B00B817DD /* infoButtonsView.swift */; };
+		31DAD06A2551D085001D61CF /* CulturalInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DAD0692551D085001D61CF /* CulturalInfoView.xib */; };
+		31DAD06F2551D096001D61CF /* CulturalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DAD06E2551D096001D61CF /* CulturalInfoView.swift */; };
 		9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
@@ -59,11 +64,16 @@
 		0AE88DF9D38563AB48B230A1 /* Pods-TravelInformationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformationTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelInformationTests/Pods-TravelInformationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		314EB931255180B30069722F /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoViewController.swift; sourceTree = "<group>"; };
+		314EB9402551B4550069722F /* VaccineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineInfoView.swift; sourceTree = "<group>"; };
+		314EB9452551B6E40069722F /* VaccineInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineInfoView.xib; sourceTree = "<group>"; };
 		31A5CBC7254B29F200CEF8DB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		31C4313D255076C500B817DD /* CountryInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfosView.xib; sourceTree = "<group>"; };
 		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
 		31C431472551737300B817DD /* NewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsView.xib; sourceTree = "<group>"; };
 		31C431512551757B00B817DD /* infoButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoButtonsView.swift; sourceTree = "<group>"; };
+		31DAD0692551D085001D61CF /* CulturalInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CulturalInfoView.xib; sourceTree = "<group>"; };
+		31DAD06E2551D096001D61CF /* CulturalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoView.swift; sourceTree = "<group>"; };
 		7DAC19A958B6DEFAB8E014DE /* Pods-TravelInformationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformationTests.release.xcconfig"; path = "Target Support Files/Pods-TravelInformationTests/Pods-TravelInformationTests.release.xcconfig"; sourceTree = "<group>"; };
 		92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
@@ -133,14 +143,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		31955B9B254B471A001C364E /* View */ = {
+		314EB9362551AD3A0069722F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				31C431512551757B00B817DD /* infoButtonsView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		314EB9372551AD460069722F /* Country Details */ = {
 			isa = PBXGroup;
 			children = (
 				31C4313D255076C500B817DD /* CountryInfosView.xib */,
 				31C43142255076E100B817DD /* CountryInfosView.swift */,
 				31C431472551737300B817DD /* NewsView.xib */,
-				31C431512551757B00B817DD /* infoButtonsView.swift */,
 				314EB931255180B30069722F /* NewsView.swift */,
+			);
+			path = "Country Details";
+			sourceTree = "<group>";
+		};
+		31955B9B254B471A001C364E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				314EB9372551AD460069722F /* Country Details */,
+				314EB9362551AD3A0069722F /* Buttons */,
+				314EB9402551B4550069722F /* VaccineInfoView.swift */,
+				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
+				31DAD0692551D085001D61CF /* CulturalInfoView.xib */,
+				31DAD06E2551D096001D61CF /* CulturalInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +182,7 @@
 				9AE3678525490F8C0077B5A2 /* NeedsToTravelViewController.swift */,
 				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 				9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */,
+				314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -395,12 +426,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				314EB9462551B6E40069722F /* VaccineInfoView.xib in Resources */,
 				31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */,
 				31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */,
 				31C431482551737300B817DD /* NewsView.xib in Resources */,
 				ECE232472536434A0030E21B /* LaunchScreen.storyboard in Resources */,
 				ECE232442536434A0030E21B /* Assets.xcassets in Resources */,
 				ECE2323F253643480030E21B /* Main.storyboard in Resources */,
+				31DAD06A2551D085001D61CF /* CulturalInfoView.xib in Resources */,
 				9AA6B74825477A9100CA16C8 /* GenerateResources.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,8 +532,11 @@
 				31C43143255076E100B817DD /* CountryInfosView.swift in Sources */,
 				9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */,
 				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
+				31DAD06F2551D096001D61CF /* CulturalInfoView.swift in Sources */,
 				314EB932255180B30069722F /* NewsView.swift in Sources */,
+				314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */,
 				31C431522551757B00B817DD /* infoButtonsView.swift in Sources */,
+				314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */,
 				ECE2323C253643480030E21B /* ViewController.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
 				9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */,
