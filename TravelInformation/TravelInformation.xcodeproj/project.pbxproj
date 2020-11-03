@@ -20,8 +20,6 @@
 		31DA3D2D2551F04F00120F0A /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */; };
 		31DA3D2E2551F04F00120F0A /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */; };
 		31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */; };
-		31DAD06A2551D085001D61CF /* CulturalInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DAD0692551D085001D61CF /* CulturalInfoView.xib */; };
-		31DAD06F2551D096001D61CF /* CulturalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DAD06E2551D096001D61CF /* CulturalInfoView.swift */; };
 		31DAD0A52551E1B5001D61CF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31DAD0982551DF23001D61CF /* Roboto-Light.ttf */; };
 		31DAD0A62551E1B5001D61CF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31DAD08C2551DF22001D61CF /* Roboto-Thin.ttf */; };
 		31DAD0A72551E1B5001D61CF /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31DAD09A2551DF23001D61CF /* Roboto-Italic.ttf */; };
@@ -96,8 +94,6 @@
 		31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
 		31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+CornerRadius.swift"; sourceTree = "<group>"; };
-		31DAD0692551D085001D61CF /* CulturalInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CulturalInfoView.xib; sourceTree = "<group>"; };
-		31DAD06E2551D096001D61CF /* CulturalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoView.swift; sourceTree = "<group>"; };
 		31DAD08A2551DF22001D61CF /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		31DAD08B2551DF22001D61CF /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		31DAD08C2551DF22001D61CF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
@@ -208,14 +204,10 @@
 		31955B9B254B471A001C364E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31DA3D4A2551F9B100120F0A /* Countries Table */,
+				31DA3D492551F9A000120F0A /* Vaccine  */,
 				314EB9372551AD460069722F /* Country Details */,
 				314EB9362551AD3A0069722F /* Buttons */,
-				314EB9402551B4550069722F /* VaccineInfoView.swift */,
-				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
-				31DAD0692551D085001D61CF /* CulturalInfoView.xib */,
-				31DAD06E2551D096001D61CF /* CulturalInfoView.swift */,
-				31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */,
-				31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */,
 				31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */,
 			);
 			path = View;
@@ -231,6 +223,24 @@
 				314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */,
 			);
 			path = Controlller;
+			sourceTree = "<group>";
+		};
+		31DA3D492551F9A000120F0A /* Vaccine  */ = {
+			isa = PBXGroup;
+			children = (
+				314EB9402551B4550069722F /* VaccineInfoView.swift */,
+				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
+			);
+			path = "Vaccine ";
+			sourceTree = "<group>";
+		};
+		31DA3D4A2551F9B100120F0A /* Countries Table */ = {
+			isa = PBXGroup;
+			children = (
+				31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */,
+				31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */,
+			);
+			path = "Countries Table";
 			sourceTree = "<group>";
 		};
 		9A4A53F4253791F600DE508F /* Models */ = {
@@ -514,7 +524,6 @@
 				ECE232442536434A0030E21B /* Assets.xcassets in Resources */,
 				ECE2323F253643480030E21B /* Main.storyboard in Resources */,
 				31DAD0AA2551E1B5001D61CF /* Roboto-Regular.ttf in Resources */,
-				31DAD06A2551D085001D61CF /* CulturalInfoView.xib in Resources */,
 				31DAD0B52551E1B5001D61CF /* RobotoCondensed-Bold.ttf in Resources */,
 				9AA6B74825477A9100CA16C8 /* GenerateResources.sh in Resources */,
 			);
@@ -616,7 +625,6 @@
 				31C43143255076E100B817DD /* CountryInfosView.swift in Sources */,
 				9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */,
 				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
-				31DAD06F2551D096001D61CF /* CulturalInfoView.swift in Sources */,
 				314EB932255180B30069722F /* NewsView.swift in Sources */,
 				314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */,
 				31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */,

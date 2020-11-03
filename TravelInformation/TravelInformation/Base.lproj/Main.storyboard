@@ -28,7 +28,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-UG-H98">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <color key="separatorColor" name="primary"/>
+                                <color key="sectionIndexBackgroundColor" name="primary"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Pcq-7O-Kwp"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5aD-yP-nnm"/>
@@ -36,7 +38,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="wpd-UG-H98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0fb-ji-2zp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpd-UG-H98" secondAttribute="bottom" id="O5M-pw-0Bk"/>
@@ -533,7 +535,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I40-Lz-dgP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="primary"/>
                         <constraints>
                             <constraint firstItem="I40-Lz-dgP" firstAttribute="bottom" secondItem="Fh1-hq-zVW" secondAttribute="bottom" id="Gtg-2x-Xgx"/>
                             <constraint firstItem="I40-Lz-dgP" firstAttribute="top" secondItem="Fh1-hq-zVW" secondAttribute="top" id="IWf-KR-NiE"/>
