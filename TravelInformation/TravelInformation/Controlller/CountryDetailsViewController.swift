@@ -83,7 +83,10 @@ class CountryDetailsViewController: UIViewController{
                         setCountryInfos(infoView: infosViews[i], title: "Seguro de Saúde", value: "Obrigatório")
                     }
                 }
-                
+            case 5:
+                setCountryInfos(infoView: infosViews[i], title: "Montante máximo de dinheiro para entrar no país sem declarar", value: country?.entryCurrency )
+            case 6:
+                setCountryInfos(infoView: infosViews[i], title: "Montante máximo de dinheiro para sair do país sem declarar", value: country?.exitCurrency)
             default:
                 print(i)
             }
