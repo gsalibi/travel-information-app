@@ -133,6 +133,11 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="121.5" height="64"/>
                                                                         <color key="backgroundColor" name="secondary"/>
                                                                         <color key="tintColor" name="secondary"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-pa-Da5">
                                                                         <rect key="frame" x="52.5" y="7" width="16" height="25"/>
@@ -160,6 +165,11 @@
                                                                     <constraint firstItem="C5g-4i-gf9" firstAttribute="centerX" secondItem="vg9-cX-dty" secondAttribute="centerX" id="qiR-hx-ulK"/>
                                                                     <constraint firstItem="C5g-4i-gf9" firstAttribute="centerY" secondItem="vg9-cX-dty" secondAttribute="centerY" id="uLi-fM-JA6"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tie-1Z-Tuf">
                                                                 <rect key="frame" x="126.5" y="0.0" width="121" height="64"/>
@@ -168,6 +178,11 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="121" height="64"/>
                                                                         <color key="backgroundColor" name="secondary"/>
                                                                         <color key="tintColor" name="secondary"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-Eb-QCV">
                                                                         <rect key="frame" x="52.5" y="9.5" width="16" height="21.5"/>
@@ -195,6 +210,11 @@
                                                                     <constraint firstItem="CZi-S3-Tmn" firstAttribute="height" secondItem="tie-1Z-Tuf" secondAttribute="height" id="rgV-tx-XSK"/>
                                                                     <constraint firstItem="CZi-S3-Tmn" firstAttribute="width" secondItem="tie-1Z-Tuf" secondAttribute="width" id="sUt-mY-YoA"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68g-eY-HMB">
                                                                 <rect key="frame" x="252.5" y="0.0" width="121.5" height="64"/>
@@ -204,8 +224,8 @@
                                                                         <color key="backgroundColor" name="secondary"/>
                                                                         <color key="tintColor" name="secondary"/>
                                                                     </button>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-0L-n3K">
-                                                                        <rect key="frame" x="53" y="10" width="16" height="20.5"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleCheck" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-0L-n3K">
+                                                                        <rect key="frame" x="53" y="8" width="16" height="24"/>
                                                                         <color key="tintColor" name="detail"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="QgO-3p-xKG"/>
@@ -230,6 +250,11 @@
                                                                     <constraint firstItem="3fJ-jY-01H" firstAttribute="centerX" secondItem="TM7-0L-n3K" secondAttribute="centerX" id="uLz-Cr-dEw"/>
                                                                     <constraint firstItem="NP4-dh-xOP" firstAttribute="centerY" secondItem="68g-eY-HMB" secondAttribute="centerY" id="zhu-gK-hfV"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <constraints>
@@ -319,8 +344,8 @@
                                                             <action selector="goVaccineInfo:" destination="BiW-BS-Brh" eventType="touchUpInside" id="zzU-O7-eAT"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-xK-2HW">
-                                                        <rect key="frame" x="366" y="17" width="8" height="15.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-xK-2HW">
+                                                        <rect key="frame" x="366" y="15" width="8" height="20"/>
                                                         <color key="tintColor" name="detail"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="wVX-7Q-Ooj"/>
@@ -362,8 +387,8 @@
                                                             <action selector="goCultureInfo:" destination="BiW-BS-Brh" eventType="touchUpInside" id="PwN-Qk-TrW"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6uU-2X-iwI">
-                                                        <rect key="frame" x="366" y="27" width="8" height="15.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonArrow" translatesAutoresizingMaskIntoConstraints="NO" id="6uU-2X-iwI">
+                                                        <rect key="frame" x="366" y="25" width="8" height="20"/>
                                                         <color key="tintColor" name="detail"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="6uU-2X-iwI" secondAttribute="height" multiplier="2:5" id="NhO-dD-VuQ"/>
@@ -666,8 +691,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="buttonArrow" width="20" height="36"/>
+        <image name="doubleCheck" width="66" height="42"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="imagemPais" width="374" height="244"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
