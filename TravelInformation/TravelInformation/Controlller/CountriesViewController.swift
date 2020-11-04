@@ -20,7 +20,7 @@ class CountriesViewController: UIViewController {
     }
     
     var selectedCountry: Country?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -46,7 +46,7 @@ class CountriesViewController: UIViewController {
             let destinationVC = segue.destination as! CountryDetailsViewController
             
             destinationVC.country = selectedCountry
-
+            
         default:
             print("Segue id not implemented")
         }
@@ -63,7 +63,10 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell{
             let cellCountry = self.countries[indexPath.row]
             cell.name.text = cellCountry.name
-            
+            if let image = ImageAsset(name: cellCountry.name).image as? UIImage{
+                cell.flagImage.image = image
+            }else{
+                print("Ver nome do país e o nome da baneria \(cellCountry.name)")}
             return cell
         }else{
             print("cade a ceklula")

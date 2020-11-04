@@ -19,6 +19,7 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet weak var nameCountryLabel: UILabel!
     @IBOutlet weak var capitalCountryLabel: UILabel!
     
+    @IBOutlet weak var flagImage: UIImageView!
     
     /// Country's information array.
     /// Comes in the following order: name, capitalCity, currency, oficialLanguage, entryNeeds, exitNeeds, touristVisa, businessVisa.
@@ -32,6 +33,7 @@ class CountryDetailsViewController: UIViewController{
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
         if let name = country?.name{
             self.navigationItem.title = name
+            self.flagImage.image = ImageAsset(name: name).image
         }
         
         
