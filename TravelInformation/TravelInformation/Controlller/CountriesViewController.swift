@@ -37,7 +37,7 @@ class CountriesViewController: UIViewController {
             self?.countries = countries
             
             //Ordering countries by name
-            self?.countries = self?.countries.sorted(by: { $0.name.lowercased() < $1.name.lowercased()}) ?? countries
+            self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
         }
         
         //change back button collor of navigation bar

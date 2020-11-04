@@ -15,6 +15,7 @@ class Country: Codable {
     let capital, currency, language, passportValidity: String?
     let entryCurrency, exitCurrency: String?
     let touristVisa, businessVisa: Visa?
+    let insurance: Insurance?
     let vaccines: Vaccines
     let culture: [String: String]?
 
@@ -25,10 +26,11 @@ class Country: Codable {
         case exitCurrency = "exit_currency"
         case touristVisa = "tourist_visa"
         case businessVisa = "business_visa"
+        case insurance = "insurance"
         case vaccines, culture
     }
 
-    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?, vaccines: Vaccines, culture: [String: String]?) {
+    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?, vaccines: Vaccines, culture: [String: String]?, insurance: Insurance?) {
         self.name = name
         self.capital = capital
         self.currency = currency
@@ -40,7 +42,14 @@ class Country: Codable {
         self.businessVisa = businessVisa
         self.vaccines = vaccines
         self.culture = culture
+        self.insurance = insurance
     }
+}
+
+enum Insurance: String, Codable{
+    case recommendable = "Recomendavel"
+    case highlyRecommendable = "Altamente Recomendavel"
+    case mandatory = "Obrigatorio"
 }
 
 enum Visa: String, Codable {

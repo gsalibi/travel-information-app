@@ -33,13 +33,13 @@ class CountryDetailsViewController: UIViewController{
         super.viewDidLoad()
         setTexts()
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-       
+        
         
         
         
     }
     //MARK: Set infos in views
-
+    
     
     func setTexts() {
         //Unraping and setting name of the Country and Capital
@@ -50,7 +50,7 @@ class CountryDetailsViewController: UIViewController{
         }else{
             //Never happen
             nameCountryLabel.text = "País desconhecido 🧐"
-    
+            
         }
         
         if let capital = country?.capital{
@@ -72,7 +72,18 @@ class CountryDetailsViewController: UIViewController{
             case 3:
                 setCountryInfos(infoView: infosViews[i], title: "Visto de negócio", value: country?.businessVisa?.rawValue)
             case 4:
-                setCountryInfos(infoView: infosViews[i], title: "Seguro de Saúde", value: "Recomendável")
+                if let insurance = country?.insurance{
+                    switch insurance{
+                    case .highlyRecommendable:
+                        setCountryInfos(infoView: infosViews[i], title: "Seguro de Saúde", value: "Altamente Recomendável")
+                    case .recommendable:
+                        setCountryInfos(infoView: infosViews[i], title: "Seguro de Saúde", value: "Recomendável")
+                        
+                    case .mandatory:
+                        setCountryInfos(infoView: infosViews[i], title: "Seguro de Saúde", value: "Obrigatório")
+                    }
+                }
+                
             default:
                 print(i)
             }
@@ -80,7 +91,7 @@ class CountryDetailsViewController: UIViewController{
     }
     
     func setCountryInfos(infoView: CountryInfosView, title: String, value: Any?){
-     
+        
         //Set values in the CountryInfosView
         if let value = value as? String{
             infoView.title.text = title
