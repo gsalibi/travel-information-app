@@ -11,6 +11,7 @@ class CountriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    //reload the tableview every time we change the array
     var countries: [Country] = [] {
         didSet{
             DispatchQueue.main.async {
@@ -23,11 +24,15 @@ class CountriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Set tableView
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Load tableview cell register
         let nib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "countryCell")
         
+        //Fetch countries from database
         NetworkManager.shared.fetchCountries { [weak self] (countries) in
             self?.countries = countries
             
@@ -35,10 +40,13 @@ class CountriesViewController: UIViewController {
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased() < $1.name.lowercased()}) ?? countries
         }
         
+        //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
         
     }
     
+    //MARK: Segues
+    //Handling segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "countrySelected":
@@ -52,6 +60,8 @@ class CountriesViewController: UIViewController {
         }
     }
 }
+
+    //MARK: Table View Delegate and Data Source
 extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.countries.count
@@ -63,10 +73,8 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell{
             let cellCountry = self.countries[indexPath.row]
             cell.name.text = cellCountry.name
-            if let image = ImageAsset(name: cellCountry.name).image as? UIImage{
-                cell.flagImage.image = image
-            }else{
-                print("Ver nome do país e o nome da baneria \(cellCountry.name)")}
+            cell.flagImage.image = ImageAsset(name: cellCountry.name).image
+            
             return cell
         }else{
             print("cade a ceklula")
@@ -77,7 +85,6 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countries[indexPath.row]
-        
         performSegue(withIdentifier: "countrySelected", sender: self)
         
     }
