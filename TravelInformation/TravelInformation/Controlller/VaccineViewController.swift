@@ -23,7 +23,7 @@ class VaccineViewController: UIViewController {
     }
     
     func setVaccinesInformation() {
-        print(country?.vaccines)
+//        print(country?.vaccines)
 //        if let vaccines = country?.vaccines{
 //            print(vaccines)
 //            for vacineInfo in vaccines.{

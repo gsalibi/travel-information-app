@@ -80,7 +80,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="340.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagemPais" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Rp-Zki">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryImage" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Rp-Zki">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="p1i-Rp-Zki" secondAttribute="height" multiplier="414:312" id="p77-JO-cji"/>
@@ -692,6 +692,7 @@
     </scenes>
     <resources>
         <image name="buttonArrow" width="20" height="36"/>
+        <image name="countryImage" width="414" height="312"/>
         <image name="doubleCheck" width="66" height="42"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="imagemPais" width="374" height="244"/>
