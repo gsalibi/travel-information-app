@@ -45,7 +45,8 @@ class CountryDetailsViewController: UIViewController{
         //Unraping and setting name of the Country and Capital
         if let name = country?.name{
             nameCountryLabel.text = name
-            self.flagImage.image = ImageAsset(name: name).image
+            let imageName = name.replacingOccurrences(of: " " , with: "").lowercased().folding(options: .diacriticInsensitive, locale: .current)
+            self.flagImage.image = ImageAsset(name: imageName).image
             self.navigationItem.title = name //Navigation controller title
         }else{
             //Never happen

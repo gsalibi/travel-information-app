@@ -73,7 +73,8 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
         if let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell{
             let cellCountry = self.countries[indexPath.row]
             cell.name.text = cellCountry.name
-            cell.flagImage.image = ImageAsset(name: cellCountry.name).image
+            let imageName = cellCountry.name.replacingOccurrences(of: " " , with: "").lowercased().folding(options: .diacriticInsensitive, locale: .current)
+            cell.flagImage.image = ImageAsset(name: imageName).image
             
             return cell
         }else{
