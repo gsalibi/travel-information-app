@@ -11,6 +11,7 @@ import Foundation
 
 // MARK: - Country
 class Country: Codable {
+    
     let name: String
     let capital, currency, language, passportValidity: String?
     let entryCurrency, exitCurrency: String?
