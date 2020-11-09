@@ -112,9 +112,9 @@ extension CountriesViewController: UITableViewDelegate, UITableViewDataSource{
             var cellCountry : Country
             
             if let filteredCountries = filteredCountries{
-                 cellCountry = filteredCountries[indexPath.row]
+                cellCountry = filteredCountries[indexPath.row]
             }else{
-                 cellCountry = self.countries[indexPath.row]
+                cellCountry = self.countries[indexPath.row]
             }
             
             cell.name.text = cellCountry.name
@@ -174,9 +174,9 @@ extension CountriesViewController: UISearchBarDelegate{
         
         //Filter case
         if searchText.isEmpty == false {
-                if let filtered = filterFor(name: searchText, allCountries: self.countries) {
-                    self.filteredCountries = filtered
-                }
+            if let filtered = filterFor(name: searchText, allCountries: self.countries) {
+                self.filteredCountries = filtered
+            }
         }
         
         updateTableViewAnimated()
@@ -191,19 +191,60 @@ extension CountriesViewController: UISearchBarDelegate{
         //Transform all in uppercased
         var name = name.uppercased()
         name = name.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
+        var finalResult: [Country] = []
+        let groupDispatch = DispatchGroup()
+        var filteredNames: [String] = []
         
-        let filterCountries = allCountries.filter({ (countries) -> Bool in
+        //        groupDispatch.enter()
+        let filterByInitial = allCountries.filter { (countries) -> Bool in
+            var countryName = countries.name.uppercased()
+            countryName = countryName.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
+            
+            //            if countries.name == allCountries.last?.name{
+            //                groupDispatch.leave()
+            //            }
+            
+            if countryName.hasPrefix(name){
+                filteredNames.append(countryName)
+                return true
+            }else{
+                return false
+            }
+        }
+        
+        //        groupDispatch.enter()
+        var filterCountries = allCountries.filter({ (countries) -> Bool in
             //Filter for name
             //Compare with uppercased
             var countryName = countries.name.uppercased()
+            print(filterByInitial.count)
             countryName = countryName.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
-            if countryName.contains(name) {
-                return true
+            //            if countries.name == allCountries.last?.name{
+            //                groupDispatch.leave()
+            //            }
+            if !filteredNames.contains(countryName){
+                if countryName.contains(name) {
+                    return true
+                }
+                return false
+            }else{
+                return false
             }
-            return false
         })
         
-        return filterCountries
+        //        for country in filterCountries{
+        //            for country2 in fil
+        //        }
+        
+        finalResult.append(contentsOf: filterByInitial)
+        finalResult.append(contentsOf: filterCountries)
+        return finalResult
+        
+        //        groupDispatch.notify(queue: .main) {
+        //            finalResult.append(contentsOf: filterByInitial)
+        //            finalResult.append(contentsOf: filterCountries)
+        //            return finalResult
+        //        }
     }
     
 }
