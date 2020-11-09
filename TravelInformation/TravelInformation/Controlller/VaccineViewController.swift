@@ -22,15 +22,13 @@ class VaccineViewController: UIViewController {
 
     }
     
+  
+    
     func setVaccinesInformation() {
-//        print(country?.vaccines)
-//        if let vaccines = country?.vaccines{
-//            print(vaccines)
-//            for vacineInfo in vaccines.{
-//
-//        }
-//
-//        }
+        let frame = CGRect(x: 0, y: 0, width: self.stackView.frame.width, height: 100)
+        let testView = VaccineCodeView(frame: frame, name: "Febre Amarela", demand: "Sim", text: "Vamosdhaos aoidhja daoisdjaon dadhoiashjda dahdoiashda dandoihaoidhaiodhoad dasoidhijoaishdoiasd asdoiahsdoiahd adhoaihdoa daidhasd asodasoid asdoaishd")
+        
+        self.stackView.addArrangedSubview(testView)
     }
     
 }

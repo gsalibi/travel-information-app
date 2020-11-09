@@ -33,10 +33,7 @@ class CountryDetailsViewController: UIViewController{
         super.viewDidLoad()
         setTexts()
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-        
-        
-        
-        
+
     }
     //MARK: Set infos in views
     

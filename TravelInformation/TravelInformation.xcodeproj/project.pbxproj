@@ -17,6 +17,7 @@
 		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
 		31C431482551737300B817DD /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C431472551737300B817DD /* NewsView.xib */; };
 		31C431522551757B00B817DD /* infoButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C431512551757B00B817DD /* infoButtonsView.swift */; };
+		31C540AB25596B7600045212 /* VaccineCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C540AA25596B7600045212 /* VaccineCodeView.swift */; };
 		31DA3D2D2551F04F00120F0A /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */; };
 		31DA3D2E2551F04F00120F0A /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */; };
 		31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */; };
@@ -91,6 +92,7 @@
 		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
 		31C431472551737300B817DD /* NewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsView.xib; sourceTree = "<group>"; };
 		31C431512551757B00B817DD /* infoButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoButtonsView.swift; sourceTree = "<group>"; };
+		31C540AA25596B7600045212 /* VaccineCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCodeView.swift; sourceTree = "<group>"; };
 		31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
 		31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+CornerRadius.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				314EB9402551B4550069722F /* VaccineInfoView.swift */,
 				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
+				31C540AA25596B7600045212 /* VaccineCodeView.swift */,
 			);
 			path = "Vaccine ";
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */,
 				ECE2323C253643480030E21B /* CountriesViewController.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
+				31C540AB25596B7600045212 /* VaccineCodeView.swift in Sources */,
 				9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */,
 				9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */,
 				ECE23242253643480030E21B /* TravelInformation.xcdatamodeld in Sources */,
