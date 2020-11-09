@@ -192,18 +192,13 @@ extension CountriesViewController: UISearchBarDelegate{
         var name = name.uppercased()
         name = name.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
         var finalResult: [Country] = []
-        let groupDispatch = DispatchGroup()
         var filteredNames: [String] = []
         
-        //        groupDispatch.enter()
+        //Filter if country name begin with search
         let filterByInitial = allCountries.filter { (countries) -> Bool in
             var countryName = countries.name.uppercased()
             countryName = countryName.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
-            
-            //            if countries.name == allCountries.last?.name{
-            //                groupDispatch.leave()
-            //            }
-            
+    
             if countryName.hasPrefix(name){
                 filteredNames.append(countryName)
                 return true
@@ -212,16 +207,11 @@ extension CountriesViewController: UISearchBarDelegate{
             }
         }
         
-        //        groupDispatch.enter()
-        var filterCountries = allCountries.filter({ (countries) -> Bool in
-            //Filter for name
-            //Compare with uppercased
+        //Filter if country name contains search
+        let filterCountries = allCountries.filter({ (countries) -> Bool in
+   
             var countryName = countries.name.uppercased()
-            print(filterByInitial.count)
             countryName = countryName.folding(options: .diacriticInsensitive, locale: Locale(identifier: "pt_BR"))
-            //            if countries.name == allCountries.last?.name{
-            //                groupDispatch.leave()
-            //            }
             if !filteredNames.contains(countryName){
                 if countryName.contains(name) {
                     return true
@@ -232,19 +222,11 @@ extension CountriesViewController: UISearchBarDelegate{
             }
         })
         
-        //        for country in filterCountries{
-        //            for country2 in fil
-        //        }
-        
+        //Append arrays to display first the country that began with searched string
         finalResult.append(contentsOf: filterByInitial)
         finalResult.append(contentsOf: filterCountries)
         return finalResult
         
-        //        groupDispatch.notify(queue: .main) {
-        //            finalResult.append(contentsOf: filterByInitial)
-        //            finalResult.append(contentsOf: filterCountries)
-        //            return finalResult
-        //        }
     }
     
 }
