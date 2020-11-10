@@ -23,7 +23,7 @@ class VaccineInfoView: UIView {
     }
     
     func commonInit(){
-        Bundle.main.loadNibNamed("CulturalInfoView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("VaccineInfoView", owner: self, options: nil)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
         contentView.frame = self.stackView.bounds

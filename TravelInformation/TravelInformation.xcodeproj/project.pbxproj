@@ -51,6 +51,7 @@
 		9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4D11325380A000026EC8B /* QueueManager.swift */; };
 		9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */; };
 		C192DAA55595030AEC8D2DA5 /* Pods_TravelInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */; };
+		EC290911255A3C0A00089CF3 /* DiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC290910255A3C0A00089CF3 /* DiseaseCell.swift */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
 		ECE2323C253643480030E21B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2323B253643480030E21B /* CountriesViewController.swift */; };
@@ -127,6 +128,7 @@
 		9AE4D11325380A000026EC8B /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		AA4CCB5FF876D179FDAF1C6E /* Pods-TravelInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformation.release.xcconfig"; path = "Target Support Files/Pods-TravelInformation/Pods-TravelInformation.release.xcconfig"; sourceTree = "<group>"; };
+		EC290910255A3C0A00089CF3 /* DiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseCell.swift; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE23239253643480030E21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		31DA3D492551F9A000120F0A /* Vaccine  */ = {
 			isa = PBXGroup;
 			children = (
+				EC290910255A3C0A00089CF3 /* DiseaseCell.swift */,
 				314EB9402551B4550069722F /* VaccineInfoView.swift */,
 				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
 			);
@@ -643,6 +646,7 @@
 				9AE4D111253808D70026EC8B /* CountryServices.swift in Sources */,
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
+				EC290911255A3C0A00089CF3 /* DiseaseCell.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
