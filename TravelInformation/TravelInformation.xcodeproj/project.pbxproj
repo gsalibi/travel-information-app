@@ -10,8 +10,6 @@
 		310F2F77D160129D9674759A /* Pods_TravelInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */; };
 		314EB932255180B30069722F /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB931255180B30069722F /* NewsView.swift */; };
 		314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */; };
-		314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB9402551B4550069722F /* VaccineInfoView.swift */; };
-		314EB9462551B6E40069722F /* VaccineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314EB9452551B6E40069722F /* VaccineInfoView.xib */; };
 		31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A5CBC7254B29F200CEF8DB /* Home.storyboard */; };
 		31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C4313D255076C500B817DD /* CountryInfosView.xib */; };
 		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
@@ -85,8 +83,6 @@
 		1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		314EB931255180B30069722F /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoViewController.swift; sourceTree = "<group>"; };
-		314EB9402551B4550069722F /* VaccineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineInfoView.swift; sourceTree = "<group>"; };
-		314EB9452551B6E40069722F /* VaccineInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineInfoView.xib; sourceTree = "<group>"; };
 		31A5CBC7254B29F200CEF8DB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		31C4313D255076C500B817DD /* CountryInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfosView.xib; sourceTree = "<group>"; };
 		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
@@ -231,8 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				EC290910255A3C0A00089CF3 /* DiseaseCell.swift */,
-				314EB9402551B4550069722F /* VaccineInfoView.swift */,
-				314EB9452551B6E40069722F /* VaccineInfoView.xib */,
 			);
 			path = "Vaccine ";
 			sourceTree = "<group>";
@@ -502,7 +496,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				314EB9462551B6E40069722F /* VaccineInfoView.xib in Resources */,
 				31DAD0AE2551E1B5001D61CF /* Roboto-Bold.ttf in Resources */,
 				31DAD0A72551E1B5001D61CF /* Roboto-Italic.ttf in Resources */,
 				31DAD0AD2551E1B5001D61CF /* RobotoCondensed-BoldItalic.ttf in Resources */,
@@ -629,7 +622,6 @@
 				9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */,
 				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
 				314EB932255180B30069722F /* NewsView.swift in Sources */,
-				314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */,
 				31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */,
 				31C431522551757B00B817DD /* infoButtonsView.swift in Sources */,
 				314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */,
