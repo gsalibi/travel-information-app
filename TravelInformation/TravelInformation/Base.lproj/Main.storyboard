@@ -544,7 +544,9 @@
                             <constraint firstItem="iSh-rK-1ja" firstAttribute="bottom" secondItem="aO8-tB-b7z" secondAttribute="bottom" id="mom-DK-t2l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7"/>
+                    <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Rvj-6P-RVA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="capitalCountryLabel" destination="X9S-44-Sf7" id="3h9-Y9-nns"/>
                         <outlet property="countryImageView" destination="p1i-Rp-Zki" id="AXN-Kj-cZI"/>
@@ -560,7 +562,7 @@
                         <outletCollection property="infosViews" destination="nFw-2v-ErY" collectionClass="NSMutableArray" id="da6-cL-cyC"/>
                         <outletCollection property="infosViews" destination="Go7-ys-Cpy" collectionClass="NSMutableArray" id="uN3-kE-JZn"/>
                         <segue destination="jMK-7l-xZa" kind="show" identifier="infoCulture" id="yQe-pu-8ws"/>
-                        <segue destination="0gR-NF-kHZ" kind="show" identifier="vaccineInfo" id="isy-cd-H3T"/>
+                        <segue destination="bLC-Nt-e2C" kind="show" identifier="vaccineInfo" id="u6G-Pd-9uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -617,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Yn-Ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4232" y="981"/>
+            <point key="canvasLocation" x="4429" y="981"/>
         </scene>
         <!--Item-->
         <scene sceneID="EJK-Gv-RBC">
@@ -644,57 +646,6 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--Nome do país-->
-        <scene sceneID="a1v-Gt-hCM">
-            <objects>
-                <viewController id="0gR-NF-kHZ" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5JY-jJ-XXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-NK-vwQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-4b-GlP">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="211"/>
-                                        <color key="backgroundColor" name="primary"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="60C-rW-uX2"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" name="primary"/>
-                                <constraints>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="trailing" secondItem="5Pu-Mz-Kmy" secondAttribute="trailing" constant="-20" id="012-dq-fOs"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="bottom" secondItem="IiZ-jU-Nik" secondAttribute="bottom" id="71d-uu-cMx"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="trailing" secondItem="IiZ-jU-Nik" secondAttribute="trailing" id="7ci-du-Jlb"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="top" secondItem="IiZ-jU-Nik" secondAttribute="top" id="9fH-TK-lHQ"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="leading" secondItem="IiZ-jU-Nik" secondAttribute="leading" id="Fhe-wC-L0h"/>
-                                    <constraint firstItem="5Pu-Mz-Kmy" firstAttribute="bottom" secondItem="KTp-4b-GlP" secondAttribute="bottom" priority="100" constant="597" id="ccD-NO-d7H"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="top" secondItem="KLj-NK-vwQ" secondAttribute="top" id="sjY-ZZ-Ucc"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="IiZ-jU-Nik"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="5Pu-Mz-Kmy"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="PDY-Ee-QoW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="KLj-NK-vwQ" secondAttribute="bottom" id="0y4-Cz-bI7"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="leading" secondItem="PDY-Ee-QoW" secondAttribute="leading" id="O9z-qX-FVJ"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="top" secondItem="PDY-Ee-QoW" secondAttribute="top" id="d3U-gW-hLq"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="trailing" secondItem="PDY-Ee-QoW" secondAttribute="trailing" id="wkj-1E-iBi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Nome do país" id="VSU-b8-ctK"/>
-                    <connections>
-                        <outlet property="stackView" destination="KTp-4b-GlP" id="BaS-Co-9qS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iM3-cW-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4233" y="-548"/>
-        </scene>
         <!--Home-->
         <scene sceneID="1Zi-qM-k3e">
             <objects>
@@ -705,7 +656,153 @@
             </objects>
             <point key="canvasLocation" x="147" y="690"/>
         </scene>
+        <!--Informações Sobre Saúde-->
+        <scene sceneID="sOg-UI-K7w">
+            <objects>
+                <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="primary"/>
+                        <color key="sectionIndexBackgroundColor" name="primary"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="diseaseCell" id="YSt-zd-VeU" customClass="DiseaseCell" customModule="TravelInformation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="453"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YSt-zd-VeU" id="o4A-Yc-hWr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="453"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aI-RaO" userLabel="PrincipalView">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="443"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Doença" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWn-6B-KNw">
+                                                    <rect key="frame" x="17" y="17" width="43.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-ir-KiX">
+                                                    <rect key="frame" x="17" y="34" width="319.5" height="39"/>
+                                                    <string key="text">Febre amarela - Certificado Internacional de
+Vacinação – CIVP"</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-0y-unS">
+                                                    <rect key="frame" x="17" y="90" width="340" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="5gR-Tl-97N"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Vacina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-Rx-Izi">
+                                                    <rect key="frame" x="17" y="108" width="37.5" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sim (Exigência)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-iT-B32">
+                                                    <rect key="frame" x="17" y="125" width="112" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNh-EX-UAQ">
+                                                    <rect key="frame" x="17" y="161.5" width="340" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Rwq-lO-Ksg"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-Us-5j3">
+                                                    <rect key="frame" x="17" y="179.5" width="57" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y1-57-OU2">
+                                                    <rect key="frame" x="17" y="196.5" width="340" height="229.5"/>
+                                                    <string key="text">País informa na publicação International
+Travel and Health (http://www.who.int/ith) que
+exige o Certificado Internacional de Vacinação
+ou Profilaxia contra a febre amarela para todos
+os viajantes a partir de 1 ano de idade
+procedentes de países com risco de
+transmissão de febre amarela, inclusive
+viajantes que fizerem conexão por mais de 12
+horas em um desses países.
+A vacinação contra febre amarela registrada no
+Certificado é válida por toda a vida.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" name="text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="secondary"/>
+                                            <constraints>
+                                                <constraint firstItem="L0F-Rx-Izi" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="0Op-Kf-rpi"/>
+                                                <constraint firstItem="Zlj-iT-B32" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="4AO-xH-L9y"/>
+                                                <constraint firstItem="KmA-Us-5j3" firstAttribute="top" secondItem="SNh-EX-UAQ" secondAttribute="bottom" constant="17" id="5i0-Fz-Gqw"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bWn-6B-KNw" secondAttribute="trailing" constant="17" id="6n5-c6-LwE"/>
+                                                <constraint firstAttribute="bottom" secondItem="3y1-57-OU2" secondAttribute="bottom" constant="17" id="703-kX-9V0"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zlj-iT-B32" secondAttribute="trailing" constant="17" id="8Xk-Ud-bgo"/>
+                                                <constraint firstItem="3y1-57-OU2" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="D5M-6G-RSY"/>
+                                                <constraint firstItem="L0F-Rx-Izi" firstAttribute="top" secondItem="Pwm-0y-unS" secondAttribute="bottom" constant="17" id="Lbo-1a-onp"/>
+                                                <constraint firstItem="Zlj-iT-B32" firstAttribute="top" secondItem="L0F-Rx-Izi" secondAttribute="bottom" constant="2" id="OBD-Dm-0E7"/>
+                                                <constraint firstItem="SNh-EX-UAQ" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="Pnh-ef-hrt"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3y1-57-OU2" secondAttribute="trailing" constant="17" id="QwK-l3-Aey"/>
+                                                <constraint firstItem="KmA-Us-5j3" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="Qzp-aG-1N7"/>
+                                                <constraint firstItem="Pwm-0y-unS" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="ScJ-tX-cUL"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rzA-ir-KiX" secondAttribute="trailing" constant="17" id="UoI-G8-ilP"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L0F-Rx-Izi" secondAttribute="trailing" constant="17" id="ZrY-w1-OiN"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KmA-Us-5j3" secondAttribute="trailing" constant="17" id="bPS-6p-YDT"/>
+                                                <constraint firstItem="rzA-ir-KiX" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="gKN-ka-iNf"/>
+                                                <constraint firstItem="rzA-ir-KiX" firstAttribute="top" secondItem="bWn-6B-KNw" secondAttribute="bottom" constant="2" id="hZK-cS-pde"/>
+                                                <constraint firstItem="Pwm-0y-unS" firstAttribute="top" secondItem="rzA-ir-KiX" secondAttribute="bottom" constant="17" id="iHV-py-fRZ"/>
+                                                <constraint firstItem="bWn-6B-KNw" firstAttribute="leading" secondItem="nLf-aI-RaO" secondAttribute="leading" constant="17" id="iZ8-16-gwv"/>
+                                                <constraint firstAttribute="trailing" secondItem="SNh-EX-UAQ" secondAttribute="trailing" constant="17" id="jFn-xr-fWP"/>
+                                                <constraint firstItem="SNh-EX-UAQ" firstAttribute="top" secondItem="Zlj-iT-B32" secondAttribute="bottom" constant="17" id="rlB-aC-GMR"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pwm-0y-unS" secondAttribute="trailing" constant="17" id="tbX-5U-O8R"/>
+                                                <constraint firstItem="3y1-57-OU2" firstAttribute="top" secondItem="KmA-Us-5j3" secondAttribute="bottom" constant="2" id="tpw-eA-lsA"/>
+                                                <constraint firstItem="bWn-6B-KNw" firstAttribute="top" secondItem="nLf-aI-RaO" secondAttribute="top" constant="17" id="zvi-FI-t9H"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" name="primary"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="nLf-aI-RaO" secondAttribute="bottom" constant="10" id="44u-2P-gDq"/>
+                                        <constraint firstItem="nLf-aI-RaO" firstAttribute="top" secondItem="o4A-Yc-hWr" secondAttribute="top" id="LwJ-Pt-I9e"/>
+                                        <constraint firstItem="nLf-aI-RaO" firstAttribute="leading" secondItem="o4A-Yc-hWr" secondAttribute="leading" constant="20" id="XOr-dm-lCJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="nLf-aI-RaO" secondAttribute="trailing" constant="20" id="eLL-4u-bR2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="3y1-57-OU2" id="BLM-z0-MII"/>
+                                    <outlet property="diseaseLabel" destination="rzA-ir-KiX" id="TlG-Gk-Fks"/>
+                                    <outlet property="vaccineLabel" destination="Zlj-iT-B32" id="wR1-RU-L5G"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bLC-Nt-e2C" id="OD6-25-uXW"/>
+                            <outlet property="delegate" destination="bLC-Nt-e2C" id="Nr7-j8-Nqi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Informações Sobre Saúde" id="JhT-w5-eS5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvN-SM-aIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4429" y="-302"/>
+        </scene>
     </scenes>
+    <color key="tintColor" name="detail"/>
     <resources>
         <image name="buttonArrow" width="20" height="36"/>
         <image name="countryImage" width="414" height="312"/>
