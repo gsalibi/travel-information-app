@@ -13,13 +13,14 @@ class CountriesViewController: UIViewController{
     @IBOutlet weak var searchBar: UISearchBar!
     
     //reload the tableview every time we change the array
-    var countries: [Country] = [] {
-        didSet{
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var countries: [Country] = []
+//    {
+//        didSet{
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
     
     var selectedCountry: Country?
     var dismissTapGesture = UITapGestureRecognizer()
@@ -38,16 +39,11 @@ class CountriesViewController: UIViewController{
         let nib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "countryCell")
         
-        //Fetch countries from database
-        NetworkManager.shared.fetchCountries { [weak self] (countries) in
-            self?.countries = countries
-            
-            //Ordering countries by name
-            self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
-        }
+
         
         //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
+        self.navigationController?.navigationBar.isHidden = false
         
     }
     

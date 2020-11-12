@@ -10,10 +10,10 @@ import UIKit
 class NetworkManager {
     
     /// Avoid external instantiation
-    private init() {}
-    
-    //MARK: Singleton
-    static let shared = NetworkManager()
+//    private init() {}
+//    
+//    //MARK: Singleton
+//    static let shared = NetworkManager()
     
     //MARK: Fetch Countries
     func fetchCountries(completionHandler: @escaping ([Country]) -> Void) {
@@ -34,12 +34,36 @@ class NetworkManager {
 
         if let data = data,
           let countrySummary = try? JSONDecoder().decode([Country].self, from: data) {
-          completionHandler(countrySummary ?? [])
+          completionHandler(countrySummary)
         }
       })
       task.resume()
     }
     
+    func fetchCurrencyConverter(completionHandler: @escaping (CurrencyConverter) -> Void) {
+        let url = URL(string: "http://data.fixer.io/api/latest?access_key=805a92cf1dd623a5a4d878f041af9b33")!
+
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+          if let error = error {
+            print("Error with fetching countries: \(error)")
+            return
+          }
+          
+          guard let httpResponse = response as? HTTPURLResponse,
+                (200...299).contains(httpResponse.statusCode) else {
+                  //TODO: Change this to show alert
+              print("Error with the response, unexpected status code: \(String(describing: response))")
+            return
+          }
+
+          if let data = data,
+            let currencyConverter = try? JSONDecoder().decode(CurrencyConverter.self, from: data) {
+            completionHandler(currencyConverter)
+          }
+        })
+        task.resume()
+      }
+    }
     
     
-}
+
