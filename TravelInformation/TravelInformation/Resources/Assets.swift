@@ -237,12 +237,14 @@ internal enum Asset {
   internal static let buttonArrow = ImageAsset(name: "buttonArrow")
   internal static let countryImage = ImageAsset(name: "countryImage")
   internal static let doubleCheck = ImageAsset(name: "doubleCheck")
+  internal static let heartIcon = ImageAsset(name: "heartIcon")
   internal static let homeImage = ImageAsset(name: "homeImage")
   internal static let imagemPais = ImageAsset(name: "imagemPais")
   internal static let imgHome = ImageAsset(name: "imgHome")
   internal static let infoCulturalTag = ImageAsset(name: "infoCulturalTag")
   internal static let requisitosTag = ImageAsset(name: "requisitosTag")
   internal static let selectCtryBtnTag = ImageAsset(name: "selectCtryBtnTag")
+  internal static let shareIcon = ImageAsset(name: "shareIcon")
   internal static let usrIMG = ImageAsset(name: "usrIMG")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

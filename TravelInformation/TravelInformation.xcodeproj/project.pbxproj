@@ -12,7 +12,6 @@
 		314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */; };
 		314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB9402551B4550069722F /* VaccineInfoView.swift */; };
 		314EB9462551B6E40069722F /* VaccineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314EB9452551B6E40069722F /* VaccineInfoView.xib */; };
-		31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A5CBC7254B29F200CEF8DB /* Home.storyboard */; };
 		31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C4313D255076C500B817DD /* CountryInfosView.xib */; };
 		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
 		31C431482551737300B817DD /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C431472551737300B817DD /* NewsView.xib */; };
@@ -87,7 +86,6 @@
 		314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoViewController.swift; sourceTree = "<group>"; };
 		314EB9402551B4550069722F /* VaccineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineInfoView.swift; sourceTree = "<group>"; };
 		314EB9452551B6E40069722F /* VaccineInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineInfoView.xib; sourceTree = "<group>"; };
-		31A5CBC7254B29F200CEF8DB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		31C4313D255076C500B817DD /* CountryInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfosView.xib; sourceTree = "<group>"; };
 		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
 		31C431472551737300B817DD /* NewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsView.xib; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 				ECE23237253643480030E21B /* AppDelegate.swift */,
 				ECE23239253643480030E21B /* SceneDelegate.swift */,
 				ECE2323D253643480030E21B /* Main.storyboard */,
-				31A5CBC7254B29F200CEF8DB /* Home.storyboard */,
 				ECE232482536434A0030E21B /* Info.plist */,
 				9AA6B732254779BB00CA16C8 /* Resources */,
 				9AE4D112253809E90026EC8B /* Mechanism */,
@@ -507,7 +504,6 @@
 				31DAD0A72551E1B5001D61CF /* Roboto-Italic.ttf in Resources */,
 				31DAD0AD2551E1B5001D61CF /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				31DAD0A92551E1B5001D61CF /* Roboto-LightItalic.ttf in Resources */,
-				31A5CBC8254B29F300CEF8DB /* Home.storyboard in Resources */,
 				31DAD0B62551E1B5001D61CF /* RobotoCondensed-Regular.ttf in Resources */,
 				31DAD0B32551E1B5001D61CF /* RobotoCondensed-LightItalic.ttf in Resources */,
 				31DAD0A82551E1B5001D61CF /* RobotoCondensed-Italic.ttf in Resources */,

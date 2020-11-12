@@ -23,7 +23,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -84,7 +84,7 @@
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
@@ -110,13 +110,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q3-4D-B7t">
-                                                        <rect key="frame" x="127" y="288.5" width="56.5" height="26.5"/>
+                                                        <rect key="frame" x="127" y="288.5" width="267" height="26.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <color key="textColor" name="text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-44-Sf7">
-                                                        <rect key="frame" x="127" y="315" width="44.5" height="16.5"/>
+                                                        <rect key="frame" x="127" y="315" width="267" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="text"/>
                                                         <nil key="highlightedColor"/>
@@ -126,8 +126,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="q2J-hK-x36" secondAttribute="bottom" id="1Y5-hx-Q6a"/>
                                                     <constraint firstItem="5q3-4D-B7t" firstAttribute="top" secondItem="q2J-hK-x36" secondAttribute="top" constant="5" id="8e9-CU-EPs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5q3-4D-B7t" secondAttribute="trailing" constant="20" id="9Tf-x7-VUy"/>
                                                     <constraint firstItem="X9S-44-Sf7" firstAttribute="leading" secondItem="q2J-hK-x36" secondAttribute="trailing" constant="13" id="H39-hi-Tg6"/>
                                                     <constraint firstItem="p1i-Rp-Zki" firstAttribute="centerX" secondItem="QUX-dQ-bH0" secondAttribute="centerX" id="Uz4-BZ-MBK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="X9S-44-Sf7" secondAttribute="trailing" constant="20" id="ZP7-eJ-qK6"/>
                                                     <constraint firstItem="5q3-4D-B7t" firstAttribute="leading" secondItem="q2J-hK-x36" secondAttribute="trailing" constant="13" id="c4s-sr-mDg"/>
                                                     <constraint firstItem="5q3-4D-B7t" firstAttribute="bottom" secondItem="X9S-44-Sf7" secondAttribute="top" id="cSg-St-d6Y"/>
                                                     <constraint firstItem="q2J-hK-x36" firstAttribute="centerY" secondItem="p1i-Rp-Zki" secondAttribute="bottom" id="kOk-1C-waj"/>
@@ -155,8 +157,8 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-pa-Da5">
-                                                                        <rect key="frame" x="52.5" y="7" width="16" height="25"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-pa-Da5">
+                                                                        <rect key="frame" x="52.5" y="8" width="16" height="24"/>
                                                                         <color key="tintColor" name="detail"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="16" id="4HP-FP-mdg"/>
@@ -200,8 +202,8 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-Eb-QCV">
-                                                                        <rect key="frame" x="52.5" y="9.5" width="16" height="21.5"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-Eb-QCV">
+                                                                        <rect key="frame" x="52.5" y="8" width="16" height="24"/>
                                                                         <color key="tintColor" name="detail"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="24" id="dn9-CF-kQo"/>
@@ -572,7 +574,7 @@
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
@@ -624,7 +626,7 @@
             <objects>
                 <viewController id="0gR-NF-kHZ" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5JY-jJ-XXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-NK-vwQ">
@@ -672,7 +674,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
@@ -1171,10 +1173,10 @@
         <image name="buttonArrow" width="20" height="36"/>
         <image name="countryImage" width="414" height="312"/>
         <image name="doubleCheck" width="66" height="42"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heartIcon" width="24" height="21"/>
         <image name="homeImage" width="221" height="203"/>
         <image name="imagemPais" width="374" height="244"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="shareIcon" width="50" height="77"/>
         <image name="usrIMG" width="48" height="48"/>
         <namedColor name="detail">
             <color red="0.2630000114440918" green="0.83499997854232788" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
