@@ -237,6 +237,7 @@ internal enum Asset {
   internal static let buttonArrow = ImageAsset(name: "buttonArrow")
   internal static let countryImage = ImageAsset(name: "countryImage")
   internal static let doubleCheck = ImageAsset(name: "doubleCheck")
+  internal static let homeImage = ImageAsset(name: "homeImage")
   internal static let imagemPais = ImageAsset(name: "imagemPais")
   internal static let imgHome = ImageAsset(name: "imgHome")
   internal static let infoCulturalTag = ImageAsset(name: "infoCulturalTag")

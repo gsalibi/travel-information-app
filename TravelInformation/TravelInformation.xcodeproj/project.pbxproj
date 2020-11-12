@@ -17,6 +17,7 @@
 		31C43143255076E100B817DD /* CountryInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C43142255076E100B817DD /* CountryInfosView.swift */; };
 		31C431482551737300B817DD /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C431472551737300B817DD /* NewsView.xib */; };
 		31C431522551757B00B817DD /* infoButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C431512551757B00B817DD /* infoButtonsView.swift */; };
+		31D368CE255D93F700AB7C39 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D368CD255D93F700AB7C39 /* CurrencyConverter.swift */; };
 		31DA3D2D2551F04F00120F0A /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */; };
 		31DA3D2E2551F04F00120F0A /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */; };
 		31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */; };
@@ -91,6 +92,7 @@
 		31C43142255076E100B817DD /* CountryInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfosView.swift; sourceTree = "<group>"; };
 		31C431472551737300B817DD /* NewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsView.xib; sourceTree = "<group>"; };
 		31C431512551757B00B817DD /* infoButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoButtonsView.swift; sourceTree = "<group>"; };
+		31D368CD255D93F700AB7C39 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		31DA3D2B2551F04F00120F0A /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		31DA3D2C2551F04F00120F0A /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
 		31DA3D322551F11B00120F0A /* UIKit+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+CornerRadius.swift"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4A53F52537920E00DE508F /* Country.swift */,
+				31D368CD255D93F700AB7C39 /* CurrencyConverter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				314EB932255180B30069722F /* NewsView.swift in Sources */,
 				314EB9412551B4550069722F /* VaccineInfoView.swift in Sources */,
 				31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */,
+				31D368CE255D93F700AB7C39 /* CurrencyConverter.swift in Sources */,
 				31C431522551757B00B817DD /* infoButtonsView.swift in Sources */,
 				314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */,
 				ECE2323C253643480030E21B /* CountriesViewController.swift in Sources */,
