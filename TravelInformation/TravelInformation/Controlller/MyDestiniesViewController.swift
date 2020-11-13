@@ -85,6 +85,16 @@ class MyDestiniesViewController: UIViewController {
 
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UIView.animate(withDuration: 1) {
+            self.navigationController?.navigationBar.prefersLargeTitles = false
+
+        }
+
+    }
     
     func segmentConfig(){
         self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Asset.blackSegment.color, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.medium) ], for: UIControl.State.selected)
@@ -125,7 +135,6 @@ class MyDestiniesViewController: UIViewController {
             let destinationVC = segue.destination as! CountryDetailsViewController
             
             destinationVC.country = selectedCountry
-            
         default:
             print("Segue id not implemented")
         }
