@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CountryManaged" representedClassName="CountryManaged" syncable="YES">
         <attribute name="businessVisa" optional="YES" attributeType="String"/>
         <attribute name="capital" optional="YES" attributeType="String"/>
@@ -15,6 +15,9 @@
         <attribute name="vaccine" optional="YES" attributeType="Transformable"/>
         <relationship name="vac_rel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vaccine" inverseName="vac_reverse_countryManaged" inverseEntity="Vaccine"/>
     </entity>
+    <entity name="UserFavorites" representedClassName="UserFavorites" syncable="YES">
+        <attribute name="savedCountries" optional="YES" attributeType="Transformable"/>
+    </entity>
     <entity name="Vaccine" representedClassName="Vaccine" syncable="YES">
         <attribute name="disease" optional="YES" attributeType="String"/>
         <attribute name="guidance" optional="YES" attributeType="String"/>
@@ -26,5 +29,6 @@
     <elements>
         <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="238"/>
         <element name="Vaccine" positionX="-63" positionY="72" width="128" height="133"/>
+        <element name="UserFavorites" positionX="-54" positionY="90" width="128" height="58"/>
     </elements>
 </model>

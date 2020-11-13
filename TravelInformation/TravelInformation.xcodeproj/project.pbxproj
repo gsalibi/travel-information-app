@@ -41,6 +41,10 @@
 		9A1BF237255E4F5900547DF7 /* VaccineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
+		9A4B0C53255EACF800997B80 /* UserFavoritesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */; };
+		9A4B0C59255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B0C57255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift */; };
+		9A4B0C5A255EAD8E00997B80 /* UserFavorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B0C58255EAD8E00997B80 /* UserFavorites+CoreDataProperties.swift */; };
+		9A4B0C5F255EB01B00997B80 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B0C5E255EB01B00997B80 /* UserServices.swift */; };
 		9A6475AF2547892E00CFE96D /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6475AE2547892E00CFE96D /* Assets.swift */; };
 		9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A98C9FF253930190087EFB0 /* NetworkManager.swift */; };
 		9AA6B74825477A9100CA16C8 /* GenerateResources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9AA6B74725477A9100CA16C8 /* GenerateResources.sh */; };
@@ -119,6 +123,10 @@
 		9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineDAO.swift; sourceTree = "<group>"; };
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavoritesDAO.swift; sourceTree = "<group>"; };
+		9A4B0C57255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFavorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9A4B0C58255EAD8E00997B80 /* UserFavorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserFavorites+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9A4B0C5E255EB01B00997B80 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		9A6475AE2547892E00CFE96D /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9A98C9FF253930190087EFB0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9AA6B74725477A9100CA16C8 /* GenerateResources.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenerateResources.sh; sourceTree = "<group>"; };
@@ -249,6 +257,8 @@
 		9A4A53F92537967B00DE508F /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				9A4B0C57255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift */,
+				9A4B0C58255EAD8E00997B80 /* UserFavorites+CoreDataProperties.swift */,
 				9A106F66255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift */,
 				9A106F67255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift */,
 				9AE4D10A253801D90026EC8B /* DAO */,
@@ -299,6 +309,7 @@
 			children = (
 				9AE4D10B253801E90026EC8B /* DAO.swift */,
 				9AE4D10D253802650026EC8B /* CountryDAO.swift */,
+				9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */,
 				9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */,
 			);
 			path = DAO;
@@ -308,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE4D110253808D70026EC8B /* CountryServices.swift */,
+				9A4B0C5E255EB01B00997B80 /* UserServices.swift */,
 				9A98C9FF253930190087EFB0 /* NetworkManager.swift */,
 			);
 			path = Business;
@@ -630,8 +642,11 @@
 				31C43143255076E100B817DD /* CountryInfosView.swift in Sources */,
 				9AFDB025254B4E6400A9C27F /* HomeScreenViewController.swift in Sources */,
 				9AE4D10C253801E90026EC8B /* DAO.swift in Sources */,
+				9A4B0C5F255EB01B00997B80 /* UserServices.swift in Sources */,
 				314EB932255180B30069722F /* NewsView.swift in Sources */,
 				31DA3D332551F11B00120F0A /* UIKit+CornerRadius.swift in Sources */,
+				9A4B0C53255EACF800997B80 /* UserFavoritesDAO.swift in Sources */,
+				9A4B0C5A255EAD8E00997B80 /* UserFavorites+CoreDataProperties.swift in Sources */,
 				31D368CE255D93F700AB7C39 /* CurrencyConverter.swift in Sources */,
 				31C431522551757B00B817DD /* infoButtonsView.swift in Sources */,
 				9A106F69255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift in Sources */,
@@ -640,6 +655,7 @@
 				9A1BF237255E4F5900547DF7 /* VaccineDAO.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
 				9A106F68255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift in Sources */,
+				9A4B0C59255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift in Sources */,
 				9AE4D10E253802650026EC8B /* CountryDAO.swift in Sources */,
 				9A98CA00253930190087EFB0 /* NetworkManager.swift in Sources */,
 				9AE4D11425380A000026EC8B /* QueueManager.swift in Sources */,
