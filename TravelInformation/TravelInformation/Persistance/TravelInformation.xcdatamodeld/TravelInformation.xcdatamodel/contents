@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CountryManaged" representedClassName="CountryManaged" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CountryManaged" representedClassName="CountryManaged" syncable="YES">
         <attribute name="businessVisa" optional="YES" attributeType="String"/>
         <attribute name="capital" optional="YES" attributeType="String"/>
+        <attribute name="cultural" optional="YES" attributeType="Transformable"/>
         <attribute name="currency" optional="YES" attributeType="String"/>
         <attribute name="entryCurrency" optional="YES" attributeType="String"/>
         <attribute name="exitCurrency" optional="YES" attributeType="String"/>
+        <attribute name="insurance" optional="YES" attributeType="String"/>
         <attribute name="language" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="passportValidity" optional="YES" attributeType="String"/>
         <attribute name="touristVisa" optional="YES" attributeType="String"/>
+        <attribute name="vaccine" optional="YES" attributeType="Transformable"/>
+        <relationship name="vac_rel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vaccine" inverseName="vac_reverse_countryManaged" inverseEntity="Vaccine"/>
+    </entity>
+    <entity name="Vaccine" representedClassName="Vaccine" syncable="YES">
+        <attribute name="disease" optional="YES" attributeType="String"/>
+        <attribute name="guidance" optional="YES" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="vaccine" optional="YES" attributeType="String"/>
+        <attribute name="vaccineDescription" optional="YES" attributeType="String"/>
+        <relationship name="vac_reverse_countryManaged" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryManaged" inverseName="vac_rel" inverseEntity="CountryManaged"/>
     </entity>
     <elements>
-        <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="Vaccine" positionX="-63" positionY="72" width="128" height="133"/>
     </elements>
 </model>

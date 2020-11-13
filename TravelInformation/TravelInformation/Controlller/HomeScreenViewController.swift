@@ -21,12 +21,18 @@ class HomeScreenViewController: UIViewController {
     
     var currency : CurrencyConverter? = nil
     var countries : [Country] = []
+    var countriesForCoreData : [CountryManaged] = []
+    var countriesAlredyInCoreData : [CountryManaged] = []
+    
     
     override func viewDidLoad() {
         self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
         self.settingName()
         self.settingCurrenciesConverter()
         self.fetchCountries()
+        
+        
+        
         //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
     
@@ -77,8 +83,43 @@ class HomeScreenViewController: UIViewController {
             
             //Ordering countries by name
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
+            
+            self?.countriesForCoreData = CountryServices.convertCountryListToManagedList(countries: countries)
+            
+            CountryServices.getAllCountries{ (error, manageds) in
+                
+                if (error == nil) {
+                    // assign country list
+                    self?.countriesAlredyInCoreData = manageds!
+                    
+                }
+                else {
+                    // display error here because it was not possible to load season list
+                }
+                
+            }
+
+            self?.saveCountriesToCoreData()
+        }
+        
+    }
+    
+    func saveCountriesToCoreData(){
+        for country in countriesForCoreData{
+            if countriesAlredyInCoreData.contains(country){
+                continue
+            }
+            else{
+                CountryServices.createCountry(countryManaged: country) { (error) in
+                    if (error != nil) {
+                        print("\(error) save")
+                    }
+                }
+            }
         }
     }
+    
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if countries.count > 0{
@@ -92,7 +133,8 @@ class HomeScreenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "countriesList"{
             if let vc = segue.destination as? CountriesViewController{
-                vc.countries = self.countries
+//                vc.countries = self.countries
+                vc.countriesFromCoreData = self.countriesForCoreData
                 self.navigationController?.navigationBar.isHidden = false
 
             }

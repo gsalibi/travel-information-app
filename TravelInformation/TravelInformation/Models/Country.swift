@@ -5,20 +5,21 @@
 //  Created by João Vitor Lopes Capi on 14/10/20.
 //
 
-//   let country = try? newJSONDecoder().decode(Country.self, from: jsonData)
+//   let country = try? newJSONDecoder().decode([Country].self, from: jsonData)
 
 import Foundation
 
 // MARK: - Country
 class Country: Codable {
     
-    let name: String
-    let capital, currency, language, passportValidity: String?
-    let entryCurrency, exitCurrency: String?
-    let touristVisa, businessVisa: Visa?
-    let insurance: Insurance?
-    let vaccines: [Vaccine]?
-    let culture: [String: String]?
+    var name: String
+    var capital, currency, language, passportValidity: String?
+    var entryCurrency, exitCurrency: String?
+    var touristVisa: Visa?
+    var businessVisa: Visa?
+    var insurance: Insurance?
+    var vaccines: [Vaccine]?
+    var culture: [String: String]?
 
     enum CodingKeys: String, CodingKey {
         case name, capital, currency, language
@@ -30,8 +31,9 @@ class Country: Codable {
         case insurance = "insurance"
         case vaccines, culture
     }
+    
 
-    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?, vaccines: [Vaccine], culture: [String: String]?, insurance: Insurance?) {
+    init(name: String, capital: String?, currency: String?, language: String?, passportValidity: String?, entryCurrency: String?, exitCurrency: String?, touristVisa: Visa?, businessVisa: Visa?, vaccines: [Vaccine]?, culture: [String: String]?, insurance: Insurance?) {
         self.name = name
         self.capital = capital
         self.currency = currency
@@ -45,6 +47,8 @@ class Country: Codable {
         self.culture = culture
         self.insurance = insurance
     }
+    
+    
 }
 
 enum Insurance: String, Codable{
@@ -53,7 +57,7 @@ enum Insurance: String, Codable{
     case mandatory = "Obrigatorio"
 }
 
-enum Visa: String, Codable {
+public enum Visa: String, Codable {
     case dispensaDeVistoPorAté180Dias = "Dispensa de visto por até 180  dias"
     case dispensaDeVistoPorAté30Dias = "Dispensa de visto por até 30  dias"
     case dispensaDeVistoPorAté59Dias = "Dispensa de visto por até 59  dias"
@@ -65,11 +69,11 @@ enum Visa: String, Codable {
 }
 
 // MARK: - Vaccine
-class Vaccine: Codable {
-    let disease, vaccine, guidance, source: String
-    let vaccineDescription: String
+public class Vaccine: NSObject, Codable {
+    public let disease, vaccine, guidance, source: String
+    public let vaccineDescription: String
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case disease, vaccine, guidance, source
         case vaccineDescription = "description"
     }

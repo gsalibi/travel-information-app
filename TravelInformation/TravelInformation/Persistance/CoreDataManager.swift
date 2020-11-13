@@ -32,6 +32,7 @@ class CoreDataManager {
         return persistentContainer.viewContext
     }
     
+    
     //MARK: Loading
     public func setup(completion: @escaping (_ error: Error?) -> Void){
         persistentContainer.loadPersistentStores(completionHandler: { (_, error) in

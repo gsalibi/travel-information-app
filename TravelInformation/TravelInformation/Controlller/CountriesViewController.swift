@@ -21,11 +21,22 @@ class CountriesViewController: UIViewController{
 //            }
 //        }
 //    }
-    
     var selectedCountry: Country?
+    
+    var countriesFromCoreData : [CountryManaged] = []
+    {
+        didSet{
+            self.countriesFromCoreData = self.countriesFromCoreData.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? self.countriesFromCoreData as! [CountryManaged]
+        }
+    }
+    
     var dismissTapGesture = UITapGestureRecognizer()
     var searchCountries: ([Country]?, Int) = ([],0)
     var filteredCountries: [Country]? = nil
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +45,25 @@ class CountriesViewController: UIViewController{
         tableView.dataSource = self
         
         searchBarConfiguration()
+        
+        CountryServices.getAllCountries{ (error, manageds) in
+            
+            if (error == nil) {
+                // assign country list
+                self.countriesFromCoreData = manageds!
+                self.countries = CountryServices.convertManagedListToCountriesList(manageds: self.countriesFromCoreData)
+                
+                // reload table view with season information
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            else {
+                // display error here because it was not possible to load season list
+            }
+            
+        }
+        
         
         //Load tableview cell register
         let nib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
@@ -45,6 +75,18 @@ class CountriesViewController: UIViewController{
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
         self.navigationController?.navigationBar.isHidden = false
         
+    }
+    
+    func loadCountriesFromCoreData(){
+        CountryServices.getAllCountries { (error, countriesFromCoreData) in
+            if (error == nil) {
+                // assign country list
+                self.countriesFromCoreData = countriesFromCoreData!
+            }
+            else {
+                print("\(error) load")
+            }
+        }
     }
     
     //Configuration search bar and gesture
