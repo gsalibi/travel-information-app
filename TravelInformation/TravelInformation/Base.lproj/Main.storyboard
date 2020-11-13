@@ -77,18 +77,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4688.4057971014499" y="129.91071428571428"/>
+            <point key="canvasLocation" x="2803" y="-429"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="hb1-BZ-Q3C">
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1299"/>
@@ -569,18 +569,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5613.04347826087" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3820" y="412"/>
         </scene>
         <!--Cultural Info View Controller-->
         <scene sceneID="5gV-ZW-FKZ">
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
                                         <rect key="frame" x="20" y="0.0" width="374" height="200"/>
@@ -621,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Yn-Ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5339.130434782609" y="980.35714285714278"/>
+            <point key="canvasLocation" x="5119" y="867"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="a1v-Gt-hCM">
@@ -1145,13 +1145,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoZ-2d-bhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827.5362318840582" y="18.75"/>
+            <point key="canvasLocation" x="1759" y="-429"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="Q21-z5-FH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD2-S4-YqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" id="9LR-H2-x96"/>
+                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" id="9LR-H2-x96">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="detail"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Im1-wn-Wod">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1169,9 +1178,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ie-0o-igW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.39130434782612" y="18.75"/>
+            <point key="canvasLocation" x="593" y="-429"/>
         </scene>
-        <!--My Destinies View Controller-->
+        <!--Meus destinos-->
         <scene sceneID="StV-3j-IVb">
             <objects>
                 <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
@@ -1179,8 +1188,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
+                                <rect key="frame" x="16" y="150" width="382" height="32"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <segments>
+                                    <segment title="Destinos"/>
+                                    <segment title="Checklists"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="detail"/>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="609"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1189,15 +1207,20 @@
                         <viewLayoutGuide key="safeArea" id="HdF-L2-BL9"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
+                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="U3X-gd-rHt" secondAttribute="trailing" constant="16" id="DYe-Gj-uFa"/>
+                            <constraint firstItem="U3X-gd-rHt" firstAttribute="top" secondItem="HdF-L2-BL9" secondAttribute="top" constant="10" id="Igp-SV-dcS"/>
                             <constraint firstItem="kM8-Uk-LQw" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" id="JUd-rc-LTT"/>
                             <constraint firstItem="HdF-L2-BL9" firstAttribute="bottom" secondItem="kM8-Uk-LQw" secondAttribute="bottom" id="QpJ-GG-T2B"/>
+                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="top" secondItem="U3X-gd-rHt" secondAttribute="bottom" constant="23" id="U9s-gU-h0n"/>
                             <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="kM8-Uk-LQw" secondAttribute="trailing" id="aLR-cZ-A6G"/>
-                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="top" secondItem="HdF-L2-BL9" secondAttribute="top" id="lTy-SR-F5z"/>
+                            <constraint firstItem="U3X-gd-rHt" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" constant="16" id="nWO-o3-GPQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="idz-uN-FcB"/>
+                    <navigationItem key="navigationItem" title="Meus destinos" largeTitleDisplayMode="always" id="idz-uN-FcB"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="U3X-gd-rHt" id="eWE-fP-FkC"/>
                         <outlet property="tableView" destination="kM8-Uk-LQw" id="drm-MK-h2H"/>
+                        <segue destination="BiW-BS-Brh" kind="show" identifier="countrySelect" id="Gzg-fl-kF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRv-11-JiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1209,7 +1232,7 @@
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -1347,7 +1370,7 @@ Certificado é válida por toda a vida.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvN-SM-aIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5339.130434782609" y="-302.00892857142856"/>
+            <point key="canvasLocation" x="5119" y="-165"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SA3-bU-h9e">
@@ -1367,20 +1390,32 @@ Certificado é válida por toda a vida.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5W-Ij-6MY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.2463768115942031" y="18.75"/>
+            <point key="canvasLocation" x="-1222" y="204"/>
         </scene>
         <!--Meus Destinos-->
         <scene sceneID="2dh-o8-TXx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDM-8q-hrQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" id="iFO-bM-KZe"/>
+                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" id="iFO-bM-KZe">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="detail"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BdI-Z8-t3b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BdI-Z8-t3b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="primary"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="text"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1393,6 +1428,9 @@ Certificado é válida por toda a vida.</string>
             <point key="canvasLocation" x="592.75362318840587" y="712.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gzg-fl-kF8"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="detail"/>
     <resources>
         <image name="buttonArrow" width="20" height="36"/>
@@ -1421,6 +1459,9 @@ Certificado é válida por toda a vida.</string>
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

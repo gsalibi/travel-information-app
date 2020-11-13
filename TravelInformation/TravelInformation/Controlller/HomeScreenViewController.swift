@@ -29,7 +29,15 @@ class HomeScreenViewController: UIViewController {
         self.fetchCountries()
         //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-    
+        for views in self.tabBarController!.viewControllers!{
+            if #available(iOS 14.0, *) {
+                if let a = views.childViewControllerForPointerLock as? MyDestiniesViewController{
+                    print("rolou")
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +49,7 @@ class HomeScreenViewController: UIViewController {
             self.nameSaudationLabel.text = "Olá, \(name)"
             
         }
-        print(UIDevice.current.name.components(separatedBy: " ").last)
-        print(UIDevice.current.name)
+   
     }
     func settingCurrenciesConverter(){
         let manager = NetworkManager()
@@ -81,6 +88,15 @@ class HomeScreenViewController: UIViewController {
             
             //Ordering countries by name
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
+            
+            if #available(iOS 14.0, *) {
+                DispatchQueue.main.async {
+                    if let vc = self?.tabBarController?.viewControllers?[1].childViewControllerForPointerLock as? MyDestiniesViewController{
+                        vc.allCountries = countries
+                    }
+                }
+                
+            }
         }
     }
     
