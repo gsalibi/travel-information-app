@@ -1137,7 +1137,7 @@
                         <outlet property="firstCurrencyValueLabel" destination="bgu-Sb-8gU" id="xaF-ss-a5t"/>
                         <outlet property="firstCuurrencyNameLabel" destination="p0T-ox-7LP" id="sme-7d-XKg"/>
                         <outlet property="imageProfile" destination="xMh-Ie-2XT" id="V4M-Hn-HdZ"/>
-                        <outlet property="nameSaudationLbl" destination="XaX-fg-0Bw" id="vIx-sC-t3y"/>
+                        <outlet property="nameSaudationLabel" destination="RYi-we-OOh" id="gQh-72-kh3"/>
                         <outlet property="secondCurrencyNameLabel" destination="6Dq-D1-RlA" id="K8C-EK-e1t"/>
                         <outlet property="secondCurrencyValueLabel" destination="zgf-um-fUA" id="6Th-yu-9rv"/>
                         <outlet property="stackView" destination="d6u-1e-wJ0" id="phw-ET-3H3"/>
@@ -1147,11 +1147,11 @@
             </objects>
             <point key="canvasLocation" x="1827.5362318840582" y="18.75"/>
         </scene>
-        <!--Item-->
+        <!--Explorar-->
         <scene sceneID="Q21-z5-FH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD2-S4-YqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9LR-H2-x96"/>
+                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" id="9LR-H2-x96"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Im1-wn-Wod">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1171,17 +1171,34 @@
             </objects>
             <point key="canvasLocation" x="917.39130434782612" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--My Destinies View Controller-->
         <scene sceneID="StV-3j-IVb">
             <objects>
-                <viewController id="WSz-B7-u9d" sceneMemberID="viewController">
+                <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HdF-L2-BL9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" id="JUd-rc-LTT"/>
+                            <constraint firstItem="HdF-L2-BL9" firstAttribute="bottom" secondItem="kM8-Uk-LQw" secondAttribute="bottom" id="QpJ-GG-T2B"/>
+                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="kM8-Uk-LQw" secondAttribute="trailing" id="aLR-cZ-A6G"/>
+                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="top" secondItem="HdF-L2-BL9" secondAttribute="top" id="lTy-SR-F5z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="idz-uN-FcB"/>
+                    <connections>
+                        <outlet property="tableView" destination="kM8-Uk-LQw" id="drm-MK-h2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRv-11-JiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1338,8 +1355,10 @@ Certificado é válida por toda a vida.</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lCC-gM-zU3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XIr-fg-awk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="fD2-S4-YqT" kind="relationship" relationship="viewControllers" id="F5H-c3-EuE"/>
@@ -1350,15 +1369,19 @@ Certificado é válida por toda a vida.</string>
             </objects>
             <point key="canvasLocation" x="7.2463768115942031" y="18.75"/>
         </scene>
-        <!--Item-->
+        <!--Meus Destinos-->
         <scene sceneID="2dh-o8-TXx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDM-8q-hrQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iFO-bM-KZe"/>
+                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" id="iFO-bM-KZe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BdI-Z8-t3b">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="primary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="text"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1374,7 +1397,9 @@ Certificado é válida por toda a vida.</string>
     <resources>
         <image name="buttonArrow" width="20" height="36"/>
         <image name="countryImage" width="414" height="312"/>
+        <image name="destinosTabIcon" width="24" height="24"/>
         <image name="doubleCheck" width="66" height="42"/>
+        <image name="explorarTabIcon" width="24" height="24"/>
         <image name="heartIcon" width="24" height="21"/>
         <image name="homeImage" width="221" height="203"/>
         <image name="imagemPais" width="374" height="244"/>

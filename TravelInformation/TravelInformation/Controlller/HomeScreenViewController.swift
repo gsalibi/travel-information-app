@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var imageProfile: UIImageView!
-    @IBOutlet weak var nameSaudationLbl: UIView!
+    @IBOutlet weak var nameSaudationLabel: UILabel!
     @IBOutlet weak var firstCuurrencyNameLabel: UILabel!
     @IBOutlet weak var firstCurrencyValueLabel: UILabel!
     
@@ -37,7 +37,11 @@ class HomeScreenViewController: UIViewController {
 
     }
     func settingName(){
-        print(UIDevice.current.name.replacingOccurrences(of:"iPhone", with: ""))
+        if let name = UIDevice.current.name.components(separatedBy: " ").last{
+            self.nameSaudationLabel.text = "Olá, \(name)"
+            
+        }
+        print(UIDevice.current.name.components(separatedBy: " ").last)
         print(UIDevice.current.name)
     }
     func settingCurrenciesConverter(){

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		310F2F77D160129D9674759A /* Pods_TravelInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E2C88C5C3F6B551CA7F70B /* Pods_TravelInformationTests.framework */; };
+		313A5567255EEAE800B90698 /* MyDestiniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A5566255EEAE800B90698 /* MyDestiniesViewController.swift */; };
 		314EB932255180B30069722F /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB931255180B30069722F /* NewsView.swift */; };
 		314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */; };
 		31C4313E255076C500B817DD /* CountryInfosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C4313D255076C500B817DD /* CountryInfosView.xib */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		0AE88DF9D38563AB48B230A1 /* Pods-TravelInformationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformationTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelInformationTests/Pods-TravelInformationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CCD2014789B6E92BAF628D6 /* Pods_TravelInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		313A5566255EEAE800B90698 /* MyDestiniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDestiniesViewController.swift; sourceTree = "<group>"; };
 		314EB931255180B30069722F /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalInfoViewController.swift; sourceTree = "<group>"; };
 		31C4313D255076C500B817DD /* CountryInfosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfosView.xib; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */,
 				9AFDB024254B4E6400A9C27F /* HomeScreenViewController.swift */,
 				314EB93B2551B17E0069722F /* CulturalInfoViewController.swift */,
+				313A5566255EEAE800B90698 /* MyDestiniesViewController.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
 				EC290911255A3C0A00089CF3 /* DiseaseCell.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
+				313A5567255EEAE800B90698 /* MyDestiniesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
