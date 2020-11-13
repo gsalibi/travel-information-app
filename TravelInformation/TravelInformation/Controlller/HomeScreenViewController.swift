@@ -29,15 +29,7 @@ class HomeScreenViewController: UIViewController {
         self.fetchCountries()
         //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-        for views in self.tabBarController!.viewControllers!{
-            if #available(iOS 14.0, *) {
-                if let a = views.childViewControllerForPointerLock as? MyDestiniesViewController{
-                    print("rolou")
-                }
-            } else {
-                // Fallback on earlier versions
-            }
-        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
