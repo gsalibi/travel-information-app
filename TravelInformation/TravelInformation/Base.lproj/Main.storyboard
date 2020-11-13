@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fD2-S4-YqT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lCC-gM-zU3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -39,7 +39,7 @@
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-UG-H98">
-                                <rect key="frame" x="0.0" y="96" width="414" height="678"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="629"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="separatorColor" name="primary"/>
                                 <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="129.91071428571428"/>
+            <point key="canvasLocation" x="4688.4057971014499" y="129.91071428571428"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="hb1-BZ-Q3C">
@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1299"/>
@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3792.753623188406" y="129.91071428571428"/>
+            <point key="canvasLocation" x="5613.04347826087" y="129.91071428571428"/>
         </scene>
         <!--Cultural Info View Controller-->
         <scene sceneID="5gV-ZW-FKZ">
@@ -580,7 +580,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
                                         <rect key="frame" x="20" y="0.0" width="374" height="200"/>
@@ -621,18 +621,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Yn-Ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4429" y="981"/>
+            <point key="canvasLocation" x="5339.130434782609" y="980.35714285714278"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="a1v-Gt-hCM">
             <objects>
                 <viewController id="0gR-NF-kHZ" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5JY-jJ-XXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-NK-vwQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="211" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-4b-GlP">
                                         <rect key="frame" x="20" y="0.0" width="374" height="211"/>
@@ -669,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM3-cW-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5142.0289855072469" y="-548.4375"/>
+            <point key="canvasLocation" x="6052.1739130434789" y="-548.4375"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="oB5-Ew-yKs">
@@ -680,7 +680,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="896" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d6u-1e-wJ0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="737.5"/>
@@ -1145,12 +1145,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoZ-2d-bhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.39130434782612" y="18.75"/>
+            <point key="canvasLocation" x="1827.5362318840582" y="18.75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="Q21-z5-FH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD2-S4-YqT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9LR-H2-x96"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Im1-wn-Wod">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1168,14 +1169,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ie-0o-igW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.2463768115942031" y="18.75"/>
+            <point key="canvasLocation" x="917.39130434782612" y="18.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="StV-3j-IVb">
+            <objects>
+                <viewController id="WSz-B7-u9d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HdF-L2-BL9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="idz-uN-FcB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRv-11-JiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502.8985507246377" y="712.5"/>
         </scene>
         <!--Informações Sobre Saúde-->
         <scene sceneID="sOg-UI-K7w">
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -1313,7 +1330,44 @@ Certificado é válida por toda a vida.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvN-SM-aIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4429" y="-302"/>
+            <point key="canvasLocation" x="5339.130434782609" y="-302.00892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SA3-bU-h9e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lCC-gM-zU3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XIr-fg-awk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fD2-S4-YqT" kind="relationship" relationship="viewControllers" id="F5H-c3-EuE"/>
+                        <segue destination="kDM-8q-hrQ" kind="relationship" relationship="viewControllers" id="weo-ET-23H"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5W-Ij-6MY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7.2463768115942031" y="18.75"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2dh-o8-TXx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDM-8q-hrQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iFO-bM-KZe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BdI-Z8-t3b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WSz-B7-u9d" kind="relationship" relationship="rootViewController" id="vky-fw-njD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csA-hs-tKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="712.5"/>
         </scene>
     </scenes>
     <color key="tintColor" name="detail"/>
