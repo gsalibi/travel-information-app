@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lCC-gM-zU3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fD2-S4-YqT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,7 +23,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -39,7 +39,7 @@
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpd-UG-H98">
-                                <rect key="frame" x="0.0" y="96" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="678"/>
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="separatorColor" name="primary"/>
                                 <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -77,19 +77,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2803" y="-429"/>
+            <point key="canvasLocation" x="2868.115942028986" y="129.91071428571428"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="hb1-BZ-Q3C">
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1299"/>
@@ -570,18 +569,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="412"/>
+            <point key="canvasLocation" x="3792.753623188406" y="129.91071428571428"/>
         </scene>
         <!--Cultural Info View Controller-->
         <scene sceneID="5gV-ZW-FKZ">
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
                                         <rect key="frame" x="20" y="0.0" width="374" height="200"/>
@@ -622,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Yn-Ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5119" y="867"/>
+            <point key="canvasLocation" x="4429" y="981"/>
         </scene>
         <!--Nome do país-->
         <scene sceneID="a1v-Gt-hCM">
@@ -670,19 +669,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM3-cW-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6052.1739130434789" y="-548.4375"/>
+            <point key="canvasLocation" x="5142.0289855072469" y="-548.4375"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="oB5-Ew-yKs">
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="896" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d6u-1e-wJ0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="737.5"/>
@@ -1139,7 +1137,7 @@
                         <outlet property="firstCurrencyValueLabel" destination="bgu-Sb-8gU" id="xaF-ss-a5t"/>
                         <outlet property="firstCuurrencyNameLabel" destination="p0T-ox-7LP" id="sme-7d-XKg"/>
                         <outlet property="imageProfile" destination="xMh-Ie-2XT" id="V4M-Hn-HdZ"/>
-                        <outlet property="nameSaudationLabel" destination="RYi-we-OOh" id="gQh-72-kh3"/>
+                        <outlet property="nameSaudationLbl" destination="XaX-fg-0Bw" id="vIx-sC-t3y"/>
                         <outlet property="secondCurrencyNameLabel" destination="6Dq-D1-RlA" id="K8C-EK-e1t"/>
                         <outlet property="secondCurrencyValueLabel" destination="zgf-um-fUA" id="6Th-yu-9rv"/>
                         <outlet property="stackView" destination="d6u-1e-wJ0" id="phw-ET-3H3"/>
@@ -1147,22 +1145,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoZ-2d-bhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="-429"/>
+            <point key="canvasLocation" x="917.39130434782612" y="18.75"/>
         </scene>
-        <!--Explorar-->
+        <!--Navigation Controller-->
         <scene sceneID="Q21-z5-FH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD2-S4-YqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" id="9LR-H2-x96">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" name="detail"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Im1-wn-Wod">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1180,61 +1168,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ie-0o-igW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="-429"/>
-        </scene>
-        <!--Meus destinos-->
-        <scene sceneID="StV-3j-IVb">
-            <objects>
-                <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
-                                <rect key="frame" x="16" y="10" width="382" height="32"/>
-                                <color key="backgroundColor" name="secondary"/>
-                                <segments>
-                                    <segment title="Destinos"/>
-                                    <segment title="Checklists"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" name="detail"/>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
-                                <rect key="frame" x="0.0" y="64" width="414" height="600.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="HdF-L2-BL9"/>
-                        <color key="backgroundColor" name="primary"/>
-                        <constraints>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="U3X-gd-rHt" secondAttribute="trailing" constant="16" id="DYe-Gj-uFa"/>
-                            <constraint firstItem="U3X-gd-rHt" firstAttribute="top" secondItem="HdF-L2-BL9" secondAttribute="top" constant="10" id="Igp-SV-dcS"/>
-                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" id="JUd-rc-LTT"/>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="bottom" secondItem="kM8-Uk-LQw" secondAttribute="bottom" id="QpJ-GG-T2B"/>
-                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="top" secondItem="U3X-gd-rHt" secondAttribute="bottom" constant="23" id="U9s-gU-h0n"/>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="kM8-Uk-LQw" secondAttribute="trailing" id="aLR-cZ-A6G"/>
-                            <constraint firstItem="U3X-gd-rHt" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" constant="16" id="nWO-o3-GPQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Meus destinos" largeTitleDisplayMode="always" id="idz-uN-FcB"/>
-                    <connections>
-                        <outlet property="segmentedControl" destination="U3X-gd-rHt" id="eWE-fP-FkC"/>
-                        <outlet property="tableView" destination="kM8-Uk-LQw" id="drm-MK-h2H"/>
-                        <segue destination="BiW-BS-Brh" kind="show" identifier="countrySelect" id="Gzg-fl-kF8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cRv-11-JiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1502.8985507246377" y="712.5"/>
+            <point key="canvasLocation" x="7.2463768115942031" y="18.75"/>
         </scene>
         <!--Informações Sobre Saúde-->
         <scene sceneID="sOg-UI-K7w">
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -1372,87 +1313,14 @@ Certificado é válida por toda a vida.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvN-SM-aIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5119" y="-165"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="SA3-bU-h9e">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lCC-gM-zU3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="XIr-fg-awk">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" name="detail"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
-                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBar>
-                    <connections>
-                        <segue destination="fD2-S4-YqT" kind="relationship" relationship="viewControllers" id="F5H-c3-EuE"/>
-                        <segue destination="kDM-8q-hrQ" kind="relationship" relationship="viewControllers" id="weo-ET-23H"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C5W-Ij-6MY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1222" y="204"/>
-        </scene>
-        <!--Meus Destinos-->
-        <scene sceneID="2dh-o8-TXx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kDM-8q-hrQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" id="iFO-bM-KZe">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" name="detail"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="BdI-Z8-t3b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="primary"/>
-                        <color key="barTintColor" name="primary"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="text"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="WSz-B7-u9d" kind="relationship" relationship="rootViewController" id="vky-fw-njD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="csA-hs-tKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="592.75362318840587" y="712.5"/>
+            <point key="canvasLocation" x="4429" y="-302"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Gzg-fl-kF8"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" name="detail"/>
     <resources>
         <image name="buttonArrow" width="20" height="36"/>
         <image name="countryImage" width="414" height="312"/>
-        <image name="destinosTabIcon" width="24" height="24"/>
         <image name="doubleCheck" width="66" height="42"/>
-        <image name="explorarTabIcon" width="24" height="24"/>
         <image name="heartIcon" width="24" height="21"/>
         <image name="homeImage" width="221" height="203"/>
         <image name="imagemPais" width="374" height="244"/>
@@ -1474,9 +1342,6 @@ Certificado é válida por toda a vida.</string>
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
