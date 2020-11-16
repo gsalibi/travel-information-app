@@ -106,6 +106,9 @@ class HomeScreenViewController: UIViewController {
             }
 
             self?.saveCountriesToCoreData()
+            CoreDataManager.sharedInstance.save(text: <#T##String#>,
+                                                toDirectory: CoreDataManager.sharedInstance.documentDirectory(),
+                                                withFileName: <#T##String#>)
         }
         
     }

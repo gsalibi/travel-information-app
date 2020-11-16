@@ -38,23 +38,26 @@ class CountriesViewController: UIViewController{
         
         searchBarConfiguration()
         
-        CountryServices.getAllCountries{ (error, manageds) in
-            
-            if (error == nil) {
-                // assign country list
-                self.countriesFromCoreData = manageds!
-                self.countries = CountryServices.convertManagedListToCountriesList(manageds: self.countriesFromCoreData)
-                
-                // reload table view with season information
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-            else {
-                // display error here because it was not possible to load season list
-            }
-            
-        }
+//        CountryServices.getAllCountries{ (error, manageds) in
+//
+//            if (error == nil) {
+//                // assign country list
+//                self.countriesFromCoreData = manageds!
+//                self.countries = CountryServices.convertManagedListToCountriesList(manageds: self.countriesFromCoreData)
+//
+//                // reload table view with season information
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//            }
+//            else {
+//                // display error here because it was not possible to load season list
+//            }
+//
+//        }
+        
+        
+        
         
         
         //Load tableview cell register

@@ -27,6 +27,41 @@ class CountryDAO: DAO {
         }
     }
     
+    private func save(text: String,
+                      toDirectory directory: String,
+                      withFileName fileName: String) {
+        guard let filePath = self.append(toPath: directory,
+                                         withPathComponent: fileName) else {
+            return
+        }
+        
+        do {
+            try text.write(toFile: filePath,
+                           atomically: true,
+                           encoding: .utf8)
+        } catch {
+            print("Error", error)
+            return
+        }
+        
+        print("Save successful")
+    }
+    
+    private func read(fromDocumentsWithFileName fileName: String) {
+        guard let filePath = self.append(toPath: self.documentDirectory(),
+                                         withPathComponent: fileName) else {
+                                            return
+        }
+        
+        do {
+            let savedString = try String(contentsOfFile: filePath)
+            
+            print(savedString)
+        } catch {
+            print("Error reading saved file")
+        }
+    }
+    
     /// Method responsible for updating a CountryManaged into database
     /// - parameters:
     ///     - objectToBeUpdated: CountryManaged to be updated on database
