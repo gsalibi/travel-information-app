@@ -49,6 +49,7 @@ class CountriesViewController: UIViewController{
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+               
             }
             else {
                 // display error here because it was not possible to load season list

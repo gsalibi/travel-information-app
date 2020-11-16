@@ -48,6 +48,9 @@ class CountryDetailsViewController: UIViewController{
             let imageName = name.replacingOccurrences(of: " " , with: "").lowercased().folding(options: .diacriticInsensitive, locale: .current)
             self.flagImage.image = ImageAsset(name: imageName).image
             self.navigationItem.title = name //Navigation controller title
+            let image = ImageAsset(name: "\(imageName)0").image
+            self.countryImageView.image = image
+            
         }else{
             //Never happen
             nameCountryLabel.text = "País desconhecido 🧐"
@@ -95,7 +98,7 @@ class CountryDetailsViewController: UIViewController{
     }
     
     func setCountryInfos(infoView: CountryInfosView, title: String, value: Any?){
-        
+                
         //Set values in the CountryInfosView
         if let value = value as? String{
             infoView.title.text = title
