@@ -115,7 +115,7 @@ class HomeScreenViewController: UIViewController {
             if savedCountries.jsonData != countriesForCoreDataData{
                 CountryServices.deleteCountry(countryManaged: savedCountries) { (error) in
                     if error == nil {
-                        var countryCD = CountryManaged()
+                        var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
                         if let data = self.countriesForCoreDataData {
                             countryCD.jsonData = data
                         }
@@ -168,7 +168,7 @@ class HomeScreenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "countriesList"{
             if let vc = segue.destination as? CountriesViewController{
-//                vc.countries = self.countries
+
                 self.navigationController?.navigationBar.isHidden = false
 
             }

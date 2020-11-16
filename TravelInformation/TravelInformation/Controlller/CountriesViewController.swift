@@ -15,16 +15,9 @@ class CountriesViewController: UIViewController{
     //reload the tableview every time we change the array
     var countries: [Country] = []{
         didSet{
-            self.countries = self.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? self.countries as! [Country]
+            self.countries = self.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) 
         }
     }
-//    {
-//        didSet{
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
     var selectedCountry: Country?
     
     var countriesFromCoreData : [CountryManaged] = []
