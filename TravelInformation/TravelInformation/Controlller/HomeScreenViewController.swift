@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var imageProfile: UIImageView!
-    @IBOutlet weak var nameSaudationLbl: UIView!
+    @IBOutlet weak var nameSaudationLabel: UILabel!
     @IBOutlet weak var firstCuurrencyNameLabel: UILabel!
     @IBOutlet weak var firstCurrencyValueLabel: UILabel!
     
@@ -42,7 +42,7 @@ class HomeScreenViewController: UIViewController {
         
         //change back button collor of navigation bar
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,8 +50,11 @@ class HomeScreenViewController: UIViewController {
 
     }
     func settingName(){
-        print(UIDevice.current.name.replacingOccurrences(of:"iPhone", with: ""))
-        print(UIDevice.current.name)
+        if let name = UIDevice.current.name.components(separatedBy: " ").last{
+            self.nameSaudationLabel.text = "Olá, \(name)"
+            
+        }
+   
     }
     func settingCurrenciesConverter(){
         let manager = NetworkManager()
@@ -91,8 +94,7 @@ class HomeScreenViewController: UIViewController {
             
             //Ordering countries by name
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
-            
-            
+                        
             CountryServices.getAllCountries{ (error, manageds) in
                 
                 if (error == nil) {
@@ -115,7 +117,7 @@ class HomeScreenViewController: UIViewController {
             if savedCountries.jsonData != countriesForCoreDataData{
                 CountryServices.deleteCountry(countryManaged: savedCountries) { (error) in
                     if error == nil {
-                        var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+                        let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
                         if let data = self.countriesForCoreDataData {
                             countryCD.jsonData = data
                         }
@@ -136,7 +138,7 @@ class HomeScreenViewController: UIViewController {
             }
         }
         else {
-            var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+            let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
             if let data = self.countriesForCoreDataData {
                 
                 countryCD.jsonData = data
@@ -149,11 +151,18 @@ class HomeScreenViewController: UIViewController {
                 else{
                     print("Error saving: \(error)")
                 }
+            if #available(iOS 14.0, *) {
+                DispatchQueue.main.async {
+                    if let vc = self.tabBarController?.viewControllers?[1].childViewControllerForPointerLock as? MyDestiniesViewController{
+                        vc.allCountries = self.countries
+                    }
+                }
+                
             }
         }
-
+        }
     }
-    
+
     
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
