@@ -76,7 +76,7 @@ class MyDestiniesViewController: UIViewController {
         let manager = NetworkManager()
         
         //Fetch countries from database
-        manager.fetchCountries { [weak self] (countries) in
+        manager.fetchCountries { [weak self] (countries, data) in
             self?.allCountries = countries
             //Ordering countries by name
             self?.allCountries = self?.allCountries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries

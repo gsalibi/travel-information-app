@@ -117,7 +117,7 @@ class HomeScreenViewController: UIViewController {
             if savedCountries.jsonData != countriesForCoreDataData{
                 CountryServices.deleteCountry(countryManaged: savedCountries) { (error) in
                     if error == nil {
-                        var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+                        let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
                         if let data = self.countriesForCoreDataData {
                             countryCD.jsonData = data
                         }
@@ -138,7 +138,7 @@ class HomeScreenViewController: UIViewController {
             }
         }
         else {
-            var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+            let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
             if let data = self.countriesForCoreDataData {
                 
                 countryCD.jsonData = data
@@ -153,15 +153,17 @@ class HomeScreenViewController: UIViewController {
                 }
             if #available(iOS 14.0, *) {
                 DispatchQueue.main.async {
-                    if let vc = self?.tabBarController?.viewControllers?[1].childViewControllerForPointerLock as? MyDestiniesViewController{
-                        vc.allCountries = countries
+                    if let vc = self.tabBarController?.viewControllers?[1].childViewControllerForPointerLock as? MyDestiniesViewController{
+                        vc.allCountries = self.countries
                     }
                 }
                 
             }
         }
-
+        }
     }
+
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if countries.count > 0{
