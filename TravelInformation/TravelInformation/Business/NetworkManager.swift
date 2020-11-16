@@ -16,7 +16,7 @@ class NetworkManager {
 //    static let shared = NetworkManager()
     
     //MARK: Fetch Countries
-    func fetchCountries(completionHandler: @escaping ([Country]) -> Void) {
+    func fetchCountries(completionHandler: @escaping ([Country], Data) -> Void) {
         let url = "http://ec2-3-16-29-21.us-east-2.compute.amazonaws.com:3100/all"
         guard let requestURL = URL(string: url) else { return }
         
@@ -26,9 +26,9 @@ class NetworkManager {
 
       let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
         
-        if let data = data,
-          let countrySummary = try? JSONDecoder().decode([Country].self, from: data) {
-          completionHandler(countrySummary)
+        if let data = data, let countrySummary = try? JSONDecoder().decode([Country].self, from: data) {
+            let jsonData = data
+            completionHandler(countrySummary, jsonData)
         }
       })
       task.resume()

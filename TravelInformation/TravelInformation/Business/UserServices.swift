@@ -149,8 +149,10 @@ class UserServices {
         CountryServices.getAllCountries { (error, managedCountryList) in
             if (error == nil) {
                 // assign country list
-               managedCountriesAtCoreData = managedCountryList!
                 countryListFromCoreData = CountryServices.convertManagedListToCountriesList(manageds: managedCountriesAtCoreData)
+                
+                
+                
                 if let favoriteNames = favorite.savedCountryNames{
                     for countryName in favoriteNames {
                         for country in countryListFromCoreData{
@@ -170,47 +172,41 @@ class UserServices {
         
     }
     
-    static func convertCountryFromManaged(managed: CountryManaged) -> Country {
+    static func convertCountryListFromManaged(managed: CountryManaged) -> [Country] {
         
-        var country = Country(name: "", capital: nil, currency: nil, language: nil, passportValidity: nil, entryCurrency: nil, exitCurrency: nil, touristVisa: nil, businessVisa: nil, vaccines: nil, culture: nil, insurance: nil)
+        var countryList:[Country] = []
         
-        country.name = managed.name
-        country.capital = managed.capital
-//        country.businessVisa = managed.businessVisa
-        country.culture = managed.cultural
-        country.entryCurrency = managed.entryCurrency
-        country.exitCurrency = managed.exitCurrency
-        country.language = managed.language
-        country.passportValidity = managed.passportValidity
-//        country.touristVisa?.rawValue = managed.touristVisa
-        country.currency = managed.currency
-//        country.vaccines = managed.vaccines
         
-        return country
+        if let countryList = try? JSONDecoder().decode([Country].self, from: managed.jsonData){
+            return countryList
+        }
+        
+        return countryList
+        
     }
     
-    static func convertCountryListToManagedList(countries: [Country]) -> [CountryManaged] {
-        
-        var countriesForCoreData : [CountryManaged] = []
-        var managed: CountryManaged?
-        for country in countries{
-            managed = CountryServices.convertManagedFromCountry(country: country)
-            countriesForCoreData.append(managed!)
-        }
-        return countriesForCoreData
-    }
+//    static func convertCountryListToManagedList(countries: [Country]) -> [CountryManaged] {
+//
+//        var countriesForCoreData : [CountryManaged] = []
+//        var managed: CountryManaged?
+//        for country in countries{
+//            managed = CountryServices.convertManagedFromCountry(country: country)
+//            countriesForCoreData.append(managed!)
+//        }
+//        return countriesForCoreData
+//    }
     
-    static func convertManagedListToCountriesList(manageds: [CountryManaged]) -> [Country]{
-        
-        var countries : [Country] = []
-        
-        
-        for managed in manageds{
-            var country = CountryServices.convertCountryFromManaged(managed: managed)
-            countries.append(country)
-        }
-        return countries
-    }
+//    static func convertManagedListToCountriesList(manageds: [CountryManaged]) -> [Country]{
+//
+//        var countries : [Country] = []
+//
+//
+//        for managed in manageds{
+//            var country = CountryServices.convertCountryFromManaged(managed: managed)
+//            countries.append(country)
+//        }
+//        return countries
+//    }
     
     
     

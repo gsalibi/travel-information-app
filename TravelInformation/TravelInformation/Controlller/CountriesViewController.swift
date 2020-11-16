@@ -13,7 +13,11 @@ class CountriesViewController: UIViewController{
     @IBOutlet weak var searchBar: UISearchBar!
     
     //reload the tableview every time we change the array
-    var countries: [Country] = []
+    var countries: [Country] = []{
+        didSet{
+            self.countries = self.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? self.countries as! [Country]
+        }
+    }
 //    {
 //        didSet{
 //            DispatchQueue.main.async {
@@ -24,11 +28,6 @@ class CountriesViewController: UIViewController{
     var selectedCountry: Country?
     
     var countriesFromCoreData : [CountryManaged] = []
-    {
-        didSet{
-            self.countriesFromCoreData = self.countriesFromCoreData.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? self.countriesFromCoreData as! [CountryManaged]
-        }
-    }
     
     var dismissTapGesture = UITapGestureRecognizer()
     var searchCountries: ([Country]?, Int) = ([],0)

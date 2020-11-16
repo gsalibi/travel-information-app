@@ -21,8 +21,15 @@ class HomeScreenViewController: UIViewController {
     
     var currency : CurrencyConverter? = nil
     var countries : [Country] = []
-    var countriesForCoreData : [CountryManaged] = []
-    var countriesAlredyInCoreData : [CountryManaged] = []
+    var countriesForCoreDataData : Data?
+    var countriesAlredyInCoreDataData: Data?
+    var countriesAlredyInCoreData : [CountryManaged] = []{
+        didSet{
+            if let countriesInCoreDataFirst = countriesAlredyInCoreData.first{
+                countriesAlredyInCoreDataData = countriesInCoreDataFirst.jsonData
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -78,20 +85,19 @@ class HomeScreenViewController: UIViewController {
         let manager = NetworkManager()
 
         //Fetch countries from database
-        manager.fetchCountries { [weak self] (countries) in
+        manager.fetchCountries { [weak self] (countries, countriesAsData) in
             self?.countries = countries
+            self?.countriesForCoreDataData = countriesAsData
             
             //Ordering countries by name
             self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
             
-            self?.countriesForCoreData = CountryServices.convertCountryListToManagedList(countries: countries)
             
             CountryServices.getAllCountries{ (error, manageds) in
                 
                 if (error == nil) {
                     // assign country list
                     self?.countriesAlredyInCoreData = manageds!
-                    
                 }
                 else {
                     // display error here because it was not possible to load season list
@@ -105,18 +111,47 @@ class HomeScreenViewController: UIViewController {
     }
     
     func saveCountriesToCoreData(){
-        for country in countriesForCoreData{
-            if countriesAlredyInCoreData.contains(country){
-                continue
-            }
-            else{
-                CountryServices.createCountry(countryManaged: country) { (error) in
-                    if (error != nil) {
-                        print("\(error) save")
+        if let savedCountries = self.countriesAlredyInCoreData.first {
+            if savedCountries.jsonData != countriesForCoreDataData{
+                CountryServices.deleteCountry(countryManaged: savedCountries) { (error) in
+                    if error == nil {
+                        var countryCD = CountryManaged()
+                        if let data = self.countriesForCoreDataData {
+                            countryCD.jsonData = data
+                        }
+                        CountryServices.createCountry(countryManaged: countryCD) { (error) in
+                            if error == nil{
+                                print("Error saving: \(error)")
+                            }
+                            else{
+                                
+                            }
+                        }
+                        
+                    }
+                    else {
+                        print("error in deleting country foor update")
                     }
                 }
             }
         }
+        else {
+            var countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+            if let data = self.countriesForCoreDataData {
+                
+                countryCD.jsonData = data
+            }
+
+            CountryServices.createCountry(countryManaged: countryCD) { (error) in
+                if error == nil{
+                    
+                }
+                else{
+                    print("Error saving: \(error)")
+                }
+            }
+        }
+
     }
     
     
@@ -134,7 +169,6 @@ class HomeScreenViewController: UIViewController {
         if segue.identifier == "countriesList"{
             if let vc = segue.destination as? CountriesViewController{
 //                vc.countries = self.countries
-                vc.countriesFromCoreData = self.countriesForCoreData
                 self.navigationController?.navigationBar.isHidden = false
 
             }

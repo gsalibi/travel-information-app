@@ -38,7 +38,6 @@
 		9A0B1143253D26B000ACAFDE /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */; };
 		9A106F68255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A106F66255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift */; };
 		9A106F69255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A106F67255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift */; };
-		9A1BF237255E4F5900547DF7 /* VaccineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */; };
 		9A4A53F62537920E00DE508F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F52537920E00DE508F /* Country.swift */; };
 		9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A53F72537966F00DE508F /* CoreDataManager.swift */; };
 		9A4B0C53255EACF800997B80 /* UserFavoritesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */; };
@@ -120,7 +119,6 @@
 		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		9A106F66255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryManaged+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		9A106F67255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryManaged+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineDAO.swift; sourceTree = "<group>"; };
 		9A4A53F52537920E00DE508F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		9A4A53F72537966F00DE508F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavoritesDAO.swift; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 				9AE4D10B253801E90026EC8B /* DAO.swift */,
 				9AE4D10D253802650026EC8B /* CountryDAO.swift */,
 				9A4B0C52255EACF800997B80 /* UserFavoritesDAO.swift */,
-				9A1BF236255E4F5900547DF7 /* VaccineDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -652,7 +649,6 @@
 				9A106F69255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift in Sources */,
 				314EB93C2551B17E0069722F /* CulturalInfoViewController.swift in Sources */,
 				ECE2323C253643480030E21B /* CountriesViewController.swift in Sources */,
-				9A1BF237255E4F5900547DF7 /* VaccineDAO.swift in Sources */,
 				ECE23238253643480030E21B /* AppDelegate.swift in Sources */,
 				9A106F68255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift in Sources */,
 				9A4B0C59255EAD8E00997B80 /* UserFavorites+CoreDataClass.swift in Sources */,
