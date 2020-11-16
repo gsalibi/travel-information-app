@@ -69,17 +69,17 @@ class CountriesViewController: UIViewController{
         
     }
     
-    func loadCountriesFromCoreData(){
-        CountryServices.getAllCountries { (error, countriesFromCoreData) in
-            if (error == nil) {
-                // assign country list
-                self.countriesFromCoreData = countriesFromCoreData!
-            }
-            else {
-                print("\(error) load")
-            }
-        }
-    }
+//    func loadCountriesFromCoreData(){
+//        CountryServices.getAllCountries { (error, countriesFromCoreData) in
+//            if (error == nil) {
+//                // assign country list
+//                self.countriesFromCoreData = countriesFromCoreData!
+//            }
+//            else {
+//                print("\(error) load")
+//            }
+//        }
+//    }
     
     //Configuration search bar and gesture
     
