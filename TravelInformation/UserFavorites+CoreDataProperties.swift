@@ -16,6 +16,6 @@ extension UserFavorites {
         return NSFetchRequest<UserFavorites>(entityName: "UserFavorites")
     }
 
-    @NSManaged public var savedCountryNames: [String]?
+    @NSManaged public var savedCountryName: String
 
 }

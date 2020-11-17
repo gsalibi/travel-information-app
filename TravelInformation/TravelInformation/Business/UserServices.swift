@@ -139,36 +139,21 @@ class UserServices {
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
     
-    static func createCountryListFromFavorites(favorite: UserFavorites) -> [Country] {
+    static func createCountryFromFavorites(favorite: UserFavorites, countries: [Country]) -> Country {
         
-        var managedCountriesAtCoreData: [CountryManaged] = []
-        var countryListFromCoreData: [Country] = []
-        var countryListFromFavorites: [Country] = []
-        var favoriteNames: [String] = []
+        var countryFromFav: Country = Country(name: "", capital: nil, currency: nil, language: nil, passportValidity: nil, entryCurrency: nil, exitCurrency: nil, touristVisa: nil, businessVisa: nil, vaccines: nil, culture: nil, insurance: nil)
         
-        CountryServices.getAllCountries { (error, managedCountryList) in
-            if (error == nil) {
-                // assign country list
-                countryListFromCoreData = CountryServices.convertManagedListToCountriesList(manageds: managedCountriesAtCoreData)
-                
-                
-                
-                if let favoriteNames = favorite.savedCountryNames{
-                    for countryName in favoriteNames {
-                        for country in countryListFromCoreData{
-                            if countryName == country.name{
-                                countryListFromFavorites.append(country)
-                            }
-                        }
-                    }
-                }
-                
-            }
-            else {
-                // display error here because it was not possible to load season list
+        
+        // assign country list
+        for country in countries{
+            if country.name == favorite.savedCountryName{
+                countryFromFav = country
             }
         }
-        return countryListFromFavorites
+        
+        
+    
+        return countryFromFav
         
     }
     

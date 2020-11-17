@@ -19,7 +19,7 @@ class MyDestiniesViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var selectedCountry: Country?
-    var favoritesCountries: [Country] = []
+    var favoritesCountries: [String] = ["Chile", "Portugal", "Argentina"]
     var allCountries : [Country] = []
     var segmentSelected : Segment = .favCountry
     
@@ -29,8 +29,6 @@ class MyDestiniesViewController: UIViewController {
         //Set tableviewDelegate
         tableView.delegate = self
         tableView.dataSource = self
-        
-        loadAllCountries()
         
         
         //Load tableview cell register
@@ -44,42 +42,7 @@ class MyDestiniesViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: Asset.text.color as Any]
-        
-        
-    }
-    
-    //Load All
-    func loadAllCountries(){
-        CountryServices.getAllCountries{ (error, manageds) in
-            
-            if (error == nil) {
-                // assign country list
-                let countriesFromCoreData = manageds!
-                self.allCountries = CountryServices.convertManagedListToCountriesList(manageds: countriesFromCoreData)
-                
-               
-            }
-            else {
-                // display error here because it was not possible to load season list
-            }
-            
-        }
-    }
-    
-    //Load favorites
-    func loadUsersFavorites(){
-        UserServices.getAllFavorites { (error, userFavs) in
-            if error == nil, let userFavs = userFavs {
-                for fav in userFavs{
-                    let countryFromFav = UserServices.createCountryFromFavorites(favorite: fav, countries: self.allCountries)
-                    self.favoritesCountries.append(countryFromFav)
-                    
-                }
-                self.filterCountries()
-            }else{
-                print("Error loading userFavorites: \(error)")
-            }
-        }
+        filterCountries()
     }
     
     
@@ -90,7 +53,7 @@ class MyDestiniesViewController: UIViewController {
         countries = allCountries.filter({ (country) -> Bool in
             var isContain = false
             for fav in favoritesCountries{
-                if country.name == fav.name{
+                if country.name == fav{
                     isContain = true
                 }
             }
@@ -113,7 +76,7 @@ class MyDestiniesViewController: UIViewController {
         let manager = NetworkManager()
         
         //Fetch countries from database
-        manager.fetchCountries { [weak self] (countries, data) in
+        manager.fetchCountries { [weak self] (countries) in
             self?.allCountries = countries
             //Ordering countries by name
             self?.allCountries = self?.allCountries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
@@ -124,8 +87,6 @@ class MyDestiniesViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        loadUsersFavorites()
-
     }
     override func viewWillDisappear(_ animated: Bool) {
         UIView.animate(withDuration: 1) {

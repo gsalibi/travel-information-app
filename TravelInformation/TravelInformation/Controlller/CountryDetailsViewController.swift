@@ -16,6 +16,8 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet weak var needsToTravelBtn: UIButton!
     @IBOutlet weak var culturalInformationBtn: UIButton!
     
+    @IBOutlet weak var heartIcon: UIImageView!
+    @IBOutlet weak var favoriteCountryBtn: UIButton!
     //all CountryInfosViews in this array
     @IBOutlet var infosViews: [CountryInfosView]!
     @IBOutlet weak var nameCountryLabel: UILabel!
@@ -29,18 +31,27 @@ class CountryDetailsViewController: UIViewController{
     
     var country : Country?
     
+    
+    var favorites: [UserFavorites] = []
+    var favorite: UserFavorites?
+    var heartIsFilled = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTexts()
+        
+        
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        
+        treatIfFavorite()
     }
     //MARK: Set infos in views
-    
-    
     func setTexts() {
         //Unraping and setting name of the Country and Capital
         if let name = country?.name{
@@ -94,6 +105,24 @@ class CountryDetailsViewController: UIViewController{
         }
     }
     
+    
+    func treatIfFavorite() {
+        UserServices.getAllFavorites { (error, favorites) in
+            if let userFavs = favorites, error == nil{
+                self.favorites = userFavs
+                
+                for fav in self.favorites{
+                    if fav.savedCountryName == self.country?.name{
+                        self.heartIcon.image = UIImage(asset: Asset.heartIconActive)
+                        self.heartIsFilled = true
+                        
+                        self.favorite = fav
+                    }
+                }
+            }
+        }
+    }
+    
     func setCountryInfos(infoView: CountryInfosView, title: String, value: Any?){
         
         //Set values in the CountryInfosView
@@ -105,6 +134,58 @@ class CountryDetailsViewController: UIViewController{
         }else{
             //Hide the view if we dont have the information
             infoView.isHidden = true
+        }
+    }
+    
+    //MARK: FAV ACTION
+    @IBAction func favoriteCountry(_ sender: Any) {
+        
+        guard let heartIconImage = heartIcon.image,
+              let heartIconNotFilled = (UIImage(named: "heartIcon")),
+              let heartFilled = (UIImage(named: "heartIconActive")) else { return }
+        
+        //eh fav
+        if heartIconImage.isEqual(heartFilled) {
+            
+            heartIcon.image = UIImage(named: "heartIcon")
+            heartIsFilled = false
+            var userFavorite = UserFavorites(context: CoreDataManager.sharedInstance.context)
+            userFavorite.savedCountryName = country?.name ?? "no country name found"
+            
+            var favoritesStored: [UserFavorites] = []
+            
+            
+            if let favorite = favorite {
+                UserServices.deleteCountry(userFavorites: favorite) { (error) in
+                    if error != nil{
+                        print("Error deleting fav: \(error)")
+                    }
+                    else{
+                        self.favorite = nil
+                    }
+                }
+            }
+            
+        }
+        else if heartIconImage.isEqual(heartIconNotFilled){
+            heartIcon.image = UIImage(named: "heartIconActive")
+            heartIsFilled = true
+            var userFavorite = UserFavorites(context: CoreDataManager.sharedInstance.context)
+            userFavorite.savedCountryName = country?.name ?? "no country name found"
+            var favoritesStored: [UserFavorites] = []
+            UserServices.getAllFavorites { (error, userFavs) in
+                if let userFavs = userFavs, error == nil{
+                    favoritesStored = userFavs
+                    
+                    
+                    UserServices.createFavorite(userFavorites: userFavorite) { (error) in
+                        if error != nil{
+                            print("Error creating favorite:\(error)")
+                        }
+                    }
+                    
+                }
+            }
         }
     }
     
@@ -137,5 +218,13 @@ class CountryDetailsViewController: UIViewController{
         }
     }
     
+    
+    func areEqualImages(img1: UIImage, img2: UIImage) -> Bool {
+
+        guard let data1 = img1.pngData() else { return false }
+        guard let data2 = img2.pngData() else { return false }
+
+        return data1 == data2
+    }
 }
 

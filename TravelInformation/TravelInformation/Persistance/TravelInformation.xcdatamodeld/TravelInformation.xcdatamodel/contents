@@ -4,7 +4,7 @@
         <attribute name="jsonData" optional="YES" attributeType="Binary"/>
     </entity>
     <entity name="UserFavorites" representedClassName="UserFavorites" syncable="YES">
-        <attribute name="savedCountries" optional="YES" attributeType="Transformable"/>
+        <attribute name="savedCountryName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="58"/>

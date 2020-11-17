@@ -20,6 +20,7 @@ class Country: Codable {
     var insurance: Insurance?
     var vaccines: [Vaccine]?
     var culture: [String: String]?
+    
 
     enum CodingKeys: String, CodingKey {
         case name, capital, currency, language
