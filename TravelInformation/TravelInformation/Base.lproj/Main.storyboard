@@ -1179,7 +1179,7 @@
         <scene sceneID="Q21-z5-FH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="fD2-S4-YqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" id="9LR-H2-x96">
+                    <tabBarItem key="tabBarItem" title="Explorar" image="explorarTabIcon" selectedImage="explorarTabIconActived" id="9LR-H2-x96">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -1445,7 +1445,7 @@ Certificado é válida por toda a vida.</string>
         <scene sceneID="2dh-o8-TXx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="kDM-8q-hrQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" id="iFO-bM-KZe">
+                    <tabBarItem key="tabBarItem" title="Meus Destinos" image="destinosTabIcon" selectedImage="destinosTabIconActived" id="iFO-bM-KZe">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" red="0.30980392156862746" green="0.42745098039215684" blue="0.80392156862745101" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -1485,9 +1485,11 @@ Certificado é válida por toda a vida.</string>
         <image name="0_front" width="636" height="372"/>
         <image name="buttonArrow" width="20" height="36"/>
         <image name="countryImage" width="414" height="312"/>
-        <image name="destinosTabIcon" width="24" height="24"/>
+        <image name="destinosTabIcon" width="29" height="29"/>
+        <image name="destinosTabIconActived" width="29" height="29"/>
         <image name="doubleCheck" width="66" height="42"/>
-        <image name="explorarTabIcon" width="24" height="24"/>
+        <image name="explorarTabIcon" width="29" height="29"/>
+        <image name="explorarTabIconActived" width="29" height="29"/>
         <image name="heartIcon" width="24" height="21"/>
         <image name="homeImage" width="221" height="203"/>
         <image name="imagemPais" width="374" height="244"/>
