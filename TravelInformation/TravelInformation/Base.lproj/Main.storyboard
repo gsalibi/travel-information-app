@@ -23,7 +23,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -49,16 +49,16 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="sXJ-bw-ica"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="wpd-UG-H98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0fb-ji-2zp"/>
-                            <constraint firstItem="751-LT-ENX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ISQ-6A-qIq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpd-UG-H98" secondAttribute="bottom" id="O5M-pw-0Bk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wpd-UG-H98" secondAttribute="trailing" id="SMz-U7-NkU"/>
-                            <constraint firstItem="751-LT-ENX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZaL-jT-x0N"/>
+                            <constraint firstItem="wpd-UG-H98" firstAttribute="leading" secondItem="sXJ-bw-ica" secondAttribute="leading" id="0fb-ji-2zp"/>
+                            <constraint firstItem="751-LT-ENX" firstAttribute="leading" secondItem="sXJ-bw-ica" secondAttribute="leading" constant="20" id="ISQ-6A-qIq"/>
+                            <constraint firstItem="sXJ-bw-ica" firstAttribute="bottom" secondItem="wpd-UG-H98" secondAttribute="bottom" id="O5M-pw-0Bk"/>
+                            <constraint firstItem="sXJ-bw-ica" firstAttribute="trailing" secondItem="wpd-UG-H98" secondAttribute="trailing" id="SMz-U7-NkU"/>
+                            <constraint firstItem="751-LT-ENX" firstAttribute="top" secondItem="sXJ-bw-ica" secondAttribute="top" constant="20" id="ZaL-jT-x0N"/>
                             <constraint firstItem="wpd-UG-H98" firstAttribute="top" secondItem="751-LT-ENX" secondAttribute="bottom" constant="20" id="feS-sT-fPW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="751-LT-ENX" secondAttribute="trailing" constant="20" id="kNF-3F-NUT"/>
+                            <constraint firstItem="sXJ-bw-ica" firstAttribute="trailing" secondItem="751-LT-ENX" secondAttribute="trailing" constant="20" id="kNF-3F-NUT"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
@@ -84,7 +84,7 @@
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
@@ -540,13 +540,13 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="iSh-rK-1ja"/>
+                        <viewLayoutGuide key="safeArea" id="MA0-r1-RN1"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="iSh-rK-1ja" firstAttribute="trailing" secondItem="aO8-tB-b7z" secondAttribute="trailing" id="A1B-pR-btM"/>
-                            <constraint firstItem="aO8-tB-b7z" firstAttribute="leading" secondItem="iSh-rK-1ja" secondAttribute="leading" id="UAt-07-hNc"/>
-                            <constraint firstItem="aO8-tB-b7z" firstAttribute="top" secondItem="iSh-rK-1ja" secondAttribute="top" id="mcv-Ou-EWI"/>
-                            <constraint firstItem="iSh-rK-1ja" firstAttribute="bottom" secondItem="aO8-tB-b7z" secondAttribute="bottom" id="mom-DK-t2l"/>
+                            <constraint firstItem="MA0-r1-RN1" firstAttribute="trailing" secondItem="aO8-tB-b7z" secondAttribute="trailing" id="A1B-pR-btM"/>
+                            <constraint firstItem="aO8-tB-b7z" firstAttribute="leading" secondItem="MA0-r1-RN1" secondAttribute="leading" id="UAt-07-hNc"/>
+                            <constraint firstItem="aO8-tB-b7z" firstAttribute="top" secondItem="MA0-r1-RN1" secondAttribute="top" id="mcv-Ou-EWI"/>
+                            <constraint firstItem="MA0-r1-RN1" firstAttribute="bottom" secondItem="aO8-tB-b7z" secondAttribute="bottom" id="mom-DK-t2l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nome do país" id="yYj-K3-If7">
@@ -580,7 +580,7 @@
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
@@ -608,14 +608,14 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="JKf-1S-gW8"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="I40-Lz-dgP"/>
+                        <viewLayoutGuide key="safeArea" id="oOs-7r-D96"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="I40-Lz-dgP" firstAttribute="bottom" secondItem="Fh1-hq-zVW" secondAttribute="bottom" id="Gtg-2x-Xgx"/>
-                            <constraint firstItem="I40-Lz-dgP" firstAttribute="top" secondItem="Fh1-hq-zVW" secondAttribute="top" id="IWf-KR-NiE"/>
-                            <constraint firstItem="Fh1-hq-zVW" firstAttribute="trailing" secondItem="I40-Lz-dgP" secondAttribute="trailing" id="OFW-Fs-2vD"/>
-                            <constraint firstItem="26C-Bk-e7F" firstAttribute="leading" secondItem="I40-Lz-dgP" secondAttribute="leading" constant="20" id="cJ1-sM-tKE"/>
-                            <constraint firstItem="I40-Lz-dgP" firstAttribute="leading" secondItem="Fh1-hq-zVW" secondAttribute="leading" id="gwE-Tx-F7i"/>
+                            <constraint firstItem="oOs-7r-D96" firstAttribute="bottom" secondItem="Fh1-hq-zVW" secondAttribute="bottom" id="Gtg-2x-Xgx"/>
+                            <constraint firstItem="oOs-7r-D96" firstAttribute="top" secondItem="Fh1-hq-zVW" secondAttribute="top" id="IWf-KR-NiE"/>
+                            <constraint firstItem="Fh1-hq-zVW" firstAttribute="trailing" secondItem="oOs-7r-D96" secondAttribute="trailing" id="OFW-Fs-2vD"/>
+                            <constraint firstItem="26C-Bk-e7F" firstAttribute="leading" secondItem="oOs-7r-D96" secondAttribute="leading" constant="20" id="cJ1-sM-tKE"/>
+                            <constraint firstItem="oOs-7r-D96" firstAttribute="leading" secondItem="Fh1-hq-zVW" secondAttribute="leading" id="gwE-Tx-F7i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HmX-re-JOI"/>
@@ -657,13 +657,13 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="5Pu-Mz-Kmy"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PDY-Ee-QoW"/>
+                        <viewLayoutGuide key="safeArea" id="04n-WH-m5Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="KLj-NK-vwQ" secondAttribute="bottom" id="0y4-Cz-bI7"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="leading" secondItem="PDY-Ee-QoW" secondAttribute="leading" id="O9z-qX-FVJ"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="top" secondItem="PDY-Ee-QoW" secondAttribute="top" id="d3U-gW-hLq"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="trailing" secondItem="PDY-Ee-QoW" secondAttribute="trailing" id="wkj-1E-iBi"/>
+                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="leading" secondItem="04n-WH-m5Q" secondAttribute="leading" id="O9z-qX-FVJ"/>
+                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="top" secondItem="04n-WH-m5Q" secondAttribute="top" id="d3U-gW-hLq"/>
+                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="trailing" secondItem="04n-WH-m5Q" secondAttribute="trailing" id="wkj-1E-iBi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nome do país" id="VSU-b8-ctK"/>
@@ -680,7 +680,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
@@ -1119,14 +1119,14 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="eAN-zl-9P1"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="BCv-0x-IC7"/>
+                        <viewLayoutGuide key="safeArea" id="MIK-tD-xcM"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="Do0-9m-iBT" firstAttribute="centerY" secondItem="BCv-0x-IC7" secondAttribute="centerY" id="9id-em-Y59"/>
-                            <constraint firstItem="BCv-0x-IC7" firstAttribute="trailing" secondItem="Do0-9m-iBT" secondAttribute="trailing" id="EUQ-O0-pTG"/>
-                            <constraint firstItem="Do0-9m-iBT" firstAttribute="leading" secondItem="BCv-0x-IC7" secondAttribute="leading" id="LE6-j9-2pK"/>
-                            <constraint firstItem="BCv-0x-IC7" firstAttribute="bottom" secondItem="Do0-9m-iBT" secondAttribute="bottom" id="LI6-1x-Qxp"/>
-                            <constraint firstItem="Do0-9m-iBT" firstAttribute="top" secondItem="BCv-0x-IC7" secondAttribute="top" id="N69-DM-leO"/>
+                            <constraint firstItem="Do0-9m-iBT" firstAttribute="centerY" secondItem="1TI-l3-RoN" secondAttribute="centerY" id="9id-em-Y59"/>
+                            <constraint firstItem="MIK-tD-xcM" firstAttribute="trailing" secondItem="Do0-9m-iBT" secondAttribute="trailing" id="EUQ-O0-pTG"/>
+                            <constraint firstItem="Do0-9m-iBT" firstAttribute="leading" secondItem="MIK-tD-xcM" secondAttribute="leading" id="LE6-j9-2pK"/>
+                            <constraint firstItem="MIK-tD-xcM" firstAttribute="bottom" secondItem="Do0-9m-iBT" secondAttribute="bottom" id="LI6-1x-Qxp"/>
+                            <constraint firstItem="Do0-9m-iBT" firstAttribute="top" secondItem="MIK-tD-xcM" secondAttribute="top" id="N69-DM-leO"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
@@ -1189,7 +1189,7 @@
             <objects>
                 <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
@@ -1208,16 +1208,16 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HdF-L2-BL9"/>
+                        <viewLayoutGuide key="safeArea" id="bpp-2p-Vtc"/>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="U3X-gd-rHt" secondAttribute="trailing" constant="16" id="DYe-Gj-uFa"/>
-                            <constraint firstItem="U3X-gd-rHt" firstAttribute="top" secondItem="HdF-L2-BL9" secondAttribute="top" constant="10" id="Igp-SV-dcS"/>
-                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" id="JUd-rc-LTT"/>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="bottom" secondItem="kM8-Uk-LQw" secondAttribute="bottom" id="QpJ-GG-T2B"/>
+                            <constraint firstItem="bpp-2p-Vtc" firstAttribute="trailing" secondItem="U3X-gd-rHt" secondAttribute="trailing" constant="16" id="DYe-Gj-uFa"/>
+                            <constraint firstItem="U3X-gd-rHt" firstAttribute="top" secondItem="bpp-2p-Vtc" secondAttribute="top" constant="10" id="Igp-SV-dcS"/>
+                            <constraint firstItem="kM8-Uk-LQw" firstAttribute="leading" secondItem="bpp-2p-Vtc" secondAttribute="leading" id="JUd-rc-LTT"/>
+                            <constraint firstItem="bpp-2p-Vtc" firstAttribute="bottom" secondItem="kM8-Uk-LQw" secondAttribute="bottom" id="QpJ-GG-T2B"/>
                             <constraint firstItem="kM8-Uk-LQw" firstAttribute="top" secondItem="U3X-gd-rHt" secondAttribute="bottom" constant="23" id="U9s-gU-h0n"/>
-                            <constraint firstItem="HdF-L2-BL9" firstAttribute="trailing" secondItem="kM8-Uk-LQw" secondAttribute="trailing" id="aLR-cZ-A6G"/>
-                            <constraint firstItem="U3X-gd-rHt" firstAttribute="leading" secondItem="HdF-L2-BL9" secondAttribute="leading" constant="16" id="nWO-o3-GPQ"/>
+                            <constraint firstItem="bpp-2p-Vtc" firstAttribute="trailing" secondItem="kM8-Uk-LQw" secondAttribute="trailing" id="aLR-cZ-A6G"/>
+                            <constraint firstItem="U3X-gd-rHt" firstAttribute="leading" secondItem="bpp-2p-Vtc" secondAttribute="leading" constant="16" id="nWO-o3-GPQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meus destinos" largeTitleDisplayMode="always" id="idz-uN-FcB"/>
@@ -1236,7 +1236,7 @@
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
