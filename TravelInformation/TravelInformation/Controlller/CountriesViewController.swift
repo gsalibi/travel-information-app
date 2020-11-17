@@ -88,7 +88,7 @@ class CountriesViewController: UIViewController{
         //Search bar
         self.searchBar.delegate = self
         if #available(iOS 13.0, *) {
-            self.searchBar.searchTextField.textColor = Asset.tertiary.color
+            self.searchBar.searchTextField.textColor = Asset.text2.color
         } else {
             // Fallback on earlier versions
         }

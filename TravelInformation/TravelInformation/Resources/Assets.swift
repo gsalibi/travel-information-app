@@ -27,6 +27,8 @@ internal enum Asset {
   internal static let secondary = ColorAsset(name: "secondary")
   internal static let tertiary = ColorAsset(name: "tertiary")
   internal static let text = ColorAsset(name: "text")
+  internal static let text2 = ColorAsset(name: "text2")
+  internal static let _0Front = ImageAsset(name: "0_front")
   internal static let abecasia = ImageAsset(name: "abecasia")
   internal static let afeganistao = ImageAsset(name: "afeganistao")
   internal static let africadosul = ImageAsset(name: "africadosul")
