@@ -438,6 +438,7 @@ internal enum Asset {
   internal static let vietna0 = ImageAsset(name: "vietna0")
   internal static let zambia0 = ImageAsset(name: "zambia0")
   internal static let zimbabue0 = ImageAsset(name: "zimbabue0")
+  internal static let launchMock = ImageAsset(name: "launchMock")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
