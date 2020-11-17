@@ -33,6 +33,7 @@ class HomeScreenViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
         self.settingName()
         self.settingCurrenciesConverter()
@@ -46,9 +47,12 @@ class HomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
-
+        self.checkLatestUpdate()
     }
+    
+    
     func settingName(){
         if let name = UIDevice.current.name.components(separatedBy: " ").last{
             self.nameSaudationLabel.text = "Olá, \(name)"
@@ -181,6 +185,35 @@ class HomeScreenViewController: UIViewController {
                 self.navigationController?.navigationBar.isHidden = false
 
             }
+        }
+    }
+}
+
+
+extension HomeScreenViewController {
+    func getLastUpdate() -> String {
+        var last_update = ""
+        if let url = URL(string: "http://ec2-3-16-29-21.us-east-2.compute.amazonaws.com:3100/update") {
+            do {
+                let contents = try String(contentsOf: url)
+                last_update = contents
+            } catch {
+                // contents could not be loaded
+            }
+        } else {
+            // the URL was bad!
+        }
+        
+        return last_update
+    }
+    
+    func checkLatestUpdate() {
+        let server_date = getLastUpdate()
+        let local_date = UserDefaults.standard.string(forKey: "update")
+        
+        if server_date != local_date {
+            self.fetchCountries()
+            UserDefaults.standard.set(server_date, forKey: "update")
         }
     }
 }

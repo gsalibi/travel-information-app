@@ -117,6 +117,7 @@
 		31DAD09A2551DF23001D61CF /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		31DAD09B2551DF23001D61CF /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		6BB7CE9BE62580FD58E1A7ED /* Pods-TravelInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformation.release.xcconfig"; path = "Target Support Files/Pods-TravelInformation/Pods-TravelInformation.release.xcconfig"; sourceTree = "<group>"; };
+		85C88782BF95A2250E54C81F /* Pods-TravelInformationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformationTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelInformationTests/Pods-TravelInformationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A0B1142253D26B000ACAFDE /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		9A106F66255DE9D2000EFBAE /* CountryManaged+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryManaged+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		9A106F67255DE9D2000EFBAE /* CountryManaged+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryManaged+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -347,6 +348,7 @@
 				CF58F5C35E024DA5E6472576 /* Pods-TravelInformation.debug.xcconfig */,
 				6BB7CE9BE62580FD58E1A7ED /* Pods-TravelInformation.release.xcconfig */,
 				0B7B3836E94D5843764C2D9E /* Pods-TravelInformationTests.release.xcconfig */,
+				85C88782BF95A2250E54C81F /* Pods-TravelInformationTests.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -880,6 +882,7 @@
 		};
 		ECE232652536434A0030E21B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C88782BF95A2250E54C81F /* Pods-TravelInformationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

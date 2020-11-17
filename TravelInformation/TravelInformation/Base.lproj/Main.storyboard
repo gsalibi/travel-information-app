@@ -116,8 +116,14 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9S-44-Sf7">
-                                                        <rect key="frame" x="127" y="315" width="267" height="16.5"/>
+                                                        <rect key="frame" x="127" y="315" width="44" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" name="text"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atualizado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnd-JS-4ED">
+                                                        <rect key="frame" x="357" y="317" width="57" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" name="text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -129,12 +135,14 @@
                                                     <constraint firstAttribute="trailing" secondItem="5q3-4D-B7t" secondAttribute="trailing" constant="20" id="9Tf-x7-VUy"/>
                                                     <constraint firstItem="X9S-44-Sf7" firstAttribute="leading" secondItem="q2J-hK-x36" secondAttribute="trailing" constant="13" id="H39-hi-Tg6"/>
                                                     <constraint firstItem="p1i-Rp-Zki" firstAttribute="centerX" secondItem="QUX-dQ-bH0" secondAttribute="centerX" id="Uz4-BZ-MBK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="X9S-44-Sf7" secondAttribute="trailing" constant="20" id="ZP7-eJ-qK6"/>
                                                     <constraint firstItem="5q3-4D-B7t" firstAttribute="leading" secondItem="q2J-hK-x36" secondAttribute="trailing" constant="13" id="c4s-sr-mDg"/>
                                                     <constraint firstItem="5q3-4D-B7t" firstAttribute="bottom" secondItem="X9S-44-Sf7" secondAttribute="top" id="cSg-St-d6Y"/>
+                                                    <constraint firstItem="wnd-JS-4ED" firstAttribute="trailing" secondItem="p1i-Rp-Zki" secondAttribute="trailing" id="cWP-YD-Ec9"/>
                                                     <constraint firstItem="q2J-hK-x36" firstAttribute="centerY" secondItem="p1i-Rp-Zki" secondAttribute="bottom" id="kOk-1C-waj"/>
+                                                    <constraint firstItem="wnd-JS-4ED" firstAttribute="top" secondItem="p1i-Rp-Zki" secondAttribute="bottom" constant="5" id="pqi-KP-91R"/>
                                                     <constraint firstItem="p1i-Rp-Zki" firstAttribute="width" secondItem="QUX-dQ-bH0" secondAttribute="width" id="sw4-hr-YkK"/>
                                                     <constraint firstItem="p1i-Rp-Zki" firstAttribute="top" secondItem="QUX-dQ-bH0" secondAttribute="top" id="w2t-Ld-PNf"/>
+                                                    <constraint firstItem="wnd-JS-4ED" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X9S-44-Sf7" secondAttribute="trailing" constant="20" id="xP1-xb-a1l"/>
                                                     <constraint firstItem="q2J-hK-x36" firstAttribute="leading" secondItem="QUX-dQ-bH0" secondAttribute="leading" constant="20" id="yy5-1y-qcK"/>
                                                 </constraints>
                                             </view>
@@ -556,6 +564,7 @@
                         <outlet property="flagImage" destination="q2J-hK-x36" id="zBg-px-caL"/>
                         <outlet property="nameCountryLabel" destination="5q3-4D-B7t" id="JVL-yM-Z1H"/>
                         <outlet property="needsToTravelBtn" destination="ZP1-80-X1B" id="zM8-Mh-p8g"/>
+                        <outlet property="updateLabel" destination="wnd-JS-4ED" id="ze1-Af-lA6"/>
                         <outletCollection property="infosViews" destination="l53-xS-uLO" collectionClass="NSMutableArray" id="41k-EU-yTj"/>
                         <outletCollection property="infosViews" destination="RhY-hD-osI" collectionClass="NSMutableArray" id="QAo-tq-fW8"/>
                         <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="lCy-Wh-g3u"/>
@@ -569,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecw-V2-5Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="412"/>
+            <point key="canvasLocation" x="3818.8405797101454" y="411.83035714285711"/>
         </scene>
         <!--Cultural Info View Controller-->
         <scene sceneID="5gV-ZW-FKZ">
@@ -1198,7 +1207,7 @@
                                 <color key="selectedSegmentTintColor" name="detail"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
-                                <rect key="frame" x="0.0" y="64" width="414" height="600.5"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="609"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

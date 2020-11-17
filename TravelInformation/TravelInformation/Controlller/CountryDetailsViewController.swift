@@ -20,6 +20,7 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet var infosViews: [CountryInfosView]!
     @IBOutlet weak var nameCountryLabel: UILabel!
     @IBOutlet weak var capitalCountryLabel: UILabel!
+    @IBOutlet weak var updateLabel: UILabel!
     
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -56,6 +57,7 @@ class CountryDetailsViewController: UIViewController{
             nameCountryLabel.text = "País desconhecido 🧐"
             
         }
+        updateLabel.text = "Atualizado em " + UserDefaults.standard.string(forKey: "update")!
         
         if let capital = country?.capital{
             capitalCountryLabel.text = capital
