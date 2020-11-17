@@ -19,6 +19,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var secondCurrencyNameLabel: UILabel!
     @IBOutlet weak var secondCurrencyValueLabel: UILabel!
     
+    @IBOutlet weak var newsView: UIView!
     var currency : CurrencyConverter? = nil
     var countries : [Country] = []
     var countriesForCoreDataData : Data?
@@ -38,7 +39,7 @@ class HomeScreenViewController: UIViewController {
         self.settingName()
         self.settingCurrenciesConverter()
         self.fetchCountries()
-        
+        self.newsView.isHidden = true
         
         
         //change back button collor of navigation bar
