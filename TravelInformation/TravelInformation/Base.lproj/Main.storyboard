@@ -201,6 +201,9 @@
                                                                                 <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="favoringCountries:" destination="BiW-BS-Brh" eventType="touchUpInside" id="xgT-qn-ZuS"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-Eb-QCV">
                                                                         <rect key="frame" x="52.5" y="8" width="16" height="24"/>
@@ -553,6 +556,7 @@
                         <outlet property="capitalCountryLabel" destination="X9S-44-Sf7" id="3h9-Y9-nns"/>
                         <outlet property="countryImageView" destination="p1i-Rp-Zki" id="AXN-Kj-cZI"/>
                         <outlet property="culturalInformationBtn" destination="Lhi-ze-4oR" id="EtS-FI-wAu"/>
+                        <outlet property="favoriteImage" destination="lNk-Eb-QCV" id="34S-2h-SUV"/>
                         <outlet property="flagImage" destination="q2J-hK-x36" id="zBg-px-caL"/>
                         <outlet property="nameCountryLabel" destination="5q3-4D-B7t" id="JVL-yM-Z1H"/>
                         <outlet property="needsToTravelBtn" destination="ZP1-80-X1B" id="zM8-Mh-p8g"/>
@@ -580,7 +584,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
                                         <rect key="frame" x="20" y="0.0" width="374" height="200"/>
@@ -1198,7 +1202,7 @@
                                 <color key="selectedSegmentTintColor" name="detail"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
-                                <rect key="frame" x="0.0" y="64" width="414" height="600.5"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="609"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

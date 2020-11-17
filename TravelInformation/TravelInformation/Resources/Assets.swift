@@ -240,6 +240,7 @@ internal enum Asset {
   internal static let explorarTabIcon = ImageAsset(name: "explorarTabIcon")
   internal static let heartIcon = ImageAsset(name: "heartIcon")
   internal static let homeImage = ImageAsset(name: "homeImage")
+  internal static let selectedHeartIcon = ImageAsset(name: "selectedHeartIcon")
   internal static let shareIcon = ImageAsset(name: "shareIcon")
   internal static let usrIMG = ImageAsset(name: "usrIMG")
   internal static let afeganistao0 = ImageAsset(name: "afeganistao0")
