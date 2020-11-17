@@ -22,6 +22,7 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet weak var nameCountryLabel: UILabel!
     @IBOutlet weak var capitalCountryLabel: UILabel!
     
+    @IBOutlet weak var newsView: UIView!
     @IBOutlet weak var flagImage: UIImageView!
     var isFavorite = false
     var favorites : [String] = []
@@ -37,7 +38,7 @@ class CountryDetailsViewController: UIViewController{
         super.viewDidLoad()
         setTexts()
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
-
+        self.newsView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

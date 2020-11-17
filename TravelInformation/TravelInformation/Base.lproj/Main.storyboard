@@ -23,7 +23,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -84,14 +84,14 @@
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1299"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1272.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="340.5"/>
@@ -428,10 +428,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="240" translatesAutoresizingMaskIntoConstraints="NO" id="2av-a3-xxe">
-                                                <rect key="frame" x="0.0" y="1081.5" width="414" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="1081.5" width="414" height="16"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="Notícias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-ZZ-nxa">
-                                                        <rect key="frame" x="20" y="0.0" width="394" height="26.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-ZZ-nxa">
+                                                        <rect key="frame" x="20" y="0.0" width="394" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <color key="textColor" name="text"/>
                                                         <nil key="highlightedColor"/>
@@ -446,7 +446,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-KI-2bG" userLabel="NewsView">
-                                                <rect key="frame" x="0.0" y="1141" width="414" height="158"/>
+                                                <rect key="frame" x="0.0" y="1114.5" width="414" height="158"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-Gs-hSD">
                                                         <rect key="frame" x="0.0" y="-5" width="414" height="168"/>
@@ -560,6 +560,7 @@
                         <outlet property="flagImage" destination="q2J-hK-x36" id="zBg-px-caL"/>
                         <outlet property="nameCountryLabel" destination="5q3-4D-B7t" id="JVL-yM-Z1H"/>
                         <outlet property="needsToTravelBtn" destination="ZP1-80-X1B" id="zM8-Mh-p8g"/>
+                        <outlet property="newsView" destination="gJW-KI-2bG" id="GHn-RC-k4s"/>
                         <outletCollection property="infosViews" destination="l53-xS-uLO" collectionClass="NSMutableArray" id="41k-EU-yTj"/>
                         <outletCollection property="infosViews" destination="RhY-hD-osI" collectionClass="NSMutableArray" id="QAo-tq-fW8"/>
                         <outletCollection property="infosViews" destination="qy3-Lf-3vb" collectionClass="NSMutableArray" id="lCy-Wh-g3u"/>
@@ -580,7 +581,7 @@
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
@@ -680,7 +681,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
@@ -1142,6 +1143,7 @@
                         <outlet property="firstCuurrencyNameLabel" destination="p0T-ox-7LP" id="sme-7d-XKg"/>
                         <outlet property="imageProfile" destination="xMh-Ie-2XT" id="V4M-Hn-HdZ"/>
                         <outlet property="nameSaudationLabel" destination="RYi-we-OOh" id="gQh-72-kh3"/>
+                        <outlet property="newsView" destination="aIo-ra-qNO" id="Pro-Yo-tZ0"/>
                         <outlet property="secondCurrencyNameLabel" destination="6Dq-D1-RlA" id="K8C-EK-e1t"/>
                         <outlet property="secondCurrencyValueLabel" destination="zgf-um-fUA" id="6Th-yu-9rv"/>
                         <outlet property="stackView" destination="d6u-1e-wJ0" id="phw-ET-3H3"/>
@@ -1189,7 +1191,7 @@
             <objects>
                 <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
@@ -1236,7 +1238,7 @@
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
