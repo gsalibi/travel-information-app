@@ -15,12 +15,12 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Countries View Controller-->
+        <!--Selecionar País-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -63,7 +63,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="Cmq-eR-FQg">
+                    <navigationItem key="navigationItem" title="Selecionar País" id="Cmq-eR-FQg">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="hXo-Qc-UZB"/>
                     </navigationItem>
                     <connections>
@@ -81,11 +81,11 @@
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="664.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1278.5"/>
@@ -603,11 +603,11 @@
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="26C-Bk-e7F">
                                         <rect key="frame" x="20" y="0.0" width="374" height="200"/>
@@ -703,7 +703,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
@@ -1213,7 +1213,7 @@
             <objects>
                 <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
@@ -1260,16 +1260,16 @@
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="diseaseCell" id="YSt-zd-VeU" customClass="DiseaseCell" customModule="TravelInformation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="453"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="475"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YSt-zd-VeU" id="o4A-Yc-hWr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="453"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLf-aI-RaO" userLabel="PrincipalView">
@@ -1373,13 +1373,22 @@ Certificado é válida por toda a vida.</string>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fonte: OMS - Organização Mundial da Saúde" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3K-2K-Ftl">
+                                            <rect key="frame" x="25" y="453" width="216.5" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" name="text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" name="primary"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="nLf-aI-RaO" secondAttribute="bottom" constant="10" id="44u-2P-gDq"/>
+                                        <constraint firstAttribute="bottom" secondItem="f3K-2K-Ftl" secondAttribute="bottom" constant="10" id="K6X-k5-RqD"/>
                                         <constraint firstItem="nLf-aI-RaO" firstAttribute="top" secondItem="o4A-Yc-hWr" secondAttribute="top" id="LwJ-Pt-I9e"/>
+                                        <constraint firstItem="f3K-2K-Ftl" firstAttribute="leading" secondItem="o4A-Yc-hWr" secondAttribute="leading" constant="25" id="MQA-kS-U1u"/>
                                         <constraint firstItem="nLf-aI-RaO" firstAttribute="leading" secondItem="o4A-Yc-hWr" secondAttribute="leading" constant="20" id="XOr-dm-lCJ"/>
                                         <constraint firstAttribute="trailing" secondItem="nLf-aI-RaO" secondAttribute="trailing" constant="20" id="eLL-4u-bR2"/>
+                                        <constraint firstItem="f3K-2K-Ftl" firstAttribute="top" secondItem="nLf-aI-RaO" secondAttribute="bottom" constant="10" id="ndh-Q4-rUw"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f3K-2K-Ftl" secondAttribute="trailing" constant="20" id="piD-2a-SNC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1448,7 +1457,7 @@ Certificado é válida por toda a vida.</string>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BdI-Z8-t3b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="primary"/>
                         <textAttributes key="titleTextAttributes">
@@ -1469,7 +1478,7 @@ Certificado é válida por toda a vida.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gzg-fl-kF8"/>
+        <segue reference="i70-sJ-zuQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="detail"/>
     <resources>
