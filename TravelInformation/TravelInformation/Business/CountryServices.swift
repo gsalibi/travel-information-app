@@ -106,7 +106,7 @@ class CountryServices {
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
     
-    /// Function responsible for getting all seasons
+    /// Function responsible for getting all countries. There is only one element at array
     /// - parameters:
     ///     - completion: closure to be executed at the end of this method
     /// - throws: if an error occurs during getting an object from database (Errors.DatabaseFailure)
@@ -137,5 +137,21 @@ class CountryServices {
         // execute block in background
         QueueManager.sharedInstance.executeBlock(blockForExecutionInBackground, queueType: QueueManager.QueueType.serial)
     }
+    
+    
+    static func convertManagedListToCountriesList(manageds: [CountryManaged]) -> [Country]{
+        var countryList : [Country] = []
+        
+        if let countriesCD = manageds.first{
+            if let countryList = try? JSONDecoder().decode([Country].self, from: countriesCD.jsonData){
+                return countryList
+            }
+        }
+        return countryList
+    }
+    
+    
+    
+    
     
 }

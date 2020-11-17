@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CountryManaged" representedClassName="CountryManaged" syncable="YES" codeGenerationType="class">
-        <attribute name="businessVisa" optional="YES" attributeType="String"/>
-        <attribute name="capital" optional="YES" attributeType="String"/>
-        <attribute name="currency" optional="YES" attributeType="String"/>
-        <attribute name="entryCurrency" optional="YES" attributeType="String"/>
-        <attribute name="exitCurrency" optional="YES" attributeType="String"/>
-        <attribute name="language" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="passportValidity" optional="YES" attributeType="String"/>
-        <attribute name="touristVisa" optional="YES" attributeType="String"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CountryManaged" representedClassName="CountryManaged" syncable="YES">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="UserFavorites" representedClassName="UserFavorites" syncable="YES">
+        <attribute name="savedCountries" optional="YES" attributeType="Transformable"/>
     </entity>
     <elements>
-        <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="CountryManaged" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="UserFavorites" positionX="-54" positionY="90" width="128" height="58"/>
     </elements>
 </model>

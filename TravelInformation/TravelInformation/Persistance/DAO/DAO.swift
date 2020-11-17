@@ -16,7 +16,7 @@ class DAO {
     /// - Returns: Fetch Request of Result Type, is the class that represents the Request.entity
     static func fetchRequest<ResultType>() -> NSFetchRequest<ResultType>
     {
-        let entityName = String(describing: ResultType.self) + "Managed"
+        let entityName = String(describing: ResultType.self)
         
         let request:NSFetchRequest = NSFetchRequest<ResultType>(entityName: entityName)
         
