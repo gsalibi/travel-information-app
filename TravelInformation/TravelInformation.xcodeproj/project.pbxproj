@@ -57,6 +57,7 @@
 		A9F9AEC3BEF0D282F8323156 /* Pods_TravelInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9A9CA696420DF8E2996E1 /* Pods_TravelInformationTests.framework */; };
 		EA6F6AFA98328760E4BD255D /* Pods_TravelInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA247F6D36956123619EF20 /* Pods_TravelInformation.framework */; };
 		EC290911255A3C0A00089CF3 /* DiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC290910255A3C0A00089CF3 /* DiseaseCell.swift */; };
+		EC4DBDEE256422AB00A3BBAA /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4DBDED256422AA00A3BBAA /* GeneralViewController.swift */; };
 		ECE23238253643480030E21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23237253643480030E21B /* AppDelegate.swift */; };
 		ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE23239253643480030E21B /* SceneDelegate.swift */; };
 		ECE2323C253643480030E21B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2323B253643480030E21B /* CountriesViewController.swift */; };
@@ -140,6 +141,7 @@
 		CF58F5C35E024DA5E6472576 /* Pods-TravelInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelInformation.debug.xcconfig"; path = "Target Support Files/Pods-TravelInformation/Pods-TravelInformation.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F9A9CA696420DF8E2996E1 /* Pods_TravelInformationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelInformationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC290910255A3C0A00089CF3 /* DiseaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseCell.swift; sourceTree = "<group>"; };
+		EC4DBDED256422AA00A3BBAA /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		ECE23234253643480030E21B /* TravelInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE23237253643480030E21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE23239253643480030E21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				9AE4D112253809E90026EC8B /* Mechanism */,
 				9AE4D10F253808C10026EC8B /* Business */,
 				9A4A53F92537967B00DE508F /* Persistance */,
+				EC4DBDED256422AA00A3BBAA /* GeneralViewController.swift */,
 			);
 			path = TravelInformation;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				9A4A53F62537920E00DE508F /* Country.swift in Sources */,
 				9A4A53F82537966F00DE508F /* CoreDataManager.swift in Sources */,
 				EC290911255A3C0A00089CF3 /* DiseaseCell.swift in Sources */,
+				EC4DBDEE256422AB00A3BBAA /* GeneralViewController.swift in Sources */,
 				ECE2323A253643480030E21B /* SceneDelegate.swift in Sources */,
 				313A5567255EEAE800B90698 /* MyDestiniesViewController.swift in Sources */,
 			);
