@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" name="primary"/>
                                 <color key="separatorColor" name="primary"/>
                                 <color key="sectionIndexBackgroundColor" name="primary"/>
-                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="fAb-aT-O2f">
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="fAb-aT-O2f">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="color" name="detail"/>
@@ -655,54 +655,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Yn-Ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5119" y="867"/>
-        </scene>
-        <!--Nome do país-->
-        <scene sceneID="a1v-Gt-hCM">
-            <objects>
-                <viewController id="0gR-NF-kHZ" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5JY-jJ-XXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-NK-vwQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="211" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-4b-GlP">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="211"/>
-                                        <color key="backgroundColor" name="primary"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" name="primary"/>
-                                <constraints>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="trailing" secondItem="5Pu-Mz-Kmy" secondAttribute="trailing" constant="-20" id="012-dq-fOs"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="bottom" secondItem="IiZ-jU-Nik" secondAttribute="bottom" id="71d-uu-cMx"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="trailing" secondItem="IiZ-jU-Nik" secondAttribute="trailing" id="7ci-du-Jlb"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="top" secondItem="IiZ-jU-Nik" secondAttribute="top" id="9fH-TK-lHQ"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="leading" secondItem="IiZ-jU-Nik" secondAttribute="leading" constant="20" id="Fhe-wC-L0h"/>
-                                    <constraint firstItem="5Pu-Mz-Kmy" firstAttribute="bottom" secondItem="KTp-4b-GlP" secondAttribute="bottom" priority="100" constant="597" id="ccD-NO-d7H"/>
-                                    <constraint firstItem="KTp-4b-GlP" firstAttribute="top" secondItem="KLj-NK-vwQ" secondAttribute="top" id="sjY-ZZ-Ucc"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="IiZ-jU-Nik"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="5Pu-Mz-Kmy"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="04n-WH-m5Q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="KLj-NK-vwQ" secondAttribute="bottom" id="0y4-Cz-bI7"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="leading" secondItem="04n-WH-m5Q" secondAttribute="leading" id="O9z-qX-FVJ"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="top" secondItem="04n-WH-m5Q" secondAttribute="top" id="d3U-gW-hLq"/>
-                            <constraint firstItem="KLj-NK-vwQ" firstAttribute="trailing" secondItem="04n-WH-m5Q" secondAttribute="trailing" id="wkj-1E-iBi"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Nome do país" id="VSU-b8-ctK"/>
-                    <connections>
-                        <outlet property="stackView" destination="KTp-4b-GlP" id="BaS-Co-9qS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iM3-cW-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6052.1739130434789" y="-548.4375"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="oB5-Ew-yKs">
@@ -1463,7 +1415,7 @@ Certificado é válida por toda a vida.</string>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BdI-Z8-t3b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="primary"/>
                         <textAttributes key="titleTextAttributes">

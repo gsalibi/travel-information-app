@@ -132,8 +132,8 @@ class HomeScreenViewController: UIViewController {
                             countryCD.jsonData = data
                         }
                         CountryServices.createCountry(countryManaged: countryCD) { (error) in
-                            if error == nil{
-                                print("Error saving: \(error)")
+                            if error != nil{
+                                print("Error saving: \(String(describing: error))")
                             }
                             else{
                                 
@@ -159,7 +159,7 @@ class HomeScreenViewController: UIViewController {
                     
                 }
                 else{
-                    print("Error saving: \(error)")
+                    print("Error saving: \(String(describing: error))")
                 }
             if #available(iOS 14.0, *) {
                 DispatchQueue.main.async {
@@ -186,7 +186,7 @@ class HomeScreenViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "countriesList"{
-            if let vc = segue.destination as? CountriesViewController{
+            if segue.destination is CountriesViewController{
 
                 self.navigationController?.navigationBar.isHidden = false
 

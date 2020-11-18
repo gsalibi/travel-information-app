@@ -141,10 +141,9 @@ class UserServices {
     
     static func createCountryListFromFavorites(favorite: UserFavorites) -> [Country] {
         
-        var managedCountriesAtCoreData: [CountryManaged] = []
+        let managedCountriesAtCoreData: [CountryManaged] = []
         var countryListFromCoreData: [Country] = []
         var countryListFromFavorites: [Country] = []
-        var favoriteNames: [String] = []
         
         CountryServices.getAllCountries { (error, managedCountryList) in
             if (error == nil) {
@@ -174,7 +173,7 @@ class UserServices {
     
     static func convertCountryListFromManaged(managed: CountryManaged) -> [Country] {
         
-        var countryList:[Country] = []
+        let countryList:[Country] = []
         
         
         if let countryList = try? JSONDecoder().decode([Country].self, from: managed.jsonData){

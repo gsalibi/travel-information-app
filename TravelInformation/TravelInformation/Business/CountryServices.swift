@@ -140,7 +140,7 @@ class CountryServices {
     
     
     static func convertManagedListToCountriesList(manageds: [CountryManaged]) -> [Country]{
-        var countryList : [Country] = []
+        let countryList : [Country] = []
         
         if let countriesCD = manageds.first{
             if let countryList = try? JSONDecoder().decode([Country].self, from: countriesCD.jsonData){
