@@ -33,12 +33,17 @@ class HomeScreenViewController: UIViewController {
     }
     
     
+    fileprivate func setProfileImageLayout() {
+        self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
+        self.imageProfile.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
+        self.setProfileImageLayout()
         self.settingName()
         self.settingCurrenciesConverter()
-        self.fetchCountries()
+//        self.fetchCountries()
         self.newsView.isHidden = true
         
         
@@ -170,14 +175,14 @@ class HomeScreenViewController: UIViewController {
 
     
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if countries.count > 0{
-            return true
-        }else{
-            self.fetchCountries()
-            return false
-        }
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if countries.count > 0{
+//            return true
+//        }else{
+//            self.fetchCountries()
+//            return false
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "countriesList"{

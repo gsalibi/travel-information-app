@@ -100,6 +100,7 @@ class MyDestiniesViewController: UIViewController {
    
     
     func segmentConfig(){
+        self.segmentedControl.isHidden = true
         self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Asset.blackSegment.color, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.medium) ], for: UIControl.State.selected)
         self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Asset.text.color, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.medium) ], for: UIControl.State.normal)
         self.segmentedControl.layer.cornerRadius = 5
