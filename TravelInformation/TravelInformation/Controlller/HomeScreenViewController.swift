@@ -19,6 +19,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var secondCurrencyNameLabel: UILabel!
     @IBOutlet weak var secondCurrencyValueLabel: UILabel!
     
+    @IBOutlet weak var newsView: UIView!
     var currency : CurrencyConverter? = nil
     var countries : [Country] = []
     var countriesForCoreDataData : Data?
@@ -32,12 +33,18 @@ class HomeScreenViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
+    fileprivate func setProfileImageLayout() {
         self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
+        self.imageProfile.isHidden = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setProfileImageLayout()
         self.settingName()
         self.settingCurrenciesConverter()
-        self.fetchCountries()
-        
+//        self.fetchCountries()
+        self.newsView.isHidden = true
         
         
         //change back button collor of navigation bar
@@ -46,9 +53,12 @@ class HomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
-
+        self.checkLatestUpdate()
     }
+    
+    
     func settingName(){
         if let name = UIDevice.current.name.components(separatedBy: " ").last{
             self.nameSaudationLabel.text = "Olá, \(name)"
@@ -122,8 +132,8 @@ class HomeScreenViewController: UIViewController {
                             countryCD.jsonData = data
                         }
                         CountryServices.createCountry(countryManaged: countryCD) { (error) in
-                            if error == nil{
-                                print("Error saving: \(error)")
+                            if error != nil{
+                                print("Error saving: \(String(describing: error))")
                             }
                             else{
                                 
@@ -149,7 +159,7 @@ class HomeScreenViewController: UIViewController {
                     
                 }
                 else{
-                    print("Error saving: \(error)")
+                    print("Error saving: \(String(describing: error))")
                 }
             if #available(iOS 14.0, *) {
                 DispatchQueue.main.async {
@@ -165,22 +175,51 @@ class HomeScreenViewController: UIViewController {
 
     
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if countries.count > 0{
-            return true
-        }else{
-            self.fetchCountries()
-            return false
-        }
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if countries.count > 0{
+//            return true
+//        }else{
+//            self.fetchCountries()
+//            return false
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "countriesList"{
-            if let vc = segue.destination as? CountriesViewController{
+            if segue.destination is CountriesViewController{
 
                 self.navigationController?.navigationBar.isHidden = false
 
             }
+        }
+    }
+}
+
+
+extension HomeScreenViewController {
+    func getLastUpdate() -> String {
+        var last_update = ""
+        if let url = URL(string: "http://ec2-3-16-29-21.us-east-2.compute.amazonaws.com:3100/update") {
+            do {
+                let contents = try String(contentsOf: url)
+                last_update = contents
+            } catch {
+                // contents could not be loaded
+            }
+        } else {
+            // the URL was bad!
+        }
+        
+        return last_update
+    }
+    
+    func checkLatestUpdate() {
+        let server_date = getLastUpdate()
+        let local_date = UserDefaults.standard.string(forKey: "update")
+        
+        if server_date != local_date {
+            self.fetchCountries()
+            UserDefaults.standard.set(server_date, forKey: "update")
         }
     }
 }

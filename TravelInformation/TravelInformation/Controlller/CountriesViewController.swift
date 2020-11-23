@@ -12,6 +12,10 @@ class CountriesViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var activityIndicatorContainer: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     //reload the tableview every time we change the array
     var countries: [Country] = []{
         didSet{
@@ -38,24 +42,9 @@ class CountriesViewController: UIViewController{
         
         searchBarConfiguration()
         
-        CountryServices.getAllCountries{ (error, manageds) in
-            
-            if (error == nil) {
-                // assign country list
-                self.countriesFromCoreData = manageds!
-                self.countries = CountryServices.convertManagedListToCountriesList(manageds: self.countriesFromCoreData)
-                
-                // reload table view with season information
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-               
-            }
-            else {
-                // display error here because it was not possible to load season list
-            }
-            
-        }
+        activityIndicator.startAnimating()
+        
+        loadCountriesFromCoreData()
         
         
         //Load tableview cell register
@@ -70,17 +59,30 @@ class CountriesViewController: UIViewController{
         
     }
     
-//    func loadCountriesFromCoreData(){
-//        CountryServices.getAllCountries { (error, countriesFromCoreData) in
-//            if (error == nil) {
-//                // assign country list
-//                self.countriesFromCoreData = countriesFromCoreData!
-//            }
-//            else {
-//                print("\(error) load")
-//            }
-//        }
-//    }
+    fileprivate func loadCountriesFromCoreData() {
+        CountryServices.getAllCountries{ (error, manageds) in
+            
+            if (error == nil) {
+                // assign country list
+                self.countriesFromCoreData = manageds!
+                self.countries = CountryServices.convertManagedListToCountriesList(manageds: self.countriesFromCoreData)
+                
+                // reload table view with coutries information
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    
+                    self.tableView.reloadData()
+                }
+                
+            }
+            else {
+                // display error here because it was not possible to load season list
+            }
+            
+        }
+    }
+    
+
     
     //Configuration search bar and gesture
     
@@ -88,7 +90,7 @@ class CountriesViewController: UIViewController{
         //Search bar
         self.searchBar.delegate = self
         if #available(iOS 13.0, *) {
-            self.searchBar.searchTextField.textColor = Asset.tertiary.color
+            self.searchBar.searchTextField.textColor = Asset.text2.color
         } else {
             // Fallback on earlier versions
         }

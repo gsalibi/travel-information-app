@@ -21,12 +21,15 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let blackSegment = ColorAsset(name: "blackSegment")
   internal static let detail = ColorAsset(name: "detail")
   internal static let primary = ColorAsset(name: "primary")
   internal static let secondary = ColorAsset(name: "secondary")
   internal static let tertiary = ColorAsset(name: "tertiary")
   internal static let text = ColorAsset(name: "text")
+  internal static let text2 = ColorAsset(name: "text2")
+  internal static let _0Front = ImageAsset(name: "0_front")
   internal static let abecasia = ImageAsset(name: "abecasia")
   internal static let afeganistao = ImageAsset(name: "afeganistao")
   internal static let africadosul = ImageAsset(name: "africadosul")
@@ -236,10 +239,13 @@ internal enum Asset {
   internal static let zimbabue = ImageAsset(name: "zimbabue")
   internal static let buttonArrow = ImageAsset(name: "buttonArrow")
   internal static let destinosTabIcon = ImageAsset(name: "destinosTabIcon")
+  internal static let destinosTabIconActived = ImageAsset(name: "destinosTabIconActived")
   internal static let doubleCheck = ImageAsset(name: "doubleCheck")
   internal static let explorarTabIcon = ImageAsset(name: "explorarTabIcon")
+  internal static let explorarTabIconActived = ImageAsset(name: "explorarTabIconActived")
   internal static let heartIcon = ImageAsset(name: "heartIcon")
   internal static let homeImage = ImageAsset(name: "homeImage")
+  internal static let selectedHeartIcon = ImageAsset(name: "selectedHeartIcon")
   internal static let shareIcon = ImageAsset(name: "shareIcon")
   internal static let usrIMG = ImageAsset(name: "usrIMG")
   internal static let afeganistao0 = ImageAsset(name: "afeganistao0")
@@ -437,6 +443,7 @@ internal enum Asset {
   internal static let vietna0 = ImageAsset(name: "vietna0")
   internal static let zambia0 = ImageAsset(name: "zambia0")
   internal static let zimbabue0 = ImageAsset(name: "zimbabue0")
+  internal static let launchMock = ImageAsset(name: "launchMock")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

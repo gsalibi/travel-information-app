@@ -15,31 +15,59 @@ class CountryDetailsViewController: UIViewController{
     @IBOutlet weak var countryImageView: UIImageView!
     @IBOutlet weak var needsToTravelBtn: UIButton!
     @IBOutlet weak var culturalInformationBtn: UIButton!
+    @IBOutlet weak var favoriteImage: UIImageView!
     
     //all CountryInfosViews in this array
     @IBOutlet var infosViews: [CountryInfosView]!
     @IBOutlet weak var nameCountryLabel: UILabel!
     @IBOutlet weak var capitalCountryLabel: UILabel!
+    @IBOutlet weak var updateLabel: UILabel!
     
+    @IBOutlet weak var newsView: UIView!
     @IBOutlet weak var flagImage: UIImageView!
+    var isFavorite = false
+    var favorites : [String] = []
     
     /// Country's information array.
     /// Comes in the following order: name, capitalCity, currency, oficialLanguage, entryNeeds, exitNeeds, touristVisa, businessVisa.
     var info: [String] = []
     
     var country : Country?
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTexts()
         self.navigationItem.backBarButtonItem?.tintColor = Asset.detail.color
+        self.newsView.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setFavoriteIcon()
+    }
+  
+    //MARK: Set infos in views
+    
+    //Set heart icon
+    func setFavoriteIcon(){
+        self.favorites = defaults.stringArray(forKey: "favorites") ?? []
         
+        guard let name = country?.name else {
+            self.favoriteImage.image = Asset.heartIcon.image
+            isFavorite = false
+            return}
         
+        if favorites.contains(name){
+            self.favoriteImage.image = Asset.selectedHeartIcon.image
+            isFavorite = true
+        }else{
+            self.favoriteImage.image = Asset.heartIcon.image
+            isFavorite = false
+        }
         
         
     }
-    //MARK: Set infos in views
-    
     
     func setTexts() {
         //Unraping and setting name of the Country and Capital
@@ -56,6 +84,7 @@ class CountryDetailsViewController: UIViewController{
             nameCountryLabel.text = "País desconhecido 🧐"
             
         }
+        updateLabel.text = "Atualizado em " + UserDefaults.standard.string(forKey: "update")!
         
         if let capital = country?.capital{
             capitalCountryLabel.text = capital
@@ -98,7 +127,7 @@ class CountryDetailsViewController: UIViewController{
     }
     
     func setCountryInfos(infoView: CountryInfosView, title: String, value: Any?){
-                
+        
         //Set values in the CountryInfosView
         if let value = value as? String{
             infoView.title.text = title
@@ -110,35 +139,66 @@ class CountryDetailsViewController: UIViewController{
             infoView.isHidden = true
         }
     }
+    //MARK: Actions
     
-    //MARK: Segues Actions
-    
-    //TODO: Remove this function and make the segues directly from the button in the storyboard
-    @IBAction func goVaccineInfo(_ sender: Any) {
-        performSegue(withIdentifier: "vaccineInfo", sender: nil)
-        
-    }
-    @IBAction func goCultureInfo(_ sender: Any) {
-        performSegue(withIdentifier: "infoCulture", sender: nil)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "infoCulture":
-            if let vc = segue.destination as? CulturalInfoViewController{
-                vc.country = self.country
+    @IBAction func favoringCountries(_ sender: Any) {
+        guard let name = country?.name else {return}
+
+        if isFavorite{
+            UIView.animate(withDuration: 0.4) {
+                self.favoriteImage.image = Asset.heartIcon.image
+
             }
-        case "vaccineInfo":
-            if let vc = segue.destination as? VaccineViewController{
-                vc.country = self.country
+
+            self.favorites = favorites.filter { (fav) -> Bool in
+                if fav == name{
+                    return false
+                }else{
+                    return true
+                }
             }
             
-        default:
-            //TODO: Change this to present alert?
-            print("no segue found")
-        }
+            defaults.setValue(self.favorites, forKey: "favorites")
+        }else{
+            UIView.animate(withDuration: 0.4) {
+                self.favoriteImage.image = Asset.selectedHeartIcon.image
+            }
+
+            favorites.append(name)
+            defaults.setValue(favorites, forKey: "favorites")
     }
     
+    
+    isFavorite = !isFavorite
+}
+//MARK: Segues Actions
+
+//TODO: Remove this function and make the segues directly from the button in the storyboard
+@IBAction func goVaccineInfo(_ sender: Any) {
+    performSegue(withIdentifier: "vaccineInfo", sender: nil)
+    
+}
+@IBAction func goCultureInfo(_ sender: Any) {
+    performSegue(withIdentifier: "infoCulture", sender: nil)
+}
+
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "infoCulture":
+        if let vc = segue.destination as? CulturalInfoViewController{
+            vc.country = self.country
+        }
+    case "vaccineInfo":
+        if let vc = segue.destination as? VaccineViewController{
+            vc.country = self.country
+        }
+        
+    default:
+        //TODO: Change this to present alert?
+        print("no segue found")
+    }
+}
+
 }
 

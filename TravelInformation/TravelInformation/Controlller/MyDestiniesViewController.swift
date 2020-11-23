@@ -19,17 +19,17 @@ class MyDestiniesViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var selectedCountry: Country?
-    var favoritesCountries: [String] = ["Chile", "Portugal", "Argentina"]
+    var favoritesCountries: [String] = []
     var allCountries : [Country] = []
     var segmentSelected : Segment = .favCountry
-    
+    let defaults = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //Set tableviewDelegate
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         //Load tableview cell register
         let nib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
@@ -44,11 +44,23 @@ class MyDestiniesViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: Asset.text.color as Any]
         filterCountries()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        filterCountries()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UIView.animate(withDuration: 1) {
+            self.navigationController?.navigationBar.prefersLargeTitles = false
+
+        }
+
+    }
     
     //Filter countries by favoites
     func filterCountries(){
-        
+        self.favoritesCountries  = defaults.stringArray(forKey: "favorites") ?? []
+
         if !allCountries.isEmpty{
         countries = allCountries.filter({ (country) -> Bool in
             var isContain = false
@@ -85,18 +97,10 @@ class MyDestiniesViewController: UIViewController {
 
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        UIView.animate(withDuration: 1) {
-            self.navigationController?.navigationBar.prefersLargeTitles = false
-
-        }
-
-    }
+   
     
     func segmentConfig(){
+        self.segmentedControl.isHidden = true
         self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Asset.blackSegment.color, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.medium) ], for: UIControl.State.selected)
         self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Asset.text.color, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.medium) ], for: UIControl.State.normal)
         self.segmentedControl.layer.cornerRadius = 5
@@ -194,4 +198,19 @@ extension MyDestiniesViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     
+}
+
+extension UINavigationController {
+    
+    func setStatusBar(backgroundColor: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        let statusBarView = UIView(frame: statusBarFrame)
+        statusBarView.backgroundColor = backgroundColor
+        view.addSubview(statusBarView)
+    }
 }
