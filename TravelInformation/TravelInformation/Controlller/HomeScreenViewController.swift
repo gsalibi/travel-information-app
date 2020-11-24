@@ -32,12 +32,6 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    
-    fileprivate func setProfileImageLayout() {
-        self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
-        self.imageProfile.isHidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setProfileImageLayout()
@@ -53,11 +47,22 @@ class HomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = true
         self.checkLatestUpdate()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
+    
+    fileprivate func setProfileImageLayout() {
+        self.imageProfile.layer.cornerRadius = self.imageProfile.bounds.height/2
+        self.imageProfile.isHidden = true
+    }
     
     func settingName(){
         if let name = UIDevice.current.name.components(separatedBy: " ").last{
