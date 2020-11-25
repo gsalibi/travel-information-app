@@ -19,12 +19,22 @@ class CountriesViewController: UIViewController{
     //reload the tableview every time we change the array
     var countries: [Country] = []{
         didSet{
-            self.countries = self.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) 
+            self.countries = self.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)})
+            self.activityIndicator.stopAnimating()
         }
     }
     var selectedCountry: Country?
     
     var countriesFromCoreData : [CountryManaged] = []
+    var countriesForCoreDataData : Data?
+    var countriesAlredyInCoreData : [CountryManaged] = []{
+        didSet{
+            if let countriesInCoreDataFirst = countriesAlredyInCoreData.first{
+                countriesAlredyInCoreDataData = countriesInCoreDataFirst.jsonData
+            }
+        }
+    }
+    var countriesAlredyInCoreDataData: Data?
     
     var dismissTapGesture = UITapGestureRecognizer()
     var searchCountries: ([Country]?, Int) = ([],0)
@@ -59,6 +69,93 @@ class CountriesViewController: UIViewController{
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if tableView.visibleCells.isEmpty {
+            fetchCountries()
+            saveCountriesToCoreData()
+            loadCountriesFromCoreData()
+        }
+    }
+    
+    func fetchCountries(){
+        let manager = NetworkManager()
+
+        //Fetch countries from database
+        manager.fetchCountries { [weak self] (countries, countriesAsData) in
+            self?.countries = countries
+            self?.countriesForCoreDataData = countriesAsData
+            
+            //Ordering countries by name
+            self?.countries = self?.countries.sorted(by: { $0.name.lowercased().folding(options: .diacriticInsensitive, locale: .current) < $1.name.lowercased().folding(options: .diacriticInsensitive, locale: .current)}) ?? countries
+                        
+            CountryServices.getAllCountries{ (error, manageds) in
+                
+                if (error == nil) {
+                    // assign country list
+                    self?.countriesAlredyInCoreData = manageds!
+                }
+                else {
+                    // display error here because it was not possible to load season list
+                }
+                
+            }
+
+            self?.saveCountriesToCoreData()
+        }
+        
+    }
+    
+    func saveCountriesToCoreData(){
+        if let savedCountries = self.countriesAlredyInCoreData.first {
+            if savedCountries.jsonData != countriesForCoreDataData{
+                CountryServices.deleteCountry(countryManaged: savedCountries) { (error) in
+                    if error == nil {
+                        let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+                        if let data = self.countriesForCoreDataData {
+                            countryCD.jsonData = data
+                        }
+                        CountryServices.createCountry(countryManaged: countryCD) { (error) in
+                            if error != nil{
+                                print("Error saving: \(String(describing: error))")
+                            }
+                            else{
+                                
+                            }
+                        }
+                        
+                    }
+                    else {
+                        print("error in deleting country foor update")
+                    }
+                }
+            }
+        }
+        else {
+            let countryCD = CountryManaged(context: CoreDataManager.sharedInstance.context)
+            if let data = self.countriesForCoreDataData {
+                
+                countryCD.jsonData = data
+            }
+
+            CountryServices.createCountry(countryManaged: countryCD) { (error) in
+                if error == nil{
+                    
+                }
+                else{
+                    print("Error saving: \(String(describing: error))")
+                }
+            if #available(iOS 14.0, *) {
+                DispatchQueue.main.async {
+                    if let vc = self.tabBarController?.viewControllers?[1].childViewControllerForPointerLock as? MyDestiniesViewController{
+                        vc.allCountries = self.countries
+                    }
+                }
+                
+            }
+        }
+        }
+    }
+    
     fileprivate func loadCountriesFromCoreData() {
         CountryServices.getAllCountries{ (error, manageds) in
             
@@ -69,7 +166,8 @@ class CountriesViewController: UIViewController{
                 
                 // reload table view with coutries information
                 DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
+                    
+                    
                     
                     self.tableView.reloadData()
                 }
