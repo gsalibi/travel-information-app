@@ -431,8 +431,8 @@
                                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="14.5" translatesAutoresizingMaskIntoConstraints="NO" id="uec-Yv-aji">
                                                 <rect key="frame" x="0.0" y="952.5" width="414" height="14.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="14.5" text="Atualizado" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnd-JS-4ED">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="14.5" text="Atualizado" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnd-JS-4ED">
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" name="text"/>
                                                         <nil key="highlightedColor"/>
@@ -443,7 +443,7 @@
                                                     <constraint firstItem="wnd-JS-4ED" firstAttribute="top" secondItem="uec-Yv-aji" secondAttribute="top" id="9cN-el-9fH"/>
                                                     <constraint firstAttribute="trailing" secondItem="wnd-JS-4ED" secondAttribute="trailing" constant="20" id="9rA-oj-j2U"/>
                                                     <constraint firstAttribute="bottom" secondItem="wnd-JS-4ED" secondAttribute="bottom" id="aJv-SK-f2m"/>
-                                                    <constraint firstItem="wnd-JS-4ED" firstAttribute="leading" secondItem="uec-Yv-aji" secondAttribute="leading" id="mXl-DH-XDB"/>
+                                                    <constraint firstItem="wnd-JS-4ED" firstAttribute="leading" secondItem="uec-Yv-aji" secondAttribute="leading" constant="20" id="mXl-DH-XDB"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="240" translatesAutoresizingMaskIntoConstraints="NO" id="2av-a3-xxe">
