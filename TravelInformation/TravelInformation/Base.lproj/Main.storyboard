@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1096.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="346.5"/>
@@ -324,32 +324,36 @@
                                                 <rect key="frame" x="0.0" y="432.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-hD-osI" userLabel="passportView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-br-E8I" userLabel="languageView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="482.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-Lf-3vb" userLabel="touristVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-hD-osI" userLabel="passportView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="532.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-hT-CY0" userLabel="businessVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-Lf-3vb" userLabel="touristVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="582.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="123-Ta-8LO" userLabel="insuranceView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-hT-CY0" userLabel="businessVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="632.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-2v-ErY" userLabel="maxMoneyEnterView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="123-Ta-8LO" userLabel="insuranceView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="682.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-ys-Cpy" userLabel="maxMoneyLeaveView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-2v-ErY" userLabel="maxMoneyEnterView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="732.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-v3-Dbv" userLabel="vaccineView">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-ys-Cpy" userLabel="maxMoneyLeaveView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="782.5" width="414" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-v3-Dbv" userLabel="vaccineView">
+                                                <rect key="frame" x="0.0" y="832.5" width="414" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-80-X1B" userLabel="vaccineInfoButton">
                                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
@@ -391,7 +395,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-OT-nhm" userLabel="culturalView">
-                                                <rect key="frame" x="0.0" y="832.5" width="414" height="90"/>
+                                                <rect key="frame" x="0.0" y="882.5" width="414" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-ze-4oR">
                                                         <rect key="frame" x="20" y="10" width="374" height="50"/>
@@ -434,7 +438,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="240" translatesAutoresizingMaskIntoConstraints="NO" id="2av-a3-xxe">
-                                                <rect key="frame" x="0.0" y="922.5" width="414" height="16"/>
+                                                <rect key="frame" x="0.0" y="972.5" width="414" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-ZZ-nxa">
                                                         <rect key="frame" x="20" y="0.0" width="394" height="0.0"/>
@@ -452,7 +456,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-KI-2bG" userLabel="NewsView">
-                                                <rect key="frame" x="0.0" y="938.5" width="414" height="158"/>
+                                                <rect key="frame" x="0.0" y="988.5" width="414" height="158"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-Gs-hSD">
                                                         <rect key="frame" x="0.0" y="-5" width="414" height="168"/>
@@ -575,6 +579,7 @@
                         <outletCollection property="infosViews" destination="123-Ta-8LO" collectionClass="NSMutableArray" id="N3N-NP-EwP"/>
                         <outletCollection property="infosViews" destination="nFw-2v-ErY" collectionClass="NSMutableArray" id="da6-cL-cyC"/>
                         <outletCollection property="infosViews" destination="Go7-ys-Cpy" collectionClass="NSMutableArray" id="uN3-kE-JZn"/>
+                        <outletCollection property="infosViews" destination="fbO-br-E8I" collectionClass="NSMutableArray" id="coj-cR-F1n"/>
                         <segue destination="jMK-7l-xZa" kind="show" identifier="infoCulture" id="yQe-pu-8ws"/>
                         <segue destination="bLC-Nt-e2C" kind="show" identifier="vaccineInfo" id="u6G-Pd-9uc"/>
                     </connections>

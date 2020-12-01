@@ -121,6 +121,8 @@ class CountryDetailsViewController: UIViewController{
             case 6:
                 setCountryInfos(infoView: infosViews[i], title: "Montante máximo de dinheiro para sair do país sem declarar", value: country?.exitCurrency)
                 infosViews[i].separatorView.isHidden = true
+            case 7:
+                setCountryInfos(infoView: infosViews[i], title: "Idioma", value: country?.language )
             default:
                 print(i)
             }
