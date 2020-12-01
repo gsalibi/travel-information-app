@@ -12,6 +12,7 @@ class CountryInfosView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var value: UILabel!
+    @IBOutlet weak var separatorView: UIView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

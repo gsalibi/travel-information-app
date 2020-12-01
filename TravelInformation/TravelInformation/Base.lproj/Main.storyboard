@@ -20,7 +20,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CountriesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" text="" placeholder="Busque por país" translatesAutoresizingMaskIntoConstraints="NO" id="751-LT-ENX">
@@ -87,14 +87,14 @@
             <objects>
                 <viewController id="BiW-BS-Brh" customClass="CountryDetailsViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhH-ko-8hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-tB-b7z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1278.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-SC-hgH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1096.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-dQ-bH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="346.5"/>
@@ -166,10 +166,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIS-z5-zfh" userLabel="coutryActionsView">
-                                                <rect key="frame" x="0.0" y="363.5" width="414" height="64"/>
+                                                <rect key="frame" x="0.0" y="346.5" width="414" height="86"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i1U-4g-CQu">
-                                                        <rect key="frame" x="20" y="0.0" width="374" height="64"/>
+                                                        <rect key="frame" x="20" y="22" width="374" height="64"/>
                                                         <subviews>
                                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg9-cX-dty">
                                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="64"/>
@@ -314,63 +314,42 @@
                                                 <accessibility key="accessibilityConfiguration" identifier="Moea"/>
                                                 <constraints>
                                                     <constraint firstItem="i1U-4g-CQu" firstAttribute="leading" secondItem="SIS-z5-zfh" secondAttribute="leading" constant="20" id="C5c-yV-Psx"/>
-                                                    <constraint firstItem="i1U-4g-CQu" firstAttribute="centerY" secondItem="SIS-z5-zfh" secondAttribute="centerY" id="Kf8-Mk-cR3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="i1U-4g-CQu" secondAttribute="bottom" id="N43-XJ-kpg"/>
                                                     <constraint firstAttribute="trailing" secondItem="i1U-4g-CQu" secondAttribute="trailing" constant="20" id="e4k-aZ-A8a"/>
-                                                    <constraint firstItem="i1U-4g-CQu" firstAttribute="height" secondItem="SIS-z5-zfh" secondAttribute="height" id="tR9-W5-dMH"/>
+                                                    <constraint firstItem="i1U-4g-CQu" firstAttribute="top" secondItem="SIS-z5-zfh" secondAttribute="top" constant="22" id="wYE-gh-07K"/>
                                                     <constraint firstItem="i1U-4g-CQu" firstAttribute="centerX" secondItem="SIS-z5-zfh" secondAttribute="centerX" id="zgg-Im-ai7"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="l53-xS-uLO" userLabel="coinView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="444.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="l53-xS-uLO" userLabel="coinView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="432.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="Vn8-KD-7yK"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-hD-osI" userLabel="passportView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="511.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-hD-osI" userLabel="passportView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="482.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="aGu-xB-lhg"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-Lf-3vb" userLabel="touristVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="578.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-Lf-3vb" userLabel="touristVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="532.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="cjY-KW-DHY"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-hT-CY0" userLabel="businessVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="645.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-hT-CY0" userLabel="businessVisaView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="582.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="PKy-By-wkk"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="123-Ta-8LO" userLabel="insuranceView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="712.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="123-Ta-8LO" userLabel="insuranceView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="632.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="04x-jS-IvQ"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-2v-ErY" userLabel="maxMoneyEnterView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="779.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-2v-ErY" userLabel="maxMoneyEnterView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="682.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="OXr-sr-s3k"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-ys-Cpy" userLabel="maxMoneyLeaveView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="846.5" width="414" height="50"/>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-ys-Cpy" userLabel="maxMoneyLeaveView" customClass="CountryInfosView" customModule="TravelInformation" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="732.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="500" constant="50" id="Alc-26-haR"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-v3-Dbv" userLabel="vaccineView">
-                                                <rect key="frame" x="0.0" y="913.5" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="782.5" width="414" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-80-X1B" userLabel="vaccineInfoButton">
                                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
@@ -412,7 +391,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-OT-nhm" userLabel="culturalView">
-                                                <rect key="frame" x="0.0" y="980.5" width="414" height="90"/>
+                                                <rect key="frame" x="0.0" y="832.5" width="414" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-ze-4oR">
                                                         <rect key="frame" x="20" y="10" width="374" height="50"/>
@@ -455,7 +434,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="240" translatesAutoresizingMaskIntoConstraints="NO" id="2av-a3-xxe">
-                                                <rect key="frame" x="0.0" y="1087.5" width="414" height="16"/>
+                                                <rect key="frame" x="0.0" y="922.5" width="414" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="500" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-ZZ-nxa">
                                                         <rect key="frame" x="20" y="0.0" width="394" height="0.0"/>
@@ -473,7 +452,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-KI-2bG" userLabel="NewsView">
-                                                <rect key="frame" x="0.0" y="1120.5" width="414" height="158"/>
+                                                <rect key="frame" x="0.0" y="938.5" width="414" height="158"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-Gs-hSD">
                                                         <rect key="frame" x="0.0" y="-5" width="414" height="168"/>
@@ -609,7 +588,7 @@
             <objects>
                 <viewController id="jMK-7l-xZa" customClass="CulturalInfoViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-zd-5cO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh1-hq-zVW">
@@ -661,7 +640,7 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efe-XF-cQJ" customClass="HomeScreenViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TI-l3-RoN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-9m-iBT">
@@ -1171,11 +1150,11 @@
             <objects>
                 <viewController id="WSz-B7-u9d" customClass="MyDestiniesViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mll-D6-5ZJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-gd-rHt">
-                                <rect key="frame" x="16" y="158.5" width="382" height="32"/>
+                                <rect key="frame" x="16" y="150" width="382" height="32"/>
                                 <color key="backgroundColor" name="secondary"/>
                                 <segments>
                                     <segment title="Destinos"/>
@@ -1184,7 +1163,7 @@
                                 <color key="selectedSegmentTintColor" name="detail"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kM8-Uk-LQw">
-                                <rect key="frame" x="0.0" y="212.5" width="414" height="600.5"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="609"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1218,7 +1197,7 @@
             <objects>
                 <tableViewController id="bLC-Nt-e2C" customClass="VaccineViewController" customModule="TravelInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrx-5s-s5z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="primary"/>
                         <color key="sectionIndexBackgroundColor" name="primary"/>
@@ -1415,7 +1394,7 @@ Certificado é válida por toda a vida.</string>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BdI-Z8-t3b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="primary"/>
                         <textAttributes key="titleTextAttributes">
